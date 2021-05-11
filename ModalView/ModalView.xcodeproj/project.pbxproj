@@ -1,0 +1,618 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6B91D816179C3BF0F3FC6FE9 /* Pods_ModalView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03BF5175A6D8451DBC9A92B0 /* Pods_ModalView.framework */; };
+		E2358C5025C7D5040001B5BA /* Dice3DViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2358C4F25C7D5030001B5BA /* Dice3DViewController.swift */; };
+		E2358C5625C7F92C0001B5BA /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2358C5525C7F92C0001B5BA /* ItemViewController.swift */; };
+		E2358C5B25C7FD270001B5BA /* TransitionTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2358C5A25C7FD270001B5BA /* TransitionTabbarController.swift */; };
+		E25E5B8625CBF67F00F2D9B4 /* ItemNavigatoinController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25E5B8525CBF67F00F2D9B4 /* ItemNavigatoinController.swift */; };
+		E25E5B8925CBF8D700F2D9B4 /* TabbarTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25E5B8825CBF8D700F2D9B4 /* TabbarTransitionAnimator.swift */; };
+		E25E5B8D25CCD88500F2D9B4 /* TabbarTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25E5B8C25CCD88500F2D9B4 /* TabbarTransitionDelegate.swift */; };
+		E25E5BD525CD0E7E00F2D9B4 /* TabbarInteractionTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25E5BD425CD0E7E00F2D9B4 /* TabbarInteractionTransitionController.swift */; };
+		E260392F25C1122500A0D093 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260392E25C1122500A0D093 /* AppDelegate.swift */; };
+		E260393125C1122500A0D093 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260393025C1122500A0D093 /* SceneDelegate.swift */; };
+		E260393625C1122500A0D093 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E260393425C1122500A0D093 /* Main.storyboard */; };
+		E260393825C1122800A0D093 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E260393725C1122800A0D093 /* Assets.xcassets */; };
+		E260393B25C1122800A0D093 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E260393925C1122800A0D093 /* LaunchScreen.storyboard */; };
+		E260394425C11A4200A0D093 /* SecondController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260394325C11A4200A0D093 /* SecondController.swift */; };
+		E28C3AB025C288CE005DB141 /* TransitionStyleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28C3AAF25C288CE005DB141 /* TransitionStyleController.swift */; };
+		E28C3AB425C28DB6005DB141 /* headers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28C3AB325C28DB6005DB141 /* headers.swift */; };
+		E28C3ABC25C298C2005DB141 /* CustomTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28C3ABB25C298C2005DB141 /* CustomTransitionController.swift */; };
+		E28C3AC425C2ABE5005DB141 /* TargetModalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28C3AC325C2ABE5005DB141 /* TargetModalController.swift */; };
+		E28C3AD225C2C4EB005DB141 /* CustomModalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28C3AD125C2C4EB005DB141 /* CustomModalController.swift */; };
+		E28C3AD525C2C535005DB141 /* TransitionNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28C3AD425C2C535005DB141 /* TransitionNavigationController.swift */; };
+		E2B9ECA625CA7B5900582444 /* PresentTranstionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B9ECA525CA7B5900582444 /* PresentTranstionController.swift */; };
+		E2B9ECAF25CA7DD700582444 /* FadeInOutAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B9ECAE25CA7DD700582444 /* FadeInOutAViewController.swift */; };
+		E2B9ECB225CA7DF700582444 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B9ECB125CA7DF700582444 /* ModalViewController.swift */; };
+		E2B9ECB525CA7FE900582444 /* FadeInOutBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B9ECB425CA7FE900582444 /* FadeInOutBViewController.swift */; };
+		E2B9ECB825CA845E00582444 /* SwipeAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B9ECB725CA845E00582444 /* SwipeAViewController.swift */; };
+		E2B9ECBB25CA848000582444 /* SwipeBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B9ECBA25CA848000582444 /* SwipeBViewController.swift */; };
+		E2B9ECBE25CA861E00582444 /* SwipeTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B9ECBD25CA861E00582444 /* SwipeTransitionDelegate.swift */; };
+		E2B9ECC225CAA07400582444 /* CustomAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B9ECC125CAA07400582444 /* CustomAViewController.swift */; };
+		E2B9ECC725CAA1F100582444 /* CustomBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B9ECC625CAA1F100582444 /* CustomBViewController.swift */; };
+		E2B9ECCA25CAA22E00582444 /* CustomPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B9ECC925CAA22E00582444 /* CustomPresentationController.swift */; };
+		E2D48F5D25C13A64001AABF4 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D48F5B25C13A64001AABF4 /* FirstViewController.swift */; };
+		E2D48F5E25C13A64001AABF4 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2D48F5C25C13A64001AABF4 /* FirstViewController.xib */; };
+		E2D48F6A25C16AE8001AABF4 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D48F6925C16AE8001AABF4 /* TableViewController.swift */; };
+		E2D48F7225C253EA001AABF4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D48F7025C253EA001AABF4 /* HomeViewController.swift */; };
+		E2D48F7625C25432001AABF4 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D48F7525C25432001AABF4 /* NavigationViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		03BF5175A6D8451DBC9A92B0 /* Pods_ModalView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ModalView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C686C95C83299107F8ADA6A7 /* Pods-ModalView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModalView.release.xcconfig"; path = "Target Support Files/Pods-ModalView/Pods-ModalView.release.xcconfig"; sourceTree = "<group>"; };
+		E2358C4F25C7D5030001B5BA /* Dice3DViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dice3DViewController.swift; sourceTree = "<group>"; };
+		E2358C5525C7F92C0001B5BA /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		E2358C5A25C7FD270001B5BA /* TransitionTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionTabbarController.swift; sourceTree = "<group>"; };
+		E25E5B7525CBE00C00F2D9B4 /* ModalView-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ModalView-Bridging-Header.h"; sourceTree = "<group>"; };
+		E25E5B8525CBF67F00F2D9B4 /* ItemNavigatoinController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemNavigatoinController.swift; sourceTree = "<group>"; };
+		E25E5B8825CBF8D700F2D9B4 /* TabbarTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarTransitionAnimator.swift; sourceTree = "<group>"; };
+		E25E5B8C25CCD88500F2D9B4 /* TabbarTransitionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarTransitionDelegate.swift; sourceTree = "<group>"; };
+		E25E5BD425CD0E7E00F2D9B4 /* TabbarInteractionTransitionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarInteractionTransitionController.swift; sourceTree = "<group>"; };
+		E260392B25C1122500A0D093 /* ModalView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModalView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E260392E25C1122500A0D093 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E260393025C1122500A0D093 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E260393525C1122500A0D093 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E260393725C1122800A0D093 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E260393A25C1122800A0D093 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E260393C25C1122800A0D093 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E260394325C11A4200A0D093 /* SecondController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondController.swift; sourceTree = "<group>"; };
+		E28C3AAF25C288CE005DB141 /* TransitionStyleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionStyleController.swift; sourceTree = "<group>"; };
+		E28C3AB325C28DB6005DB141 /* headers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = headers.swift; sourceTree = "<group>"; };
+		E28C3ABB25C298C2005DB141 /* CustomTransitionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransitionController.swift; sourceTree = "<group>"; };
+		E28C3AC325C2ABE5005DB141 /* TargetModalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetModalController.swift; sourceTree = "<group>"; };
+		E28C3AD125C2C4EB005DB141 /* CustomModalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModalController.swift; sourceTree = "<group>"; };
+		E28C3AD425C2C535005DB141 /* TransitionNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionNavigationController.swift; sourceTree = "<group>"; };
+		E2B9ECA525CA7B5900582444 /* PresentTranstionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentTranstionController.swift; sourceTree = "<group>"; };
+		E2B9ECAE25CA7DD700582444 /* FadeInOutAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeInOutAViewController.swift; sourceTree = "<group>"; };
+		E2B9ECB125CA7DF700582444 /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		E2B9ECB425CA7FE900582444 /* FadeInOutBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeInOutBViewController.swift; sourceTree = "<group>"; };
+		E2B9ECB725CA845E00582444 /* SwipeAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeAViewController.swift; sourceTree = "<group>"; };
+		E2B9ECBA25CA848000582444 /* SwipeBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeBViewController.swift; sourceTree = "<group>"; };
+		E2B9ECBD25CA861E00582444 /* SwipeTransitionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTransitionDelegate.swift; sourceTree = "<group>"; };
+		E2B9ECC125CAA07400582444 /* CustomAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAViewController.swift; sourceTree = "<group>"; };
+		E2B9ECC625CAA1F100582444 /* CustomBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBViewController.swift; sourceTree = "<group>"; };
+		E2B9ECC925CAA22E00582444 /* CustomPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPresentationController.swift; sourceTree = "<group>"; };
+		E2D48F5B25C13A64001AABF4 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		E2D48F5C25C13A64001AABF4 /* FirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
+		E2D48F6925C16AE8001AABF4 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		E2D48F7025C253EA001AABF4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E2D48F7525C25432001AABF4 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		EBFAF6FF160C18183616D737 /* Pods-ModalView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModalView.debug.xcconfig"; path = "Target Support Files/Pods-ModalView/Pods-ModalView.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E260392825C1122500A0D093 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B91D816179C3BF0F3FC6FE9 /* Pods_ModalView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9E3BBC15A0F86A97352CE8E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03BF5175A6D8451DBC9A92B0 /* Pods_ModalView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B7D0824793F98F8479BF6E3C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EBFAF6FF160C18183616D737 /* Pods-ModalView.debug.xcconfig */,
+				C686C95C83299107F8ADA6A7 /* Pods-ModalView.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E260392225C1122500A0D093 = {
+			isa = PBXGroup;
+			children = (
+				E260392D25C1122500A0D093 /* ModalView */,
+				E260392C25C1122500A0D093 /* Products */,
+				B7D0824793F98F8479BF6E3C /* Pods */,
+				9E3BBC15A0F86A97352CE8E7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E260392C25C1122500A0D093 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E260392B25C1122500A0D093 /* ModalView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E260392D25C1122500A0D093 /* ModalView */ = {
+			isa = PBXGroup;
+			children = (
+				E260392E25C1122500A0D093 /* AppDelegate.swift */,
+				E260393025C1122500A0D093 /* SceneDelegate.swift */,
+				E2D48F7525C25432001AABF4 /* NavigationViewController.swift */,
+				E2B9ECB125CA7DF700582444 /* ModalViewController.swift */,
+				E2D48F7025C253EA001AABF4 /* HomeViewController.swift */,
+				E2358C4F25C7D5030001B5BA /* Dice3DViewController.swift */,
+				E28C3ABE25C298C7005DB141 /* CustomTransition */,
+				E28C3AB925C2989F005DB141 /* UIModalTransitionStyle */,
+				E28C3AAD25C2889E005DB141 /* UIModalPresentationStyle */,
+				E260393425C1122500A0D093 /* Main.storyboard */,
+				E260393725C1122800A0D093 /* Assets.xcassets */,
+				E260393925C1122800A0D093 /* LaunchScreen.storyboard */,
+				E260393C25C1122800A0D093 /* Info.plist */,
+				E28C3AB325C28DB6005DB141 /* headers.swift */,
+			);
+			path = ModalView;
+			sourceTree = "<group>";
+		};
+		E28C3AAD25C2889E005DB141 /* UIModalPresentationStyle */ = {
+			isa = PBXGroup;
+			children = (
+				E2D48F5B25C13A64001AABF4 /* FirstViewController.swift */,
+				E2D48F6925C16AE8001AABF4 /* TableViewController.swift */,
+				E2D48F5C25C13A64001AABF4 /* FirstViewController.xib */,
+				E260394325C11A4200A0D093 /* SecondController.swift */,
+			);
+			path = UIModalPresentationStyle;
+			sourceTree = "<group>";
+		};
+		E28C3AB925C2989F005DB141 /* UIModalTransitionStyle */ = {
+			isa = PBXGroup;
+			children = (
+				E28C3AAF25C288CE005DB141 /* TransitionStyleController.swift */,
+			);
+			path = UIModalTransitionStyle;
+			sourceTree = "<group>";
+		};
+		E28C3ABE25C298C7005DB141 /* CustomTransition */ = {
+			isa = PBXGroup;
+			children = (
+				E28C3ABB25C298C2005DB141 /* CustomTransitionController.swift */,
+				E2B9ECA825CA7B5F00582444 /* PresentTranstion */,
+				E2B9EC9F25CA7AFE00582444 /* Tabbar */,
+				E2B9ECA125CA7B0500582444 /* Navigation */,
+				E2B9ECA325CA7B1500582444 /* Custom Modal view */,
+			);
+			path = CustomTransition;
+			sourceTree = "<group>";
+		};
+		E2B9EC9F25CA7AFE00582444 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				E2358C5A25C7FD270001B5BA /* TransitionTabbarController.swift */,
+				E25E5B8C25CCD88500F2D9B4 /* TabbarTransitionDelegate.swift */,
+				E25E5BD425CD0E7E00F2D9B4 /* TabbarInteractionTransitionController.swift */,
+				E25E5B8825CBF8D700F2D9B4 /* TabbarTransitionAnimator.swift */,
+				E25E5B8525CBF67F00F2D9B4 /* ItemNavigatoinController.swift */,
+				E2358C5525C7F92C0001B5BA /* ItemViewController.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		E2B9ECA125CA7B0500582444 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				E28C3AD425C2C535005DB141 /* TransitionNavigationController.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		E2B9ECA325CA7B1500582444 /* Custom Modal view */ = {
+			isa = PBXGroup;
+			children = (
+				E28C3AD125C2C4EB005DB141 /* CustomModalController.swift */,
+				E28C3AC325C2ABE5005DB141 /* TargetModalController.swift */,
+			);
+			path = "Custom Modal view";
+			sourceTree = "<group>";
+		};
+		E2B9ECA825CA7B5F00582444 /* PresentTranstion */ = {
+			isa = PBXGroup;
+			children = (
+				E2B9ECA525CA7B5900582444 /* PresentTranstionController.swift */,
+				E2B9ECAA25CA7CAC00582444 /* FadeInOut */,
+				E2B9ECAC25CA7CED00582444 /* Swipe */,
+				E2B9ECC025CAA06100582444 /* Custom */,
+			);
+			path = PresentTranstion;
+			sourceTree = "<group>";
+		};
+		E2B9ECAA25CA7CAC00582444 /* FadeInOut */ = {
+			isa = PBXGroup;
+			children = (
+				E2B9ECAE25CA7DD700582444 /* FadeInOutAViewController.swift */,
+				E2B9ECB425CA7FE900582444 /* FadeInOutBViewController.swift */,
+				E25E5B7525CBE00C00F2D9B4 /* ModalView-Bridging-Header.h */,
+			);
+			path = FadeInOut;
+			sourceTree = "<group>";
+		};
+		E2B9ECAC25CA7CED00582444 /* Swipe */ = {
+			isa = PBXGroup;
+			children = (
+				E2B9ECB725CA845E00582444 /* SwipeAViewController.swift */,
+				E2B9ECBA25CA848000582444 /* SwipeBViewController.swift */,
+				E2B9ECBD25CA861E00582444 /* SwipeTransitionDelegate.swift */,
+			);
+			path = Swipe;
+			sourceTree = "<group>";
+		};
+		E2B9ECC025CAA06100582444 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				E2B9ECC125CAA07400582444 /* CustomAViewController.swift */,
+				E2B9ECC625CAA1F100582444 /* CustomBViewController.swift */,
+				E2B9ECC925CAA22E00582444 /* CustomPresentationController.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E260392A25C1122500A0D093 /* ModalView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E260393F25C1122800A0D093 /* Build configuration list for PBXNativeTarget "ModalView" */;
+			buildPhases = (
+				4C1ED1A9D6B4C75689985FD0 /* [CP] Check Pods Manifest.lock */,
+				E260392725C1122500A0D093 /* Sources */,
+				E260392825C1122500A0D093 /* Frameworks */,
+				E260392925C1122500A0D093 /* Resources */,
+				52E3F4344AF6C4B7828EED59 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ModalView;
+			productName = ModalView;
+			productReference = E260392B25C1122500A0D093 /* ModalView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E260392325C1122500A0D093 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					E260392A25C1122500A0D093 = {
+						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1240;
+					};
+				};
+			};
+			buildConfigurationList = E260392625C1122500A0D093 /* Build configuration list for PBXProject "ModalView" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E260392225C1122500A0D093;
+			productRefGroup = E260392C25C1122500A0D093 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E260392A25C1122500A0D093 /* ModalView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E260392925C1122500A0D093 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E260393B25C1122800A0D093 /* LaunchScreen.storyboard in Resources */,
+				E2D48F5E25C13A64001AABF4 /* FirstViewController.xib in Resources */,
+				E260393825C1122800A0D093 /* Assets.xcassets in Resources */,
+				E260393625C1122500A0D093 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4C1ED1A9D6B4C75689985FD0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ModalView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52E3F4344AF6C4B7828EED59 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ModalView/Pods-ModalView-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ModalView/Pods-ModalView-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ModalView/Pods-ModalView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E260392725C1122500A0D093 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2D48F5D25C13A64001AABF4 /* FirstViewController.swift in Sources */,
+				E2B9ECC225CAA07400582444 /* CustomAViewController.swift in Sources */,
+				E2B9ECB525CA7FE900582444 /* FadeInOutBViewController.swift in Sources */,
+				E28C3AD525C2C535005DB141 /* TransitionNavigationController.swift in Sources */,
+				E28C3AC425C2ABE5005DB141 /* TargetModalController.swift in Sources */,
+				E2B9ECC725CAA1F100582444 /* CustomBViewController.swift in Sources */,
+				E260394425C11A4200A0D093 /* SecondController.swift in Sources */,
+				E25E5B8925CBF8D700F2D9B4 /* TabbarTransitionAnimator.swift in Sources */,
+				E28C3AB025C288CE005DB141 /* TransitionStyleController.swift in Sources */,
+				E260392F25C1122500A0D093 /* AppDelegate.swift in Sources */,
+				E2B9ECAF25CA7DD700582444 /* FadeInOutAViewController.swift in Sources */,
+				E25E5BD525CD0E7E00F2D9B4 /* TabbarInteractionTransitionController.swift in Sources */,
+				E2B9ECB225CA7DF700582444 /* ModalViewController.swift in Sources */,
+				E2358C5625C7F92C0001B5BA /* ItemViewController.swift in Sources */,
+				E2B9ECB825CA845E00582444 /* SwipeAViewController.swift in Sources */,
+				E25E5B8D25CCD88500F2D9B4 /* TabbarTransitionDelegate.swift in Sources */,
+				E28C3ABC25C298C2005DB141 /* CustomTransitionController.swift in Sources */,
+				E25E5B8625CBF67F00F2D9B4 /* ItemNavigatoinController.swift in Sources */,
+				E2B9ECBB25CA848000582444 /* SwipeBViewController.swift in Sources */,
+				E2D48F6A25C16AE8001AABF4 /* TableViewController.swift in Sources */,
+				E2B9ECCA25CAA22E00582444 /* CustomPresentationController.swift in Sources */,
+				E2B9ECA625CA7B5900582444 /* PresentTranstionController.swift in Sources */,
+				E2B9ECBE25CA861E00582444 /* SwipeTransitionDelegate.swift in Sources */,
+				E260393125C1122500A0D093 /* SceneDelegate.swift in Sources */,
+				E28C3AD225C2C4EB005DB141 /* CustomModalController.swift in Sources */,
+				E28C3AB425C28DB6005DB141 /* headers.swift in Sources */,
+				E2358C5B25C7FD270001B5BA /* TransitionTabbarController.swift in Sources */,
+				E2358C5025C7D5040001B5BA /* Dice3DViewController.swift in Sources */,
+				E2D48F7625C25432001AABF4 /* NavigationViewController.swift in Sources */,
+				E2D48F7225C253EA001AABF4 /* HomeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E260393425C1122500A0D093 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E260393525C1122500A0D093 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E260393925C1122800A0D093 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E260393A25C1122800A0D093 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E260393D25C1122800A0D093 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E260393E25C1122800A0D093 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E260394025C1122800A0D093 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBFAF6FF160C18183616D737 /* Pods-ModalView.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NL2TZ8P5RF;
+				INFOPLIST_FILE = ModalView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.znjtys.ModalView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ModalView/CustomTransition/PresentTranstion/FadeInOut/ModalView-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E260394125C1122800A0D093 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C686C95C83299107F8ADA6A7 /* Pods-ModalView.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NL2TZ8P5RF;
+				INFOPLIST_FILE = ModalView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.znjtys.ModalView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ModalView/CustomTransition/PresentTranstion/FadeInOut/ModalView-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E260392625C1122500A0D093 /* Build configuration list for PBXProject "ModalView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E260393D25C1122800A0D093 /* Debug */,
+				E260393E25C1122800A0D093 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E260393F25C1122800A0D093 /* Build configuration list for PBXNativeTarget "ModalView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E260394025C1122800A0D093 /* Debug */,
+				E260394125C1122800A0D093 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E260392325C1122500A0D093 /* Project object */;
+}

@@ -1,0 +1,31 @@
+PODS:
+  - Bugly (2.5.5)
+  - MBProgressHUD (1.2.0)
+  - MKSwiftRes (0.1.0):
+    - MBProgressHUD
+    - SnapKit
+  - SnapKit (5.0.1)
+
+DEPENDENCIES:
+  - Bugly (= 2.5.5)
+  - MKSwiftRes (from `../../../MKSwiftRes/`)
+
+SPEC REPOS:
+  trunk:
+    - Bugly
+    - MBProgressHUD
+    - SnapKit
+
+EXTERNAL SOURCES:
+  MKSwiftRes:
+    :path: "../../../MKSwiftRes/"
+
+SPEC CHECKSUMS:
+  Bugly: eded937bbb1f731cacf689c2d934ddbd9ab34f83
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MKSwiftRes: 10029cbd06465d20325a7029fe697420c94a7303
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+
+PODFILE CHECKSUM: df1db5a290d29a6011aee76724042c9cf47fe837
+
+COCOAPODS: 1.9.3

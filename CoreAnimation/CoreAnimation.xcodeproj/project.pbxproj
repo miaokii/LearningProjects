@@ -1,0 +1,656 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		39317848E83AE41AAC6B4362 /* Pods_CoreAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD803CEECD185EE30E82915F /* Pods_CoreAnimation.framework */; };
+		B8605A1625CD85870088A8DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8605A1525CD85870088A8DB /* AppDelegate.swift */; };
+		B8605A1825CD85870088A8DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8605A1725CD85870088A8DB /* SceneDelegate.swift */; };
+		B8605A1A25CD85870088A8DB /* CubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8605A1925CD85870088A8DB /* CubeViewController.swift */; };
+		B8605A1D25CD85870088A8DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8605A1B25CD85870088A8DB /* Main.storyboard */; };
+		B8605A1F25CD85880088A8DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8605A1E25CD85880088A8DB /* Assets.xcassets */; };
+		B8605A2225CD85880088A8DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8605A2025CD85880088A8DB /* LaunchScreen.storyboard */; };
+		B8C5C31325DEBEC600E84A55 /* TextLayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C5C31225DEBEC600E84A55 /* TextLayerController.swift */; };
+		E20F46C925DE606E00DB37C5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20F46C825DE606E00DB37C5 /* HomeViewController.swift */; };
+		E253A3D325E49FF9000BE52E /* TimerAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E253A3D225E49FF9000BE52E /* TimerAnimationController.swift */; };
+		E253A3D825E4CCD6000BE52E /* UIDynamicHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E253A3D725E4CCD6000BE52E /* UIDynamicHomeController.swift */; };
+		E253A3DC25E4D912000BE52E /* DynamicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E253A3DB25E4D912000BE52E /* DynamicViewController.swift */; };
+		E253A3E825E4DC96000BE52E /* DynamicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E253A3E725E4DC96000BE52E /* DynamicView.swift */; };
+		E253A3EB25E4DDAA000BE52E /* GravityBehaviorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E253A3EA25E4DDAA000BE52E /* GravityBehaviorView.swift */; };
+		E253A3F025E4E42F000BE52E /* SnapBehaviorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E253A3EF25E4E42F000BE52E /* SnapBehaviorView.swift */; };
+		E253A3F325E4E5DA000BE52E /* PushBehaviorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E253A3F225E4E5DA000BE52E /* PushBehaviorView.swift */; };
+		E253A3F625E4E6BE000BE52E /* CrashBehaviorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E253A3F525E4E6BE000BE52E /* CrashBehaviorView.swift */; };
+		E253A3FE25E4FBF6000BE52E /* AttachmentBehaviorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E253A3FD25E4FBF6000BE52E /* AttachmentBehaviorView.swift */; };
+		E253A40125E5075A000BE52E /* MachObjectAttachmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E253A40025E5075A000BE52E /* MachObjectAttachmentView.swift */; };
+		E253A40825E5E900000BE52E /* SpringListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E253A40725E5E8FF000BE52E /* SpringListView.swift */; };
+		E259270125E7934A00763D05 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E259270025E7934A00763D05 /* DrawingViewController.swift */; };
+		E259270425E7965B00763D05 /* VectorDrawController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E259270325E7965B00763D05 /* VectorDrawController.swift */; };
+		E259270725E7A66B00763D05 /* BrushDrawController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E259270625E7A66B00763D05 /* BrushDrawController.swift */; };
+		E259276B25E89ED900763D05 /* ImageIOController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E259276A25E89ED900763D05 /* ImageIOController.swift */; };
+		E259276F25E8A09E00763D05 /* Image.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E259276E25E8A09E00763D05 /* Image.bundle */; };
+		E259277225E8BD7C00763D05 /* ImageLoadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E259277125E8BD7C00763D05 /* ImageLoadController.swift */; };
+		E259277525EC80E600763D05 /* ImageCacgeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E259277425EC80E600763D05 /* ImageCacgeController.swift */; };
+		E25BBD2725E0F1BF00A85AD7 /* PropertyAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBD2625E0F1BF00A85AD7 /* PropertyAnimationController.swift */; };
+		E25BBD2A25E35B9400A85AD7 /* TransitionAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBD2925E35B9400A85AD7 /* TransitionAnimationController.swift */; };
+		E25BBD3425E3847F00A85AD7 /* LayerTimeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBD3325E3847F00A85AD7 /* LayerTimeController.swift */; };
+		E25BBD3E25E3985200A85AD7 /* AnimationBufferController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBD3D25E3985200A85AD7 /* AnimationBufferController.swift */; };
+		E25BBD4125E3A4A800A85AD7 /* CustomTimingFuncController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BBD4025E3A4A800A85AD7 /* CustomTimingFuncController.swift */; };
+		E2C1202A25E3B30C0051078D /* CAMediaTimingFunction+ControlPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C1202925E3B30C0051078D /* CAMediaTimingFunction+ControlPoint.m */; };
+		E2F1EA2925DE630C0010A874 /* LayerPropertyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F1EA2825DE630C0010A874 /* LayerPropertyController.swift */; };
+		E2F1EA2C25DE63580010A874 /* ClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F1EA2B25DE63580010A874 /* ClockViewController.swift */; };
+		E2F1EA2F25DE639F0010A874 /* ShadowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F1EA2E25DE639F0010A874 /* ShadowViewController.swift */; };
+		E2F1EA3725DE67C70010A874 /* ShapLayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F1EA3625DE67C70010A874 /* ShapLayerController.swift */; };
+		E2F1EA3C25DE68020010A874 /* SpecialLayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F1EA3B25DE68020010A874 /* SpecialLayerController.swift */; };
+		E2F1EA4125DF82F80010A874 /* TransformLayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F1EA4025DF82F80010A874 /* TransformLayerController.swift */; };
+		E2F1EA4425DF8E4D0010A874 /* GradientLayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F1EA4325DF8E4D0010A874 /* GradientLayerController.swift */; };
+		E2F1EA4725DF91830010A874 /* ReplicatorLayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F1EA4625DF91830010A874 /* ReplicatorLayerController.swift */; };
+		E2F1EA4F25DFA0920010A874 /* EmitterLayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F1EA4E25DFA0920010A874 /* EmitterLayerController.swift */; };
+		E2F1EA5825DFBFF40010A874 /* ImplicitAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F1EA5725DFBFF40010A874 /* ImplicitAnimationController.swift */; };
+		E2F1EA5B25E0D6CF0010A874 /* ExplicitAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F1EA5A25E0D6CE0010A874 /* ExplicitAnimationController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A7DC5F318E3D939C2320628D /* Pods-CoreAnimation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreAnimation.release.xcconfig"; path = "Target Support Files/Pods-CoreAnimation/Pods-CoreAnimation.release.xcconfig"; sourceTree = "<group>"; };
+		B8605A1225CD85870088A8DB /* CoreAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8605A1525CD85870088A8DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B8605A1725CD85870088A8DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B8605A1925CD85870088A8DB /* CubeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubeViewController.swift; sourceTree = "<group>"; };
+		B8605A1C25CD85870088A8DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B8605A1E25CD85880088A8DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B8605A2125CD85880088A8DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B8605A2325CD85880088A8DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8C5C31225DEBEC600E84A55 /* TextLayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLayerController.swift; sourceTree = "<group>"; };
+		CD803CEECD185EE30E82915F /* Pods_CoreAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoreAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E20F46C825DE606E00DB37C5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E253A3D225E49FF9000BE52E /* TimerAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerAnimationController.swift; sourceTree = "<group>"; };
+		E253A3D725E4CCD6000BE52E /* UIDynamicHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDynamicHomeController.swift; sourceTree = "<group>"; };
+		E253A3DB25E4D912000BE52E /* DynamicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicViewController.swift; sourceTree = "<group>"; };
+		E253A3E725E4DC96000BE52E /* DynamicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicView.swift; sourceTree = "<group>"; };
+		E253A3EA25E4DDAA000BE52E /* GravityBehaviorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravityBehaviorView.swift; sourceTree = "<group>"; };
+		E253A3EF25E4E42F000BE52E /* SnapBehaviorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapBehaviorView.swift; sourceTree = "<group>"; };
+		E253A3F225E4E5DA000BE52E /* PushBehaviorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushBehaviorView.swift; sourceTree = "<group>"; };
+		E253A3F525E4E6BE000BE52E /* CrashBehaviorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashBehaviorView.swift; sourceTree = "<group>"; };
+		E253A3FD25E4FBF6000BE52E /* AttachmentBehaviorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentBehaviorView.swift; sourceTree = "<group>"; };
+		E253A40025E5075A000BE52E /* MachObjectAttachmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachObjectAttachmentView.swift; sourceTree = "<group>"; };
+		E253A40725E5E8FF000BE52E /* SpringListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringListView.swift; sourceTree = "<group>"; };
+		E259270025E7934A00763D05 /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
+		E259270325E7965B00763D05 /* VectorDrawController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectorDrawController.swift; sourceTree = "<group>"; };
+		E259270625E7A66B00763D05 /* BrushDrawController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrushDrawController.swift; sourceTree = "<group>"; };
+		E259276A25E89ED900763D05 /* ImageIOController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageIOController.swift; sourceTree = "<group>"; };
+		E259276E25E8A09E00763D05 /* Image.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Image.bundle; sourceTree = "<group>"; };
+		E259277125E8BD7C00763D05 /* ImageLoadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoadController.swift; sourceTree = "<group>"; };
+		E259277425EC80E600763D05 /* ImageCacgeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacgeController.swift; sourceTree = "<group>"; };
+		E25BBD2625E0F1BF00A85AD7 /* PropertyAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyAnimationController.swift; sourceTree = "<group>"; };
+		E25BBD2925E35B9400A85AD7 /* TransitionAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionAnimationController.swift; sourceTree = "<group>"; };
+		E25BBD3325E3847F00A85AD7 /* LayerTimeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerTimeController.swift; sourceTree = "<group>"; };
+		E25BBD3D25E3985200A85AD7 /* AnimationBufferController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationBufferController.swift; sourceTree = "<group>"; };
+		E25BBD4025E3A4A800A85AD7 /* CustomTimingFuncController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTimingFuncController.swift; sourceTree = "<group>"; };
+		E2C1202725E3B30C0051078D /* CoreAnimation-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoreAnimation-Bridging-Header.h"; sourceTree = "<group>"; };
+		E2C1202825E3B30C0051078D /* CAMediaTimingFunction+ControlPoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CAMediaTimingFunction+ControlPoint.h"; sourceTree = "<group>"; };
+		E2C1202925E3B30C0051078D /* CAMediaTimingFunction+ControlPoint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CAMediaTimingFunction+ControlPoint.m"; sourceTree = "<group>"; };
+		E2F1EA2825DE630C0010A874 /* LayerPropertyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerPropertyController.swift; sourceTree = "<group>"; };
+		E2F1EA2B25DE63580010A874 /* ClockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockViewController.swift; sourceTree = "<group>"; };
+		E2F1EA2E25DE639F0010A874 /* ShadowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowViewController.swift; sourceTree = "<group>"; };
+		E2F1EA3625DE67C70010A874 /* ShapLayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapLayerController.swift; sourceTree = "<group>"; };
+		E2F1EA3B25DE68020010A874 /* SpecialLayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialLayerController.swift; sourceTree = "<group>"; };
+		E2F1EA4025DF82F80010A874 /* TransformLayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformLayerController.swift; sourceTree = "<group>"; };
+		E2F1EA4325DF8E4D0010A874 /* GradientLayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLayerController.swift; sourceTree = "<group>"; };
+		E2F1EA4625DF91830010A874 /* ReplicatorLayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplicatorLayerController.swift; sourceTree = "<group>"; };
+		E2F1EA4E25DFA0920010A874 /* EmitterLayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmitterLayerController.swift; sourceTree = "<group>"; };
+		E2F1EA5725DFBFF40010A874 /* ImplicitAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImplicitAnimationController.swift; sourceTree = "<group>"; };
+		E2F1EA5A25E0D6CE0010A874 /* ExplicitAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplicitAnimationController.swift; sourceTree = "<group>"; };
+		F4F8A6F051D2898801755360 /* Pods-CoreAnimation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreAnimation.debug.xcconfig"; path = "Target Support Files/Pods-CoreAnimation/Pods-CoreAnimation.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B8605A0F25CD85870088A8DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39317848E83AE41AAC6B4362 /* Pods_CoreAnimation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		12DBF0AFEC43C46B4D35E3CB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F4F8A6F051D2898801755360 /* Pods-CoreAnimation.debug.xcconfig */,
+				A7DC5F318E3D939C2320628D /* Pods-CoreAnimation.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B8605A0925CD85870088A8DB = {
+			isa = PBXGroup;
+			children = (
+				B8605A1425CD85870088A8DB /* CoreAnimation */,
+				B8605A1325CD85870088A8DB /* Products */,
+				12DBF0AFEC43C46B4D35E3CB /* Pods */,
+				DB98FE509406393606CDD7FC /* Frameworks */,
+				E2C1202725E3B30C0051078D /* CoreAnimation-Bridging-Header.h */,
+			);
+			sourceTree = "<group>";
+		};
+		B8605A1325CD85870088A8DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B8605A1225CD85870088A8DB /* CoreAnimation.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B8605A1425CD85870088A8DB /* CoreAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				B8605A1525CD85870088A8DB /* AppDelegate.swift */,
+				B8605A1725CD85870088A8DB /* SceneDelegate.swift */,
+				E20F46C825DE606E00DB37C5 /* HomeViewController.swift */,
+				E259276925E89EB400763D05 /* 图像IO */,
+				E25926F925E792E900763D05 /* 高效绘图 */,
+				E253A3D625E4CCCD000BE52E /* 物理仿真 */,
+				E253A3D125E49FDD000BE52E /* 定时器动画 */,
+				E25BBD3925E3982D00A85AD7 /* 缓冲 */,
+				E25BBD2F25E3843800A85AD7 /* 图层时间 */,
+				E2F1EA5D25E0D6F50010A874 /* 显式动画 */,
+				E2F1EA5425DFBF9F0010A874 /* 隐式动画 */,
+				E2F1EA3925DE67CC0010A874 /* 专用图层 */,
+				E2F1EA3425DE67B00010A874 /* Base */,
+				B8605A1B25CD85870088A8DB /* Main.storyboard */,
+				B8605A1E25CD85880088A8DB /* Assets.xcassets */,
+				E259276E25E8A09E00763D05 /* Image.bundle */,
+				B8605A2025CD85880088A8DB /* LaunchScreen.storyboard */,
+				B8605A2325CD85880088A8DB /* Info.plist */,
+			);
+			path = CoreAnimation;
+			sourceTree = "<group>";
+		};
+		DB98FE509406393606CDD7FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD803CEECD185EE30E82915F /* Pods_CoreAnimation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E253A3D125E49FDD000BE52E /* 定时器动画 */ = {
+			isa = PBXGroup;
+			children = (
+				E253A3D225E49FF9000BE52E /* TimerAnimationController.swift */,
+			);
+			path = "定时器动画";
+			sourceTree = "<group>";
+		};
+		E253A3D625E4CCCD000BE52E /* 物理仿真 */ = {
+			isa = PBXGroup;
+			children = (
+				E253A3D725E4CCD6000BE52E /* UIDynamicHomeController.swift */,
+				E253A3DB25E4D912000BE52E /* DynamicViewController.swift */,
+				E253A3E725E4DC96000BE52E /* DynamicView.swift */,
+				E253A3EA25E4DDAA000BE52E /* GravityBehaviorView.swift */,
+				E253A3EF25E4E42F000BE52E /* SnapBehaviorView.swift */,
+				E253A3F525E4E6BE000BE52E /* CrashBehaviorView.swift */,
+				E253A3F225E4E5DA000BE52E /* PushBehaviorView.swift */,
+				E253A3FD25E4FBF6000BE52E /* AttachmentBehaviorView.swift */,
+				E253A40025E5075A000BE52E /* MachObjectAttachmentView.swift */,
+				E253A40725E5E8FF000BE52E /* SpringListView.swift */,
+			);
+			path = "物理仿真";
+			sourceTree = "<group>";
+		};
+		E25926F925E792E900763D05 /* 高效绘图 */ = {
+			isa = PBXGroup;
+			children = (
+				E259270025E7934A00763D05 /* DrawingViewController.swift */,
+				E259270325E7965B00763D05 /* VectorDrawController.swift */,
+				E259270625E7A66B00763D05 /* BrushDrawController.swift */,
+			);
+			path = "高效绘图";
+			sourceTree = "<group>";
+		};
+		E259276925E89EB400763D05 /* 图像IO */ = {
+			isa = PBXGroup;
+			children = (
+				E259276A25E89ED900763D05 /* ImageIOController.swift */,
+				E259277125E8BD7C00763D05 /* ImageLoadController.swift */,
+				E259277425EC80E600763D05 /* ImageCacgeController.swift */,
+			);
+			path = "图像IO";
+			sourceTree = "<group>";
+		};
+		E25BBD2F25E3843800A85AD7 /* 图层时间 */ = {
+			isa = PBXGroup;
+			children = (
+				E25BBD3325E3847F00A85AD7 /* LayerTimeController.swift */,
+			);
+			path = "图层时间";
+			sourceTree = "<group>";
+		};
+		E25BBD3925E3982D00A85AD7 /* 缓冲 */ = {
+			isa = PBXGroup;
+			children = (
+				E2C1202825E3B30C0051078D /* CAMediaTimingFunction+ControlPoint.h */,
+				E2C1202925E3B30C0051078D /* CAMediaTimingFunction+ControlPoint.m */,
+				E25BBD3D25E3985200A85AD7 /* AnimationBufferController.swift */,
+				E25BBD4025E3A4A800A85AD7 /* CustomTimingFuncController.swift */,
+			);
+			path = "缓冲";
+			sourceTree = "<group>";
+		};
+		E2F1EA3425DE67B00010A874 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E2F1EA2825DE630C0010A874 /* LayerPropertyController.swift */,
+				E2F1EA2E25DE639F0010A874 /* ShadowViewController.swift */,
+				E2F1EA2B25DE63580010A874 /* ClockViewController.swift */,
+				B8605A1925CD85870088A8DB /* CubeViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		E2F1EA3925DE67CC0010A874 /* 专用图层 */ = {
+			isa = PBXGroup;
+			children = (
+				E2F1EA3B25DE68020010A874 /* SpecialLayerController.swift */,
+				E2F1EA3625DE67C70010A874 /* ShapLayerController.swift */,
+				B8C5C31225DEBEC600E84A55 /* TextLayerController.swift */,
+				E2F1EA4025DF82F80010A874 /* TransformLayerController.swift */,
+				E2F1EA4325DF8E4D0010A874 /* GradientLayerController.swift */,
+				E2F1EA4625DF91830010A874 /* ReplicatorLayerController.swift */,
+				E2F1EA4E25DFA0920010A874 /* EmitterLayerController.swift */,
+			);
+			path = "专用图层";
+			sourceTree = "<group>";
+		};
+		E2F1EA5425DFBF9F0010A874 /* 隐式动画 */ = {
+			isa = PBXGroup;
+			children = (
+				E2F1EA5725DFBFF40010A874 /* ImplicitAnimationController.swift */,
+			);
+			path = "隐式动画";
+			sourceTree = "<group>";
+		};
+		E2F1EA5D25E0D6F50010A874 /* 显式动画 */ = {
+			isa = PBXGroup;
+			children = (
+				E2F1EA5A25E0D6CE0010A874 /* ExplicitAnimationController.swift */,
+				E25BBD2625E0F1BF00A85AD7 /* PropertyAnimationController.swift */,
+				E25BBD2925E35B9400A85AD7 /* TransitionAnimationController.swift */,
+			);
+			path = "显式动画";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B8605A1125CD85870088A8DB /* CoreAnimation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8605A2625CD85880088A8DB /* Build configuration list for PBXNativeTarget "CoreAnimation" */;
+			buildPhases = (
+				6C5488FBFEAE278539BC2104 /* [CP] Check Pods Manifest.lock */,
+				B8605A0E25CD85870088A8DB /* Sources */,
+				B8605A0F25CD85870088A8DB /* Frameworks */,
+				B8605A1025CD85870088A8DB /* Resources */,
+				36C40747FD8D61028727DE42 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoreAnimation;
+			productName = CoreAnimation;
+			productReference = B8605A1225CD85870088A8DB /* CoreAnimation.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B8605A0A25CD85870088A8DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					B8605A1125CD85870088A8DB = {
+						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1240;
+					};
+				};
+			};
+			buildConfigurationList = B8605A0D25CD85870088A8DB /* Build configuration list for PBXProject "CoreAnimation" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B8605A0925CD85870088A8DB;
+			productRefGroup = B8605A1325CD85870088A8DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B8605A1125CD85870088A8DB /* CoreAnimation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B8605A1025CD85870088A8DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8605A2225CD85880088A8DB /* LaunchScreen.storyboard in Resources */,
+				B8605A1F25CD85880088A8DB /* Assets.xcassets in Resources */,
+				B8605A1D25CD85870088A8DB /* Main.storyboard in Resources */,
+				E259276F25E8A09E00763D05 /* Image.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		36C40747FD8D61028727DE42 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoreAnimation/Pods-CoreAnimation-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoreAnimation/Pods-CoreAnimation-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CoreAnimation/Pods-CoreAnimation-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C5488FBFEAE278539BC2104 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoreAnimation-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B8605A0E25CD85870088A8DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E253A3DC25E4D912000BE52E /* DynamicViewController.swift in Sources */,
+				E25BBD2725E0F1BF00A85AD7 /* PropertyAnimationController.swift in Sources */,
+				B8605A1A25CD85870088A8DB /* CubeViewController.swift in Sources */,
+				E253A3F325E4E5DA000BE52E /* PushBehaviorView.swift in Sources */,
+				E2F1EA3725DE67C70010A874 /* ShapLayerController.swift in Sources */,
+				E2F1EA4F25DFA0920010A874 /* EmitterLayerController.swift in Sources */,
+				E25BBD3425E3847F00A85AD7 /* LayerTimeController.swift in Sources */,
+				E259270125E7934A00763D05 /* DrawingViewController.swift in Sources */,
+				B8C5C31325DEBEC600E84A55 /* TextLayerController.swift in Sources */,
+				E2F1EA2F25DE639F0010A874 /* ShadowViewController.swift in Sources */,
+				E259270725E7A66B00763D05 /* BrushDrawController.swift in Sources */,
+				B8605A1625CD85870088A8DB /* AppDelegate.swift in Sources */,
+				E253A40825E5E900000BE52E /* SpringListView.swift in Sources */,
+				E259277225E8BD7C00763D05 /* ImageLoadController.swift in Sources */,
+				E2F1EA5B25E0D6CF0010A874 /* ExplicitAnimationController.swift in Sources */,
+				E253A3F025E4E42F000BE52E /* SnapBehaviorView.swift in Sources */,
+				E2C1202A25E3B30C0051078D /* CAMediaTimingFunction+ControlPoint.m in Sources */,
+				E253A40125E5075A000BE52E /* MachObjectAttachmentView.swift in Sources */,
+				E2F1EA4725DF91830010A874 /* ReplicatorLayerController.swift in Sources */,
+				E253A3D825E4CCD6000BE52E /* UIDynamicHomeController.swift in Sources */,
+				E2F1EA2925DE630C0010A874 /* LayerPropertyController.swift in Sources */,
+				E259277525EC80E600763D05 /* ImageCacgeController.swift in Sources */,
+				E2F1EA2C25DE63580010A874 /* ClockViewController.swift in Sources */,
+				E259270425E7965B00763D05 /* VectorDrawController.swift in Sources */,
+				E25BBD4125E3A4A800A85AD7 /* CustomTimingFuncController.swift in Sources */,
+				E25BBD3E25E3985200A85AD7 /* AnimationBufferController.swift in Sources */,
+				E2F1EA3C25DE68020010A874 /* SpecialLayerController.swift in Sources */,
+				E259276B25E89ED900763D05 /* ImageIOController.swift in Sources */,
+				B8605A1825CD85870088A8DB /* SceneDelegate.swift in Sources */,
+				E25BBD2A25E35B9400A85AD7 /* TransitionAnimationController.swift in Sources */,
+				E253A3F625E4E6BE000BE52E /* CrashBehaviorView.swift in Sources */,
+				E253A3E825E4DC96000BE52E /* DynamicView.swift in Sources */,
+				E253A3FE25E4FBF6000BE52E /* AttachmentBehaviorView.swift in Sources */,
+				E253A3D325E49FF9000BE52E /* TimerAnimationController.swift in Sources */,
+				E2F1EA5825DFBFF40010A874 /* ImplicitAnimationController.swift in Sources */,
+				E20F46C925DE606E00DB37C5 /* HomeViewController.swift in Sources */,
+				E253A3EB25E4DDAA000BE52E /* GravityBehaviorView.swift in Sources */,
+				E2F1EA4125DF82F80010A874 /* TransformLayerController.swift in Sources */,
+				E2F1EA4425DF8E4D0010A874 /* GradientLayerController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B8605A1B25CD85870088A8DB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B8605A1C25CD85870088A8DB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B8605A2025CD85880088A8DB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B8605A2125CD85880088A8DB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B8605A2425CD85880088A8DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B8605A2525CD85880088A8DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B8605A2725CD85880088A8DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4F8A6F051D2898801755360 /* Pods-CoreAnimation.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4YGH48HCL3;
+				INFOPLIST_FILE = CoreAnimation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.miaokii.CoreAnimation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CoreAnimation-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B8605A2825CD85880088A8DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7DC5F318E3D939C2320628D /* Pods-CoreAnimation.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4YGH48HCL3;
+				INFOPLIST_FILE = CoreAnimation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.miaokii.CoreAnimation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CoreAnimation-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B8605A0D25CD85870088A8DB /* Build configuration list for PBXProject "CoreAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8605A2425CD85880088A8DB /* Debug */,
+				B8605A2525CD85880088A8DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8605A2625CD85880088A8DB /* Build configuration list for PBXNativeTarget "CoreAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8605A2725CD85880088A8DB /* Debug */,
+				B8605A2825CD85880088A8DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B8605A0A25CD85870088A8DB /* Project object */;
+}

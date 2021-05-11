@@ -1,0 +1,6 @@
+framework module Pods_ExceptionDeal {
+  umbrella header "Pods-ExceptionDeal-umbrella.h"
+
+  export *
+  module * { export * }
+}
