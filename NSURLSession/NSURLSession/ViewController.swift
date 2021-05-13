@@ -40,12 +40,23 @@ class ViewController: UIViewController {
     }
     
     @IBAction func postRequest(_ sender: Any) {
-        var request = URLRequest.init(url: .init(string: "http://192.168.7.12/pension-service-api/api/staff/login")!)
-        request.httpMethod = "POST"
-        request.allHTTPHeaderFields = ["Content-Type": "application/json"]
         
-        let bodyDic = ["type":"1","tel":"13688421393","password":"123456"]
-        request.httpBody = try? JSONSerialization.data(withJSONObject: bodyDic, options: .fragmentsAllowed)
+        let url = "http://pre.panzh.zljtys.com/kyhz/user/api/update"
+        
+        var request = URLRequest.init(url: URL.init(string:  url)!)
+        request.httpMethod = "POST"
+        request.allHTTPHeaderFields = ["Content-Type": "application/x-www-form-urlencoded; charset=utf-8",
+                                       "token": kyToken]
+        
+        let param = ["id":"aee1965b-5d97-46f4-96a9-ab31c55b5d52", "nickName": String.randomStr(len: 20)]
+        let paramString = String.init(data: try! JSONSerialization.data(withJSONObject: param, options: .fragmentsAllowed), encoding: .utf8)!
+        let dataString = """
+data=\(paramString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
+"""
+        
+        let data = dataString.data(using: .ascii)
+        
+        request.httpBody = data
         
         HUD.show()
         let postTask = session.dataTask(with: request) { data, response, error in
@@ -58,26 +69,27 @@ class ViewController: UIViewController {
         postTask.resume()
     }
     
-    private let boundary = "upload.boundary"
+    
     @IBAction func uploadData(_ sender: Any) {
         
-        guard let imgData = UIImage.init(named: "headImg")?.jpegData(compressionQuality: 1) else {
+        guard let imgData = UIImage.init(named: "head")?.jpegData(compressionQuality: 1) else {
             return
         }
         
-        let url = URL.init(string: "http://192.168.7.12/pension-service-api/api/staff/upload")!
+        let param = ["id":"aee1965b-5d97-46f4-96a9-ab31c55b5d52"]
+        let paramString = String.init(data: try! JSONSerialization.data(withJSONObject: param, options: .fragmentsAllowed), encoding: .utf8)!.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        
+        let url = URL.init(string: "http://pre.panzh.zljtys.com/kyhz/user/api/update")!
         var request = URLRequest.init(url: url)
         request.httpMethod = "POST"
-        let param = ["userId": "32"]
-        request.httpBody = try? JSONSerialization.data(withJSONObject: param, options: .fragmentsAllowed)
         
         let header = [
             "Content-Type": "multipart/form-data; charset=utf-8; boundary=\(boundary)",
-            "token": token
+            "token": kyToken
         ]
         request.allHTTPHeaderFields = header
         
-        let taskData = buildHeadImage(data: imgData)
+        let taskData = buildHeadImage(data: imgData, param: ["data": paramString])
         
         let uploadTask = session.uploadTask(with: request, from: taskData) { data, response, error in
             guard let data = data else {
@@ -98,9 +110,44 @@ class ViewController: UIViewController {
     }
 }
 
+
+// 分段边界
+private let boundary = "upload.boundary"
+// 换行
+private let crlf = "\r\n"
+
+private let dataContentDisposition = "Content-Disposition: form-data;"
+private let contentType = "Content-Type:"
+
 extension ViewController {
-    private func buildHeadImage(data: Data) -> Data {
-        return data
+    private func buildHeadImage(data: Data, param: [String: Any]) -> Data {
+        
+        guard !data.isEmpty else {
+            return data
+        }
+        
+        var formData = Data()
+        var formString = ""
+        
+        // data参数
+        formString += "--"+boundary+crlf
+        formString += dataContentDisposition+" name=\"data\""+crlf
+        formString += (param["data"] as! String)+crlf
+        
+        // 图片数据
+        formString += "--"+boundary+crlf
+        formString += dataContentDisposition+" name=\"file\""+crlf
+        formString += contentType+" image/*"+crlf
+        
+        // 拼接
+        formData.append(formString.data(using: .utf8)!)
+        // 拼接图片数据
+        formData.append(data)
+        
+        // 结束行
+        let end = crlf+"--"+boundary+"--"+crlf
+        formData.append(end.data(using: .utf8)!)
+        return formData
     }
 }
 

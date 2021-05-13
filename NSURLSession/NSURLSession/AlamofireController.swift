@@ -8,6 +8,7 @@
 import UIKit
 import Alamofire
 
+let kyToken = "ad8a9eda-315b-4460-ac1c-63523c389ada"
 class AlamofireController: UIViewController {
 
     var session: Session!
@@ -44,11 +45,13 @@ class AlamofireController: UIViewController {
     }
     
     @IBAction func postRequest(_ sender: Any) {
-        let url = "http://192.168.7.12/pension-service-api/api/staff/login"
-        let param = ["type":"1","tel":"13688421393","password":"123456"]
+        let url = "http://pre.panzh.zljtys.com/kyhz/user/api/update"
+        let header = HTTPHeaders.init([.init(name: "token", value: kyToken)])
+        let param = ["id":"aee1965b-5d97-46f4-96a9-ab31c55b5d52", "nickName": String.randomStr(len: 20)]
+        let paramString = String.init(data: try! JSONSerialization.data(withJSONObject: param, options: .fragmentsAllowed), encoding: .utf8)!
         
         HUD.show()
-        session.request(url, method: .post, parameters: param, encoding: JSONEncoding.default, headers: nil).responseJSON { response in
+        session.request(url, method: .post, parameters: ["data": paramString], headers: header).responseJSON { response in
             guard let data = response.data else {
                 HUD.flash(error: response.error)
                 return
@@ -60,15 +63,19 @@ class AlamofireController: UIViewController {
     }
     
     @IBAction func uploadData(_ sender: Any) {
-        let url = "http://192.168.7.12/pension-service-api/api/staff/upload?userId=32"
-        guard let imgData = UIImage.init(named: "headImg")?.jpegData(compressionQuality: 1) else {
+        
+        let url = "http://pre.panzh.zljtys.com/kyhz/user/api/update"
+        guard let imgData = UIImage.init(named: "head")?.jpegData(compressionQuality: 1) else {
             return
         }
-        let header = HTTPHeaders.init([.init(name: "token", value: "2a7d677f-bdd2-4360-aeed-146032fc96e7")])
+        let header = HTTPHeaders.init([.init(name: "token", value: kyToken)])
+        let param = ["id":"aee1965b-5d97-46f4-96a9-ab31c55b5d52"]
+        let paramData = try! JSONSerialization.data(withJSONObject: param, options: .fragmentsAllowed)
         
         HUD.show()
         session.upload(multipartFormData: { formData in
             formData.append(imgData, withName: "file", fileName: nil, mimeType: "image/*")
+            formData.append(paramData, withName: "data")
         }, to: url, method: .post, headers: header).responseJSON { response in
             guard let data = response.data else {
                 HUD.flash(error: response.error)
@@ -82,34 +89,21 @@ class AlamofireController: UIViewController {
     
     @IBAction func uploadFile(_ sender: Any) {
         
-        let url = "http://192.168.7.12/pension-service-api/api/staff/upload?userId=32"
-        let header = HTTPHeaders.init([.init(name: "token", value: "2a7d677f-bdd2-4360-aeed-146032fc96e7")])
+        let url = "http://pre.panzh.zljtys.com/kyhz/user/api/update"
+        let header = HTTPHeaders.init([.init(name: "token", value: kyToken)])
+        let param = ["id":"aee1965b-5d97-46f4-96a9-ab31c55b5d52"]
         
-        /*
-        HUD.show()
-        session.upload(multipartFormData: { formData in
-            formData.append(self.imageURL, withName: "file")
-        }, to: url, method: .post, headers: header).responseJSON { response in
-            guard let data = response.data else {
-                HUD.flash(error: response.error)
-                return
-            }
-            
-            let string = String.init(data: data, encoding: .utf8)
-            HUD.flash(hint: string)
-        }
-         */
-        
-        
-        let url1 = "http://192.168.7.12/pension-service-api/api/staff/upload"
-        let praram = ["userId": "32"]
-        var request = URLRequest.init(url: URL.init(string: url1)!)
+        var request = URLRequest.init(url: URL.init(string: url)!)
         request.httpMethod = "POST"
         request.allHTTPHeaderFields = header.dictionary
-        request.httpBody = try? JSONSerialization.data(withJSONObject: praram, options: .fragmentsAllowed)
+        
+        let paramData = try! JSONSerialization.data(withJSONObject: param, options: .fragmentsAllowed)
         
         session.upload(multipartFormData: { formData in
+            // 上传图像文件
             formData.append(self.imageURL, withName: "file")
+            // 其他参数
+            formData.append(paramData, withName: "data")
         }, with: request).responseJSON { response in
             guard let data = response.data else {
                 HUD.flash(error: response.error)
