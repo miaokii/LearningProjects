@@ -7,14 +7,101 @@
 
 import UIKit
 
+let token = "1431102e-2175-4af8-8bf5-639f32b37053"
 class ViewController: UIViewController {
 
+    var shareSession = URLSession.shared
+    var backgroundSession: URLSession!
+    var session: URLSession!
+    var defaultConfig = URLSessionConfiguration.default
+    var backgroundConfig = URLSessionConfiguration.background(withIdentifier: "urlsession.background")
+    var responseData = Data()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        postReqeust()
+        
+        defaultConfig.timeoutIntervalForRequest = 15
+        defaultConfig.timeoutIntervalForResource = 15
+        
+        session = URLSession.init(configuration: defaultConfig, delegate: self, delegateQueue: nil)
+        backgroundSession = URLSession.init(configuration: backgroundConfig)
+    }
+
+    @IBAction func getRequest(_ sender: Any) {
+        HUD.show()
+        let dataTask = session.dataTask(with: URL.init(string: "https://www.baidu.com")!) { data, response, error in
+            guard let data = data else {
+                HUD.flash(error: error)
+                return
+            }
+            HUD.flash(hint: String.init(data: data, encoding: .utf8))
+        }
+        dataTask.resume()
     }
     
-    var responseData = Data()
+    @IBAction func postRequest(_ sender: Any) {
+        var request = URLRequest.init(url: .init(string: "http://192.168.7.12/pension-service-api/api/staff/login")!)
+        request.httpMethod = "POST"
+        request.allHTTPHeaderFields = ["Content-Type": "application/json"]
+        
+        let bodyDic = ["type":"1","tel":"13688421393","password":"123456"]
+        request.httpBody = try? JSONSerialization.data(withJSONObject: bodyDic, options: .fragmentsAllowed)
+        
+        HUD.show()
+        let postTask = session.dataTask(with: request) { data, response, error in
+            guard let data = data else {
+                HUD.flash(error: error)
+                return
+            }
+            HUD.flash(hint: String.init(data: data, encoding: .utf8))
+        }
+        postTask.resume()
+    }
+    
+    private let boundary = "upload.boundary"
+    @IBAction func uploadData(_ sender: Any) {
+        
+        guard let imgData = UIImage.init(named: "headImg")?.jpegData(compressionQuality: 1) else {
+            return
+        }
+        
+        let url = URL.init(string: "http://192.168.7.12/pension-service-api/api/staff/upload")!
+        var request = URLRequest.init(url: url)
+        request.httpMethod = "POST"
+        let param = ["userId": "32"]
+        request.httpBody = try? JSONSerialization.data(withJSONObject: param, options: .fragmentsAllowed)
+        
+        let header = [
+            "Content-Type": "multipart/form-data; charset=utf-8; boundary=\(boundary)",
+            "token": token
+        ]
+        request.allHTTPHeaderFields = header
+        
+        let taskData = buildHeadImage(data: imgData)
+        
+        let uploadTask = session.uploadTask(with: request, from: taskData) { data, response, error in
+            guard let data = data else {
+                HUD.flash(error: error)
+                return
+            }
+            HUD.flash(hint: String.init(data: data, encoding: .utf8))
+        }
+        uploadTask.resume()
+    }
+    
+    @IBAction func uploadFile(_ sender: Any) {
+        
+    }
+    
+    @IBAction func uploadVideo(_ sender: Any) {
+        
+    }
+}
+
+extension ViewController {
+    private func buildHeadImage(data: Data) -> Data {
+        return data
+    }
 }
 
 extension ViewController {
@@ -45,44 +132,6 @@ extension ViewController {
         
         let session = URLSession.init(configuration: sessionConfiguration, delegate: self, delegateQueue: .current)
         session.invalidateAndCancel()
-    }
-    
-    func getRequest() {
-        let sessionConfiguration = URLSessionConfiguration.default
-//        let session = URLSession.init(configuration: sessionConfiguration, delegate: self, delegateQueue: .current)
-//        let dataTask = session.dataTask(with: URL.init(string: "https://www.baidu.com")!) { data, response, error in
-//            guard let data = data else {
-//                print(error?.localizedDescription ?? "")
-//                return
-//            }
-//            print(String.init(data: data, encoding: .utf8)!)
-//        }
-        let session = URLSession.init(configuration: sessionConfiguration, delegate: self, delegateQueue: .current)
-        let dataTask = session.dataTask(with: URL.init(string: "https://www.baidu.com")!)
-        dataTask.resume()
-        
-        session.getTasksWithCompletionHandler { dataTasks, uploadTasks, downloadTasks in
-            print("all dataTaks ----> \(dataTasks)")
-        }
-    }
-    
-    func postReqeust() {
-        let session = URLSession.shared
-        var request = URLRequest.init(url: .init(string: "http://192.168.7.12/pension-service-api/api/staff/login")!)
-        request.httpMethod = "POST"
-        request.allHTTPHeaderFields = ["Content-Type": "application/json"]
-        
-        let bodyDic = ["type":"1","tel":"13688421393","password":"123456"]
-        request.httpBody = try? JSONSerialization.data(withJSONObject: bodyDic, options: .fragmentsAllowed)
-        
-        let postTask = session.dataTask(with: request) { data, response, error in
-            guard let data = data else {
-                print(error?.localizedDescription ?? "")
-                return
-            }
-            print(String.init(data: data, encoding: .utf8)!)
-        }
-        postTask.resume()
     }
 }
 

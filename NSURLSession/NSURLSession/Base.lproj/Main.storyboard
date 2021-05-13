@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0IO-52-6dE">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -8,20 +8,243 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--URL Session-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NSURLSession" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiG-3D-27h">
+                                <rect key="frame" x="20" y="108" width="374" height="40"/>
+                                <color key="backgroundColor" red="0.095498970579999995" green="0.055557928399999998" blue="0.13862127590000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Tpp-SL-fst"/>
+                                </constraints>
+                                <state key="normal" title="GET">
+                                    <color key="titleColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="getRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R1M-ji-gsr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9U-qP-ZjD">
+                                <rect key="frame" x="20" y="168" width="374" height="40"/>
+                                <color key="backgroundColor" red="0.095498970579999995" green="0.055557928399999998" blue="0.13862127590000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="488-u6-4go"/>
+                                </constraints>
+                                <state key="normal" title="POST">
+                                    <color key="titleColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="postRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UDx-be-aTI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wu5-9L-uJl">
+                                <rect key="frame" x="20" y="228" width="374" height="40"/>
+                                <color key="backgroundColor" red="0.095498970579999995" green="0.055557928399999998" blue="0.13862127590000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="lQ8-tk-10x"/>
+                                </constraints>
+                                <state key="normal" title="UPLOAD DATA">
+                                    <color key="titleColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="uploadData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t4a-kL-XGi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qq5-BS-7HR">
+                                <rect key="frame" x="20" y="288" width="374" height="40"/>
+                                <color key="backgroundColor" red="0.095498970579999995" green="0.055557928399999998" blue="0.13862127590000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2Sy-BV-uYi"/>
+                                </constraints>
+                                <state key="normal" title="UPLOAD FILE">
+                                    <color key="titleColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="uploadFile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="stA-CH-DPy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGv-2J-tgh">
+                                <rect key="frame" x="20" y="348" width="374" height="40"/>
+                                <color key="backgroundColor" red="0.095498970579999995" green="0.055557928399999998" blue="0.13862127590000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="YSd-Um-5GM"/>
+                                </constraints>
+                                <state key="normal" title="UPLOAD VIDEO">
+                                    <color key="titleColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="uploadVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V2i-XY-YD8"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="E9U-qP-ZjD" firstAttribute="leading" secondItem="aiG-3D-27h" secondAttribute="leading" id="0AY-5C-se8"/>
+                            <constraint firstItem="wu5-9L-uJl" firstAttribute="top" secondItem="E9U-qP-ZjD" secondAttribute="bottom" constant="20" id="6c2-6i-M0A"/>
+                            <constraint firstItem="aiG-3D-27h" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="6dZ-M3-a8h"/>
+                            <constraint firstItem="YGv-2J-tgh" firstAttribute="trailing" secondItem="aiG-3D-27h" secondAttribute="trailing" id="72R-7w-Yup"/>
+                            <constraint firstItem="YGv-2J-tgh" firstAttribute="height" secondItem="aiG-3D-27h" secondAttribute="height" id="7V9-xU-5eo"/>
+                            <constraint firstItem="YGv-2J-tgh" firstAttribute="leading" secondItem="aiG-3D-27h" secondAttribute="leading" id="Fsh-rA-RIx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aiG-3D-27h" secondAttribute="trailing" constant="20" id="KCN-gL-xPD"/>
+                            <constraint firstItem="YGv-2J-tgh" firstAttribute="width" secondItem="aiG-3D-27h" secondAttribute="width" id="MMF-jQ-sBN"/>
+                            <constraint firstItem="E9U-qP-ZjD" firstAttribute="trailing" secondItem="aiG-3D-27h" secondAttribute="trailing" id="R2V-ZD-HYh"/>
+                            <constraint firstItem="aiG-3D-27h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="SOk-Va-TS2"/>
+                            <constraint firstItem="wu5-9L-uJl" firstAttribute="trailing" secondItem="aiG-3D-27h" secondAttribute="trailing" id="U1i-V9-HzB"/>
+                            <constraint firstItem="E9U-qP-ZjD" firstAttribute="width" secondItem="aiG-3D-27h" secondAttribute="width" id="URp-iV-lLC"/>
+                            <constraint firstItem="E9U-qP-ZjD" firstAttribute="height" secondItem="aiG-3D-27h" secondAttribute="height" id="asp-Bb-K1Z"/>
+                            <constraint firstItem="qq5-BS-7HR" firstAttribute="top" secondItem="wu5-9L-uJl" secondAttribute="bottom" constant="20" id="eJ2-TI-YHa"/>
+                            <constraint firstItem="wu5-9L-uJl" firstAttribute="leading" secondItem="aiG-3D-27h" secondAttribute="leading" id="el0-10-9o2"/>
+                            <constraint firstItem="wu5-9L-uJl" firstAttribute="height" secondItem="aiG-3D-27h" secondAttribute="height" id="g5S-o1-chB"/>
+                            <constraint firstItem="qq5-BS-7HR" firstAttribute="leading" secondItem="aiG-3D-27h" secondAttribute="leading" id="hiR-PV-onL"/>
+                            <constraint firstItem="qq5-BS-7HR" firstAttribute="height" secondItem="aiG-3D-27h" secondAttribute="height" id="icg-M3-VoW"/>
+                            <constraint firstItem="YGv-2J-tgh" firstAttribute="top" secondItem="qq5-BS-7HR" secondAttribute="bottom" constant="20" id="rii-Ty-YMc"/>
+                            <constraint firstItem="qq5-BS-7HR" firstAttribute="trailing" secondItem="aiG-3D-27h" secondAttribute="trailing" id="rlL-8Q-O8U"/>
+                            <constraint firstItem="qq5-BS-7HR" firstAttribute="width" secondItem="aiG-3D-27h" secondAttribute="width" id="s2b-zY-Sve"/>
+                            <constraint firstItem="wu5-9L-uJl" firstAttribute="width" secondItem="aiG-3D-27h" secondAttribute="width" id="ucL-4y-AWk"/>
+                            <constraint firstItem="E9U-qP-ZjD" firstAttribute="top" secondItem="aiG-3D-27h" secondAttribute="bottom" constant="20" id="wfK-hv-Gug"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="URL Session" id="KxE-PA-kbF">
+                        <barButtonItem key="rightBarButtonItem" title="Alamofire" id="Ubo-Ea-s1b">
+                            <connections>
+                                <segue destination="Xqw-3h-uyM" kind="show" id="eGr-Lz-FXL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="115.84821428571428"/>
+            <point key="canvasLocation" x="677" y="92"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LSw-si-RRw">
+            <objects>
+                <navigationController id="0IO-52-6dE" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="I0C-r9-szO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="YjH-e6-SnD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NcL-u0-dMJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="26" y="92"/>
+        </scene>
+        <!--Alamofire-->
+        <scene sceneID="sPK-0F-XZO">
+            <objects>
+                <viewController id="Xqw-3h-uyM" customClass="AlamofireController" customModule="NSURLSession" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tww-3w-8MZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsY-lZ-Qwn">
+                                <rect key="frame" x="20" y="108" width="374" height="40"/>
+                                <color key="backgroundColor" red="0.095498970579999995" green="0.055557928399999998" blue="0.13862127590000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="aqM-cP-ef1"/>
+                                </constraints>
+                                <state key="normal" title="GET">
+                                    <color key="titleColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="getRequest:" destination="Xqw-3h-uyM" eventType="touchUpInside" id="sFF-46-SHP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8t-CC-rmd">
+                                <rect key="frame" x="20" y="168" width="374" height="40"/>
+                                <color key="backgroundColor" red="0.095498970579999995" green="0.055557928399999998" blue="0.13862127590000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="o0X-fE-Ye6"/>
+                                </constraints>
+                                <state key="normal" title="POST">
+                                    <color key="titleColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="postRequest:" destination="Xqw-3h-uyM" eventType="touchUpInside" id="GaD-w2-1RL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lA-a6-dBL">
+                                <rect key="frame" x="20" y="228" width="374" height="40"/>
+                                <color key="backgroundColor" red="0.095498970579999995" green="0.055557928399999998" blue="0.13862127590000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Xle-D7-RxJ"/>
+                                </constraints>
+                                <state key="normal" title="UPLOAD DATA">
+                                    <color key="titleColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="uploadData:" destination="Xqw-3h-uyM" eventType="touchUpInside" id="8gp-sX-woI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egR-nj-cA4">
+                                <rect key="frame" x="20" y="288" width="374" height="40"/>
+                                <color key="backgroundColor" red="0.095498970579999995" green="0.055557928399999998" blue="0.13862127590000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="hDi-Gh-wqz"/>
+                                </constraints>
+                                <state key="normal" title="UPLOAD FILE">
+                                    <color key="titleColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="uploadFile:" destination="Xqw-3h-uyM" eventType="touchUpInside" id="AE3-Eb-eDR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbt-QX-TfP">
+                                <rect key="frame" x="20" y="348" width="374" height="40"/>
+                                <color key="backgroundColor" red="0.095498970579999995" green="0.055557928399999998" blue="0.13862127590000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Pwz-qf-65h"/>
+                                </constraints>
+                                <state key="normal" title="UPLOAD VIDEO">
+                                    <color key="titleColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="uploadVideo:" destination="Xqw-3h-uyM" eventType="touchUpInside" id="gMi-k0-LeM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="e7t-2V-hGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1lA-a6-dBL" firstAttribute="top" secondItem="e8t-CC-rmd" secondAttribute="bottom" constant="20" id="3u9-Bt-e2r"/>
+                            <constraint firstItem="e8t-CC-rmd" firstAttribute="width" secondItem="jsY-lZ-Qwn" secondAttribute="width" id="4qY-0f-NBb"/>
+                            <constraint firstItem="egR-nj-cA4" firstAttribute="top" secondItem="1lA-a6-dBL" secondAttribute="bottom" constant="20" id="6hi-sQ-oMK"/>
+                            <constraint firstItem="1lA-a6-dBL" firstAttribute="height" secondItem="jsY-lZ-Qwn" secondAttribute="height" id="FSw-aG-51j"/>
+                            <constraint firstItem="jbt-QX-TfP" firstAttribute="trailing" secondItem="jsY-lZ-Qwn" secondAttribute="trailing" id="GzM-z5-8B9"/>
+                            <constraint firstItem="e8t-CC-rmd" firstAttribute="leading" secondItem="jsY-lZ-Qwn" secondAttribute="leading" id="I70-gO-usX"/>
+                            <constraint firstItem="jbt-QX-TfP" firstAttribute="top" secondItem="egR-nj-cA4" secondAttribute="bottom" constant="20" id="Mdf-0m-0Af"/>
+                            <constraint firstItem="jbt-QX-TfP" firstAttribute="leading" secondItem="jsY-lZ-Qwn" secondAttribute="leading" id="Ml6-4e-8aJ"/>
+                            <constraint firstItem="jbt-QX-TfP" firstAttribute="height" secondItem="jsY-lZ-Qwn" secondAttribute="height" id="P29-i8-jBc"/>
+                            <constraint firstItem="e8t-CC-rmd" firstAttribute="top" secondItem="jsY-lZ-Qwn" secondAttribute="bottom" constant="20" id="Q3f-Te-9yE"/>
+                            <constraint firstItem="egR-nj-cA4" firstAttribute="leading" secondItem="jsY-lZ-Qwn" secondAttribute="leading" id="SFb-5t-bDq"/>
+                            <constraint firstItem="egR-nj-cA4" firstAttribute="height" secondItem="jsY-lZ-Qwn" secondAttribute="height" id="WJN-kh-bnx"/>
+                            <constraint firstItem="e8t-CC-rmd" firstAttribute="height" secondItem="jsY-lZ-Qwn" secondAttribute="height" id="b0K-co-v2Q"/>
+                            <constraint firstItem="jsY-lZ-Qwn" firstAttribute="leading" secondItem="e7t-2V-hGB" secondAttribute="leading" constant="20" id="bZ0-o8-DV8"/>
+                            <constraint firstItem="egR-nj-cA4" firstAttribute="trailing" secondItem="jsY-lZ-Qwn" secondAttribute="trailing" id="dr5-3l-BoS"/>
+                            <constraint firstItem="1lA-a6-dBL" firstAttribute="width" secondItem="jsY-lZ-Qwn" secondAttribute="width" id="gyW-sL-4u3"/>
+                            <constraint firstItem="1lA-a6-dBL" firstAttribute="trailing" secondItem="jsY-lZ-Qwn" secondAttribute="trailing" id="hCL-22-t7S"/>
+                            <constraint firstItem="egR-nj-cA4" firstAttribute="width" secondItem="jsY-lZ-Qwn" secondAttribute="width" id="iHd-st-D5f"/>
+                            <constraint firstItem="jsY-lZ-Qwn" firstAttribute="top" secondItem="e7t-2V-hGB" secondAttribute="top" constant="20" id="jh9-Ub-GGn"/>
+                            <constraint firstItem="e8t-CC-rmd" firstAttribute="trailing" secondItem="jsY-lZ-Qwn" secondAttribute="trailing" id="lKq-GP-nmL"/>
+                            <constraint firstItem="jbt-QX-TfP" firstAttribute="width" secondItem="jsY-lZ-Qwn" secondAttribute="width" id="qJp-Bw-XR6"/>
+                            <constraint firstItem="1lA-a6-dBL" firstAttribute="leading" secondItem="jsY-lZ-Qwn" secondAttribute="leading" id="vkF-eB-TXP"/>
+                            <constraint firstItem="e7t-2V-hGB" firstAttribute="trailing" secondItem="jsY-lZ-Qwn" secondAttribute="trailing" constant="20" id="wSc-DW-7ek"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Alamofire" id="oSW-8X-Yv5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tON-WN-a7N" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1399" y="92"/>
         </scene>
     </scenes>
     <resources>
