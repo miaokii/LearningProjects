@@ -58,4 +58,17 @@ public extension UIImage {
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         return newImage!
     }
+    
+    func tintTo(tintColor: UIColor, blendModel: CGBlendMode = .destinationIn, alpha: CGFloat = 1.0) -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(self.size, false, self.scale)
+        defer {
+            UIGraphicsEndImageContext()
+        }
+        let imageRect = CGRect(x: 0, y: 0, width: self.size.width, height: self.size.height)
+        tintColor.setFill()
+        UIRectFill(imageRect)
+        self.draw(in: imageRect, blendMode: blendModel, alpha: alpha)
+        return UIGraphicsGetImageFromCurrentImageContext()
+    }
+
 }

@@ -7,8 +7,11 @@
 
 import UIKit
 
+let baseUrl = "https://mockapi.eolinker.com/33es19E1ff1417cde8d0e4d4ccd7d3e346b5983e5e656cb"
+
+
 let token = "1431102e-2175-4af8-8bf5-639f32b37053"
-class ViewController: UIViewController {
+class ViewController: AssetViewController {
 
     var shareSession = URLSession.shared
     var backgroundSession: URLSession!
@@ -28,8 +31,34 @@ class ViewController: UIViewController {
     }
 
     @IBAction func getRequest(_ sender: Any) {
+        getUserInfo()
+    }
+    
+    @IBAction func postRequest(_ sender: Any) {
+        postLogin()
+    }
+    
+    
+    @IBAction func uploadData(_ sender: Any) {
+        chooseImage(type: .video) {
+            self.clipVideo()
+        }
+    }
+    
+    @IBAction func uploadFile(_ sender: Any) {
+
+    }
+    
+    @IBAction func uploadVideo(_ sender: Any) {
+    }
+}
+
+// MARK: - 模拟接口
+extension ViewController {
+    func getUserInfo() {
+        let url = baseUrl + "/userInfo?id=123"
         HUD.show()
-        let dataTask = session.dataTask(with: URL.init(string: "https://www.baidu.com")!) { data, response, error in
+        let dataTask = session.dataTask(with: URL.init(string: url)!) { data, response, error in
             guard let data = data else {
                 HUD.flash(error: error)
                 return
@@ -39,8 +68,63 @@ class ViewController: UIViewController {
         dataTask.resume()
     }
     
-    @IBAction func postRequest(_ sender: Any) {
+    func postLogin()  {
+        let url = baseUrl + "/login"
+        var request = URLRequest.init(url: URL.init(string: url)!)
+        request.httpMethod = "POST"
         
+        let param = ["name": "kk",
+                     "password": "23"]
+        request.httpBody = try? JSONSerialization.data(withJSONObject: param, options: .fragmentsAllowed)
+        
+        let dataTask = session.dataTask(with: request) { data, response, error in
+            guard let data = data else {
+                HUD.flash(error: error)
+                return
+            }
+            HUD.flash(hint: String.init(data: data, encoding: .utf8))
+        }
+        dataTask.resume()
+    }
+    
+    func uploadImage() {
+        guard let fileUrl = url, let imgData = try? Data.init(contentsOf: fileUrl) else {
+            return
+        }
+        
+        let param = ["data": "dasdfaf"]
+        
+        let url = URL.init(string: baseUrl+"/uploadImage")!
+        var request = URLRequest.init(url: url)
+        request.httpMethod = "POST"
+        
+        let header = [
+            "Content-Type": "multipart/form-data; charset=utf-8; boundary=\(boundary)",
+        ]
+        request.allHTTPHeaderFields = header
+        
+        let taskData = buildHeadImage(data: imgData, param: param)
+        
+        let uploadTask = session.uploadTask(with: request, from: taskData) { data, response, error in
+            guard let data = data else {
+                print(error.debugDescription )
+                return
+            }
+            print(String.init(data: data, encoding: .utf8) ?? "")
+        }
+        uploadTask.resume()
+    }
+    
+    func clipVideo()  {
+        
+    }
+}
+
+// MARK: - ky康养护照
+extension ViewController {
+    
+    /// 康养护照更新昵称
+    func updateNickName() {
         let url = "http://pre.panzh.zljtys.com/kyhz/user/api/update"
         
         var request = URLRequest.init(url: URL.init(string:  url)!)
@@ -69,15 +153,15 @@ data=\(paramString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed
         postTask.resume()
     }
     
-    
-    @IBAction func uploadData(_ sender: Any) {
-        
-        guard let imgData = UIImage.init(named: "head")?.jpegData(compressionQuality: 1) else {
+    /// 康养护照更新头像
+    func updateHeadeImageByData() {
+        guard let fileUrl = url, let imgData = try? Data.init(contentsOf: fileUrl) else {
             return
         }
         
-        let param = ["id":"aee1965b-5d97-46f4-96a9-ab31c55b5d52"]
-        let paramString = String.init(data: try! JSONSerialization.data(withJSONObject: param, options: .fragmentsAllowed), encoding: .utf8)!.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        let dataParam = ["id":"aee1965b-5d97-46f4-96a9-ab31c55b5d52",
+                         "nickName": "uzi"]
+        let param = ["data": dataParam]
         
         let url = URL.init(string: "http://pre.panzh.zljtys.com/kyhz/user/api/update")!
         var request = URLRequest.init(url: url)
@@ -89,24 +173,46 @@ data=\(paramString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed
         ]
         request.allHTTPHeaderFields = header
         
-        let taskData = buildHeadImage(data: imgData, param: ["data": paramString])
+        let taskData = buildHeadImage(data: imgData, param: param)
         
         let uploadTask = session.uploadTask(with: request, from: taskData) { data, response, error in
             guard let data = data else {
-                HUD.flash(error: error)
+                print(error.debugDescription )
                 return
             }
-            HUD.flash(hint: String.init(data: data, encoding: .utf8))
+            print(String.init(data: data, encoding: .utf8) ?? "")
         }
         uploadTask.resume()
     }
     
-    @IBAction func uploadFile(_ sender: Any) {
+    /// 康养护照更新文件头像
+    func updateHeadImageByFile() {
+        guard let imageURL = url else {
+            return
+        }
+        let dataParam = ["id":"aee1965b-5d97-46f4-96a9-ab31c55b5d52",
+                         "nickName": "uzi"]
+        let param = ["data": dataParam]
         
-    }
-    
-    @IBAction func uploadVideo(_ sender: Any) {
+        let url = URL.init(string: "http://pre.panzh.zljtys.com/kyhz/user/api/update")!
+        var request = URLRequest.init(url: url)
+        request.httpMethod = "POST"
         
+        let header = [
+            "Content-Type": "multipart/form-data; charset=utf-8; boundary=\(boundary)",
+            "token": kyToken
+        ]
+        request.allHTTPHeaderFields = header
+        request.httpBody = buildHeadFile(path: imageURL, param: param)
+        
+        let uploadTask = session.uploadTask(with: request, fromFile: imageURL) { data, response, error in
+            guard let data = data else {
+                print(error.debugDescription )
+                return
+            }
+            print(String.init(data: data, encoding: .utf8) ?? "")
+        }
+        uploadTask.resume()
     }
 }
 
@@ -115,37 +221,80 @@ data=\(paramString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed
 private let boundary = "upload.boundary"
 // 换行
 private let crlf = "\r\n"
-
-private let dataContentDisposition = "Content-Disposition: form-data;"
-private let contentType = "Content-Type:"
+// --
+private let line = "--"
 
 extension ViewController {
     private func buildHeadImage(data: Data, param: [String: Any]) -> Data {
         
-        guard !data.isEmpty else {
-            return data
-        }
-        
+        // 保存请求体数据
         var formData = Data()
+        // 
         var formString = ""
         
-        // data参数
-        formString += "--"+boundary+crlf
-        formString += dataContentDisposition+" name=\"data\""+crlf
-        formString += (param["data"] as! String)+crlf
+        // 上传参数
+        for (key, value) in param {
+            guard let valueData = try? JSONSerialization.data(withJSONObject: value, options: .fragmentsAllowed),
+                  let valueString = String.init(data: valueData, encoding: .utf8) else {
+                continue
+            }
+            
+            formString += line+boundary+crlf
+            formString += "Content-Disposition: form-data; name=\"\(key)\""+crlf+crlf
+            formString += valueString+crlf
+        }
         
-        // 图片数据
-        formString += "--"+boundary+crlf
-        formString += dataContentDisposition+" name=\"file\""+crlf
-        formString += contentType+" image/*"+crlf
+        // 上传数据信息
+        formString += line+boundary+crlf
+        formString += "Content-Disposition: form-data; name=\"file\""+crlf+crlf
+        formString += "Content-Type: image/*"+crlf
         
-        // 拼接
+        // 拼接参数和上传数据信息
         formData.append(formString.data(using: .utf8)!)
-        // 拼接图片数据
+        // 拼接上传数据
         formData.append(data)
         
         // 结束行
-        let end = crlf+"--"+boundary+"--"+crlf
+        let end = crlf+line+boundary+line+crlf
+        formData.append(end.data(using: .utf8)!)
+        return formData
+    }
+    
+    private func buildHeadFile(path: URL, param: [String: Any]) -> Data {
+        
+        let fileName = path.lastPathComponent
+        
+        let data = (try? Data.init(contentsOf: path)) ?? .init()
+        
+        // 保存请求体数据
+        var formData = Data()
+        //
+        var formString = ""
+        
+        // 上传参数
+        for (key, value) in param {
+            guard let valueData = try? JSONSerialization.data(withJSONObject: value, options: .fragmentsAllowed),
+                  let valueString = String.init(data: valueData, encoding: .utf8) else {
+                continue
+            }
+            
+            formString += line+boundary+crlf
+            formString += "Content-Disposition: form-data; name=\"\(key)\""+crlf+crlf
+            formString += valueString+crlf
+        }
+        
+        // 上传数据信息
+        formString += line+boundary+crlf
+        formString += "Content-Disposition: form-data; name=\"file\"; filename=\"\(fileName)\""+crlf+crlf
+        formString += "Content-Type: image/*"+crlf
+        
+        // 拼接参数和上传数据信息
+        formData.append(formString.data(using: .utf8)!)
+        // 拼接上传数据
+        formData.append(data)
+        
+        // 结束行
+        let end = crlf+line+boundary+line+crlf
         formData.append(end.data(using: .utf8)!)
         return formData
     }

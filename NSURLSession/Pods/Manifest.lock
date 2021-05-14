@@ -2,23 +2,29 @@ PODS:
   - Alamofire (5.4.3)
   - MBProgressHUD (1.2.0)
   - SnapKit (5.0.1)
+  - ZLPhotoBrowser (4.1.5):
+    - ZLPhotoBrowser/Core (= 4.1.5)
+  - ZLPhotoBrowser/Core (4.1.5)
 
 DEPENDENCIES:
   - Alamofire
   - MBProgressHUD
   - SnapKit
+  - ZLPhotoBrowser
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - MBProgressHUD
     - SnapKit
+    - ZLPhotoBrowser
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  ZLPhotoBrowser: 809878607ea92e9411c580797ce1be23896b8d7f
 
-PODFILE CHECKSUM: dae9f6f3c0afe92ef2631c4aa80a5f9e151b219e
+PODFILE CHECKSUM: b1a4c5562f136c548e8e8b7523c16a00dca6fc94
 
 COCOAPODS: 1.9.3

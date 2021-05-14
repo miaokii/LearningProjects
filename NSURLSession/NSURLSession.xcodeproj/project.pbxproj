@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		482D57C6C28BB0B1EFF9383F /* Pods_NSURLSession.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD0FCAAC52E733F997243B0C /* Pods_NSURLSession.framework */; };
+		E23BED77264E5ED600AD4FD7 /* UIViewControllerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23BED76264E5ED600AD4FD7 /* UIViewControllerEx.swift */; };
+		E23BED79264E616400AD4FD7 /* VideoDownloadProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23BED78264E616400AD4FD7 /* VideoDownloadProgressView.swift */; };
 		E2678B9E264CB6FA00473FD7 /* AlamofireController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2678B9D264CB6FA00473FD7 /* AlamofireController.swift */; };
 		E2678BB8264CD6DA00473FD7 /* MKAuthCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2678BA1264CD6DA00473FD7 /* MKAuthCodeView.swift */; };
 		E2678BB9264CD6DA00473FD7 /* MKScrollController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2678BA2264CD6DA00473FD7 /* MKScrollController.swift */; };
@@ -43,6 +45,8 @@
 /* Begin PBXFileReference section */
 		9336AE89E050875D95F91A7C /* Pods-NSURLSession.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSURLSession.release.xcconfig"; path = "Target Support Files/Pods-NSURLSession/Pods-NSURLSession.release.xcconfig"; sourceTree = "<group>"; };
 		AD0FCAAC52E733F997243B0C /* Pods_NSURLSession.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NSURLSession.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E23BED76264E5ED600AD4FD7 /* UIViewControllerEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerEx.swift; sourceTree = "<group>"; };
+		E23BED78264E616400AD4FD7 /* VideoDownloadProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDownloadProgressView.swift; sourceTree = "<group>"; };
 		E2678B9D264CB6FA00473FD7 /* AlamofireController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireController.swift; sourceTree = "<group>"; };
 		E2678BA1264CD6DA00473FD7 /* MKAuthCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKAuthCodeView.swift; sourceTree = "<group>"; };
 		E2678BA2264CD6DA00473FD7 /* MKScrollController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKScrollController.swift; sourceTree = "<group>"; };
@@ -200,6 +204,8 @@
 			children = (
 				E2D791BB264A4A130017D580 /* AppDelegate.swift */,
 				E2D791BD264A4A130017D580 /* SceneDelegate.swift */,
+				E23BED78264E616400AD4FD7 /* VideoDownloadProgressView.swift */,
+				E23BED76264E5ED600AD4FD7 /* UIViewControllerEx.swift */,
 				E2D791BF264A4A130017D580 /* ViewController.swift */,
 				E2678B9D264CB6FA00473FD7 /* AlamofireController.swift */,
 				E2D791C1264A4A130017D580 /* Main.storyboard */,
@@ -329,6 +335,7 @@
 				E2678BBC264CD6DA00473FD7 /* MKPageViewController.swift in Sources */,
 				E2678BBB264CD6DA00473FD7 /* MKViewController.swift in Sources */,
 				E2678BC2264CD6DA00473FD7 /* Layout.swift in Sources */,
+				E23BED77264E5ED600AD4FD7 /* UIViewControllerEx.swift in Sources */,
 				E2678BBA264CD6DA00473FD7 /* MKView.swift in Sources */,
 				E2678BC4264CD6DA00473FD7 /* QuickInitEx.swift in Sources */,
 				E2678BC9264CD6DA00473FD7 /* StringEx.swift in Sources */,
@@ -342,6 +349,7 @@
 				E2678BC5264CD6DA00473FD7 /* UIViewEx.swift in Sources */,
 				E2678BC0264CD6DA00473FD7 /* MKTimer.swift in Sources */,
 				E2678BCA264CD6DA00473FD7 /* CellEx.swift in Sources */,
+				E23BED79264E616400AD4FD7 /* VideoDownloadProgressView.swift in Sources */,
 				E2678BB9264CD6DA00473FD7 /* MKScrollController.swift in Sources */,
 				E2D791BE264A4A130017D580 /* SceneDelegate.swift in Sources */,
 				E2678BCB264CD6DA00473FD7 /* UIButtonEx.swift in Sources */,

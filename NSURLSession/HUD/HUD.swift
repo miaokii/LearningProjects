@@ -60,7 +60,9 @@ class HUD {
     /// 持有的hud
     private var hud: MBProgressHUD!
     /// 默认显示hud的父视图
-    private let window = UIApplication.shared.keyWindow!
+    private var window: UIWindow {
+            return UIApplication.shared.keyWindow!
+    }
 
     /// 单例
     static var share: HUD! {
