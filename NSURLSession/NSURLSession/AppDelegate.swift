@@ -6,14 +6,16 @@
 //
 
 import UIKit
+import UserNotifications
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var backgroundSessionComplete: (()->Void)?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
+        print(SandBoxManager.multipartFilePath())
+        regisigerNotification()
         return true
     }
 
@@ -30,8 +32,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
+    
+    func application(_ application: UIApplication, handleEventsForBackgroundURLSession identifier: String, completionHandler: @escaping () -> Void) {
+        
+        if identifier == backgroundSessionId {
+            backgroundSessionComplete = completionHandler
+        }
+    }
 
+}
 
+extension AppDelegate {
+    private func regisigerNotification(){
+          UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+        if success {
+            print("All set!")
+        } else if let error = error {
+            print(error.localizedDescription)
+        }
+          }
+    }
 }
 
 extension String{
@@ -44,4 +64,14 @@ extension String{
         }
         return ranStr
     }
+}
+
+func popLocalotification() {
+    let unNotification = UNMutableNotificationContent.init()
+    unNotification.title = "下载结束"
+    unNotification.subtitle = "您有一个新任务已经下载结束"
+    unNotification.sound = .default
+    let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: 1, repeats: false)
+    let request = UNNotificationRequest.init(identifier: backgroundSessionId, content: unNotification, trigger: trigger)
+    UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
 }
