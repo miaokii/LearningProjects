@@ -5,7 +5,7 @@ target 'ModalView' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  pod 'MKSwiftRes', :path => '../../../MKSwiftRes/'
+  pod 'MKSwiftRes', :path => '../../MKSwiftRes/'
 
   # Pods for ModalView
 

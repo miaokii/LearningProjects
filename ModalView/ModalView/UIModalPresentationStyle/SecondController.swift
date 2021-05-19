@@ -11,7 +11,7 @@ class SecondController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
     
         let cancel = UIButton.init(type: .close)
         cancel.setClosure { [unowned self] (_) in

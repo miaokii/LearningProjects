@@ -29,14 +29,16 @@ class FirstViewController: UIViewController {
         presentingViewController指的是 present 出当前控制器的控制器。
         presentedViewController指被当前控制器 present 出的控制器。
          */
+        vc.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
     }
 
     @objc private func showPop() {
         
     }
     
+    var vc: UIViewController = SecondController.init()
     @IBAction func presentController(_ sender: UIButton) {
-        var vc = UIViewController.init()
+//        var vc = UIViewController.init()
         // present controller时的模态样式
         guard let presentationStyle = UIModalPresentationStyle.init(rawValue: sender.tag) else {
             return
@@ -118,7 +120,7 @@ class FirstViewController: UIViewController {
             vc = UINavigationController.init(rootViewController: TableViewController.init())
             vc.preferredContentSize = .init(width: view.frame.width, height: 400)
         default:
-            vc = SecondController()
+            break
         }
         vc.modalPresentationStyle = presentationStyle
         if presentationStyle == .popover, let popverController = vc.popoverPresentationController {
