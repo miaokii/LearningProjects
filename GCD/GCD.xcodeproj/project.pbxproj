@@ -18,6 +18,7 @@
 		B81C346D2630851900356147 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B81C346C2630851900356147 /* Assets.xcassets */; };
 		B81C34702630851900356147 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B81C346E2630851900356147 /* Main.storyboard */; };
 		E238B3C726311F2200012300 /* ThreadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E238B3C626311F2100012300 /* ThreadController.swift */; };
+		E24A8118265656840009C68E /* OperationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24A8117265656830009C68E /* OperationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +38,7 @@
 		B81C34712630851900356147 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B81C34722630851900356147 /* ListeningSource.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ListeningSource.entitlements; sourceTree = "<group>"; };
 		E238B3C626311F2100012300 /* ThreadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadController.swift; sourceTree = "<group>"; };
-		E238B3F626312C4900012300 /* Thread.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thread.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E24A8117265656830009C68E /* OperationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,13 +50,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B81C34632630851900356147 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E238B3F326312C4900012300 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -79,7 +73,6 @@
 			children = (
 				02FA1F9D217887200072A579 /* GCD.app */,
 				B81C34662630851900356147 /* ListeningSource.app */,
-				E238B3F626312C4900012300 /* Thread.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,6 +83,7 @@
 				02FA1FA0217887200072A579 /* AppDelegate.swift */,
 				02FA1FA2217887200072A579 /* ViewController.swift */,
 				E238B3C626311F2100012300 /* ThreadController.swift */,
+				E24A8117265656830009C68E /* OperationController.swift */,
 				02FA1FB22178878D0072A579 /* GCDTool.swift */,
 				02FA1FA4217887200072A579 /* Main.storyboard */,
 				02FA1FA7217887210072A579 /* Assets.xcassets */,
@@ -149,23 +143,6 @@
 			productReference = B81C34662630851900356147 /* ListeningSource.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E238B3F526312C4900012300 /* Thread */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E238B40726312C4B00012300 /* Build configuration list for PBXNativeTarget "Thread" */;
-			buildPhases = (
-				E238B3F226312C4900012300 /* Sources */,
-				E238B3F326312C4900012300 /* Frameworks */,
-				E238B3F426312C4900012300 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Thread;
-			productName = Thread;
-			productReference = E238B3F626312C4900012300 /* Thread.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -181,9 +158,6 @@
 						LastSwiftMigration = 1240;
 					};
 					B81C34652630851900356147 = {
-						CreatedOnToolsVersion = 12.4;
-					};
-					E238B3F526312C4900012300 = {
 						CreatedOnToolsVersion = 12.4;
 					};
 				};
@@ -203,7 +177,6 @@
 			targets = (
 				02FA1F9C217887200072A579 /* GCD */,
 				B81C34652630851900356147 /* ListeningSource */,
-				E238B3F526312C4900012300 /* Thread */,
 			);
 		};
 /* End PBXProject section */
@@ -228,13 +201,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E238B3F426312C4900012300 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -242,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E24A8118265656840009C68E /* OperationController.swift in Sources */,
 				02FA1FA3217887200072A579 /* ViewController.swift in Sources */,
 				E238B3C726311F2200012300 /* ThreadController.swift in Sources */,
 				02FA1FB32178878D0072A579 /* GCDTool.swift in Sources */,
@@ -255,13 +222,6 @@
 			files = (
 				B81C346B2630851900356147 /* ViewController.swift in Sources */,
 				B81C34692630851900356147 /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E238B3F226312C4900012300 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,52 +460,6 @@
 			};
 			name = Release;
 		};
-		E238B40826312C4B00012300 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CODE_SIGN_ENTITLEMENTS = Thread/Thread.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = NL2TZ8P5RF;
-				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = Thread/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 11.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.znjtys.Thread;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
-		E238B40926312C4B00012300 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CODE_SIGN_ENTITLEMENTS = Thread/Thread.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = NL2TZ8P5RF;
-				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = Thread/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 11.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.znjtys.Thread;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -572,15 +486,6 @@
 			buildConfigurations = (
 				B81C34732630851900356147 /* Debug */,
 				B81C34742630851900356147 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E238B40726312C4B00012300 /* Build configuration list for PBXNativeTarget "Thread" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E238B40826312C4B00012300 /* Debug */,
-				E238B40926312C4B00012300 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

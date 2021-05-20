@@ -92,6 +92,14 @@ extension ViewController {
 // MARK: - 队列与任务组合
 extension ViewController {
     
+    func sysQueue()  {
+        let main = DispatchQueue.main
+        let global = DispatchQueue.global(qos: .userInteractive)
+        
+        global.suspend()
+        global.resume()
+    }
+    
     /// 在其他线程中 创建串行队列执行同步任务
     func customThreadRunSerialSync() {
         let thread = Thread.init(target: self, selector: #selector(serialAsync), object: nil)
