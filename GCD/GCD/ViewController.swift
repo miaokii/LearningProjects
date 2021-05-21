@@ -24,7 +24,20 @@ class ViewController: UIViewController {
 	}
     
     @IBAction func taped(_ sender: Any) {
-        numTask1()
+        queueWorkItem()
+    }
+}
+
+// MARK: - DispatchWorkItem
+extension ViewController {
+    func queueWorkItem() {
+        let workItem = DispatchWorkItem.init {
+            print("task A")
+        }
+        workItem.notify(queue: .main) {
+            print("task A end")
+        }
+        workItem.perform()
     }
 }
 
@@ -93,16 +106,20 @@ extension ViewController {
 extension ViewController {
     
     func sysQueue()  {
-        let main = DispatchQueue.main
-        let global = DispatchQueue.global(qos: .userInteractive)
+        let queue = DispatchQueue.init(label: "gcd.serial.queue", qos: .default)
+        let concurrentQueue = DispatchQueue.init(label: "gcd.concurrent.queue", qos: .default, attributes: .concurrent)
+        queue.sync {
+            print("sync task")
+        }
+        queue.async {
+            print("async task")
+        }
         
-        global.suspend()
-        global.resume()
     }
     
     /// 在其他线程中 创建串行队列执行同步任务
     func customThreadRunSerialSync() {
-        let thread = Thread.init(target: self, selector: #selector(serialAsync), object: nil)
+        let thread = Thread.init(target: self, selector: #selector(mainQueueMainThreadSync), object: nil)
         thread.name = "serialThread"
         thread.start()
     }
@@ -111,35 +128,24 @@ extension ViewController {
     /// 不会创建新线程，如果在主线程中执行，会阻塞主线程
     /// 任务按照添加顺序执行
     /// 同步任务不具备开启新线程的能力
+    /// 在主队列中执行，所以当前线程是主线程
     @objc func serialSync() {
-        // 串行队列
-        let serialQueue = createSerialQueue(label: "serialQueue")
-        // 当前线程
-        var thread: Thread {
-            return getCurrentThread()
-        }
+        let serialQueue = DispatchQueue.init(label: "gcd.serial.queue")
+        var currentThread: Thread { return Thread.current }
         
-        print("current thread: \(thread)")
+        print("current thread: \(currentThread)")
         print("begin task")
         serialQueue.sync {
             currentThreadSleep(time: 1)
-            print("current thread: \(thread)")
-            print("tash 1")
+            print("task 1, current thread: \(currentThread)")
         }
         serialQueue.sync {
             currentThreadSleep(time: 1)
-            print("current thread: \(thread)")
-            print("tash 2")
+            print("task 2, current thread: \(currentThread)")
         }
         serialQueue.sync {
             currentThreadSleep(time: 1)
-            print("current thread: \(thread)")
-            print("tash 3")
-        }
-        serialQueue.sync {
-            currentThreadSleep(time: 1)
-            print("current thread: \(thread)")
-            print("tash 4")
+            print("task 3, current thread: \(currentThread)")
         }
         print("end task")
     }
@@ -151,34 +157,21 @@ extension ViewController {
     /// 任务执行需要等前一个任务执行完毕再执行
     /// 任务按照添加顺序执行
     @objc func serialAsync() {
-        // 串行队列
-        let serialQueue = createSerialQueue(label: "serialQueue")
-        // 当前线程
-        var thread: Thread {
-            return getCurrentThread()
-        }
-        
-        print("current thread: \(thread)")
+        let serialQueue = DispatchQueue.init(label: "gcd.serial.queue")
+        var currentThread: Thread { return Thread.current }
+        print("current thread: \(currentThread)")
         print("begin task")
         serialQueue.async {
             currentThreadSleep(time: 1)
-            print("current thread: \(thread)")
-            print("tash 1")
+            print("task 1, current thread: \(currentThread)")
         }
         serialQueue.async {
             currentThreadSleep(time: 1)
-            print("current thread: \(thread)")
-            print("tash 2")
+            print("task 2, current thread: \(currentThread)")
         }
         serialQueue.async {
             currentThreadSleep(time: 1)
-            print("current thread: \(thread)")
-            print("tash 3")
-        }
-        serialQueue.async {
-            currentThreadSleep(time: 1)
-            print("current thread: \(thread)")
-            print("tash 4")
+            print("task 3, current thread: \(currentThread)")
         }
         print("end task")
     }
@@ -190,33 +183,23 @@ extension ViewController {
     /// 同步任务按照添加任务顺序执行
     func concurrentSync() {
         /// 并行队列
-        let concurrentQueue = createConcurrentQueue(label: "concurrentQueue")
-        var thread: Thread {
-            return getCurrentThread()
-        }
+        let concurrentQueue = DispatchQueue.init(label: "gcd.concurrent.queue", attributes: .concurrent)
+        var currentThread: Thread { return getCurrentThread() }
         
-        print("current thread: \(thread)")
+        print("current thread: \(currentThread)")
         print("begin task")
         
         concurrentQueue.sync {
             currentThreadSleep(time: 1)
-            print("current thread: \(thread)")
-            print("task 1")
+            print("task 1, current thread: \(currentThread)")
         }
         concurrentQueue.sync {
             currentThreadSleep(time: 1)
-            print("current thread: \(thread)")
-            print("task 2")
+            print("task 2, current thread: \(currentThread)")
         }
         concurrentQueue.sync {
             currentThreadSleep(time: 1)
-            print("current thread: \(thread)")
-            print("task 3")
-        }
-        concurrentQueue.sync {
-            currentThreadSleep(time: 1)
-            print("current thread: \(thread)")
-            print("task 4")
+            print("task 3, current thread: \(currentThread)")
         }
         print("end task")
     }
@@ -227,33 +210,23 @@ extension ViewController {
     
     func concurrentAsync() {
         /// 并行队列
-        let concurrentQueue = createConcurrentQueue(label: "concurrentQueue")
-        var thread: Thread {
-            return getCurrentThread()
-        }
+        let concurrentQueue = DispatchQueue.init(label: "gcd.concurrent.queue", attributes: .concurrent)
+        var currentThread: Thread { return getCurrentThread() }
         
-        print("current thread: \(thread)")
+        print("current thread: \(currentThread)")
         print("begin task")
         
         concurrentQueue.async {
             currentThreadSleep(time: 1)
-            print("current thread: \(thread)")
-            print("task 1")
+            print("task 1, current thread: \(currentThread)")
         }
         concurrentQueue.async {
             currentThreadSleep(time: 1)
-            print("current thread: \(thread)")
-            print("task 2")
+            print("task 2, current thread: \(currentThread)")
         }
         concurrentQueue.async {
             currentThreadSleep(time: 1)
-            print("current thread: \(thread)")
-            print("task 3")
-        }
-        concurrentQueue.async {
-            currentThreadSleep(time: 1)
-            print("current thread: \(thread)")
-            print("task 4")
+            print("task 3, current thread: \(currentThread)")
         }
         print("end task")
     }
@@ -266,7 +239,7 @@ extension ViewController {
     /// 所以新添加的任务要等待mainQueueMainThreadSync执行完才能执行
     /// 而mainQueueMainThreadSync要等待新添加的任务执行完才结束
     /// 所以会相互等待完成，就发生卡死
-    func mainQueueMainThreadSync() {
+    @objc func mainQueueMainThreadSync() {
         var thread: Thread {
             return getCurrentThread()
         }
@@ -327,32 +300,19 @@ extension ViewController {
     /// 异步任务不会等待mainQueueMainThreadAsync执行完成
     /// 在串行队列中，任务是按照添加顺序执行的
     func mainQueueMainThreadAsync() {
-        let mainQueue = getMainQueue()
-       
-        print("current thread: \(getCurrentThread())")
-        print("begin task")
-        
-        mainQueue.async {
-            currentThreadSleep(time: 1)
-            print("current thread: \(getCurrentThread())")
-            print("task 1")
-        }
-        mainQueue.async {
-            currentThreadSleep(time: 1)
-            print("current thread: \(getCurrentThread())")
-            print("task 2")
-        }
-        mainQueue.async {
-            currentThreadSleep(time: 1)
-            print("current thread: \(getCurrentThread())")
-            print("task 3")
-        }
-        mainQueue.async {
-            currentThreadSleep(time: 1)
-            print("current thread: \(getCurrentThread())")
-            print("task 4")
-        }
-        print("end task")
+        let mainQueue = DispatchQueue.main
+        var currentThread: Thread { return Thread.current }
+          print("current thread: \(currentThread)")
+          print("begin task")
+          mainQueue.async {
+                currentThreadSleep(time: 1)
+                print("task A, current thread: \(currentThread)")
+          }
+          mainQueue.async {
+                currentThreadSleep(time: 1)
+                print("task B, current thread: \(currentThread)")
+          }
+          print("end task")
     }
     
     /// 栅栏函数
