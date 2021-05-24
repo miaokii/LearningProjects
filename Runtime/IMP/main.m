@@ -9,6 +9,7 @@
 #import "IMPTest.h"
 #import <objc/runtime.h>
 #import "Person.h"
+#import <malloc/malloc.h>
 
 // c函数指针来接受方法IMP，默认有前两个隐藏参数id、SEL
 void (*function) (id, SEL, NSDictionary*);
@@ -46,6 +47,11 @@ int main(int argc, const char * argv[]) {
         [per run];
         // 动态调用
         [per performSelector:@selector(fly)];
+        
+        NSObject * object = [[NSObject alloc] init];
+        sizeof(object);
+        class_getInstanceSize([object class]);
+        malloc_size(object)
         
     }
     return 0;
