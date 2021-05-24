@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8C6A213265BF15D0022DB6C /* CycleReference.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C6A212265BF15D0022DB6C /* CycleReference.m */; };
 		E2331DD225FA1D7400BD1A09 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2331DD125FA1D7400BD1A09 /* main.m */; };
 		E2331DDB25FA1D8100BD1A09 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = E2331DDA25FA1D8100BD1A09 /* Person.m */; };
 		E2331DE025FB079100BD1A09 /* Cat.m in Sources */ = {isa = PBXBuildFile; fileRef = E2331DDF25FB079100BD1A09 /* Cat.m */; };
@@ -49,6 +50,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B8C6A211265BF15D0022DB6C /* CycleReference.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CycleReference.h; sourceTree = "<group>"; };
+		B8C6A212265BF15D0022DB6C /* CycleReference.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CycleReference.m; sourceTree = "<group>"; };
 		E2331DCE25FA1D7400BD1A09 /* Runtime */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Runtime; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2331DD125FA1D7400BD1A09 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E2331DD925FA1D8100BD1A09 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
@@ -162,6 +165,8 @@
 				E295EDE2262842FD00707DE2 /* AppDelegate.m */,
 				E295EDE4262842FD00707DE2 /* ViewController.h */,
 				E295EDE5262842FD00707DE2 /* ViewController.m */,
+				B8C6A211265BF15D0022DB6C /* CycleReference.h */,
+				B8C6A212265BF15D0022DB6C /* CycleReference.m */,
 				E295EE082628438A00707DE2 /* KVOPerson.h */,
 				E295EE092628438A00707DE2 /* KVOPerson.m */,
 				E295EDE72628430200707DE2 /* Assets.xcassets */,
@@ -324,6 +329,7 @@
 				E295EE0A2628438A00707DE2 /* KVOPerson.m in Sources */,
 				E295EDEE2628430200707DE2 /* main.m in Sources */,
 				E295EDE3262842FD00707DE2 /* AppDelegate.m in Sources */,
+				B8C6A213265BF15D0022DB6C /* CycleReference.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

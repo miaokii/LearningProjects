@@ -80,7 +80,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "916"
                   endingLineNumber = "916"
-                  offsetFromSymbolStart = "100">
+                  offsetFromSymbolStart = "83">
                </Location>
                <Location
                   uuid = "81A4F9FB-2D50-4FA8-9C59-AC25F4DBD1F4 - 565843a9e301263b"
@@ -95,7 +95,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "916"
                   endingLineNumber = "916"
-                  offsetFromSymbolStart = "212">
+                  offsetFromSymbolStart = "228">
                </Location>
                <Location
                   uuid = "81A4F9FB-2D50-4FA8-9C59-AC25F4DBD1F4 - 565843a9e301263b"
@@ -110,25 +110,9 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "916"
                   endingLineNumber = "916"
-                  offsetFromSymbolStart = "256">
+                  offsetFromSymbolStart = "272">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E3417E4C-393E-4723-84B5-070B0404FFF0"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Pods/Alamofire/Source/MultipartFormData.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "440"
-            endingLineNumber = "440"
-            landmarkName = "encode(_:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
