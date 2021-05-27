@@ -51,7 +51,7 @@ int main(int argc, const char * argv[]) {
         NSObject * object = [[NSObject alloc] init];
         sizeof(object);
         class_getInstanceSize([object class]);
-        malloc_size(object)
+        malloc_size(object);
         
     }
     return 0;
