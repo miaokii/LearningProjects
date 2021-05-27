@@ -7,6 +7,7 @@
 
 #import "ViewController.h"
 #import "KVOPerson.h"
+#import "CycleReference.h"
 
 @interface ViewController ()
 
@@ -19,7 +20,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self cycle];
+}
+
+- (void)cycle {
+    Father * father = [[Father alloc] init];
+    Son * son = [[Son alloc] init];
     
+    son.father = father;
+    father.son = son;
+}
+
+- (void)kvo {
     NSButton * button = [NSButton buttonWithTitle:@"KVO Run" target:self action:@selector(changePerson)];
     
     button.frame = CGRectMake(20, 20, 200, 50);
