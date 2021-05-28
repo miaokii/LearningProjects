@@ -59,16 +59,33 @@
                                     <segue destination="xmw-mZ-EWD" kind="show" id="kNW-hq-tuR"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m35-3V-uyJ">
+                                <rect key="frame" x="20" y="140" width="374" height="40"/>
+                                <color key="backgroundColor" red="0.095498970579999995" green="0.055557928399999998" blue="0.13862127590000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Saq-OM-Tek"/>
+                                    <constraint firstAttribute="height" constant="40" id="q5B-cr-1oU"/>
+                                </constraints>
+                                <state key="normal" title="线程保活（RunLoop）">
+                                    <color key="titleColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="runCustomThreadSelector:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1CY-XI-NZY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wk6-Rq-KKo" secondAttribute="trailing" constant="20" id="3uW-Z7-uaR"/>
+                            <constraint firstItem="m35-3V-uyJ" firstAttribute="leading" secondItem="kTB-QM-z1a" secondAttribute="leading" id="8ND-0s-PVw"/>
                             <constraint firstItem="kTB-QM-z1a" firstAttribute="top" secondItem="Wk6-Rq-KKo" secondAttribute="bottom" constant="20" id="UXL-bu-Ht0"/>
                             <constraint firstItem="Wk6-Rq-KKo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Z1m-rL-ch2"/>
                             <constraint firstItem="kTB-QM-z1a" firstAttribute="trailing" secondItem="Wk6-Rq-KKo" secondAttribute="trailing" id="hlZ-ZE-32t"/>
                             <constraint firstItem="kTB-QM-z1a" firstAttribute="leading" secondItem="Wk6-Rq-KKo" secondAttribute="leading" id="lfd-DL-Sl8"/>
+                            <constraint firstItem="m35-3V-uyJ" firstAttribute="top" secondItem="kTB-QM-z1a" secondAttribute="bottom" constant="20" id="ru7-jk-Lak"/>
                             <constraint firstItem="Wk6-Rq-KKo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="uU6-55-ZHh"/>
+                            <constraint firstItem="m35-3V-uyJ" firstAttribute="trailing" secondItem="kTB-QM-z1a" secondAttribute="trailing" id="yvR-gA-X2g"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0e9-LU-XiO"/>
