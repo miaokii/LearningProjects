@@ -14,10 +14,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         launchNewThread()
+        mainRunLoopOberver()
     }
     @IBAction func runCustomThreadSelector(_ sender: Any) {
         perform(#selector(newThreadSelector), on: newThread, with: nil, waitUntilDone: true)
-        perform(<#T##aSelector: Selector##Selector#>, with: <#T##Any?#>, afterDelay: <#T##TimeInterval#>)
     }
     
     /// 创建新线程，并执行任务
@@ -42,6 +42,59 @@ class ViewController: UIViewController {
         print("new task start")
         print(Thread.current)
         print("new task end")
+    }
+    
+    private func currentRunLoop() {
+        let runLoop = RunLoop.current
+        let cfRunLoop = CFRunLoopGetCurrent()
+        runLoop.getCFRunLoop()
+        
+        // 运行RunLoop
+        // 直接运行，如果没有输入源会自动退出
+        runLoop.run()
+        // 到指定时间结束运行，在此之前所有的输入源事件正常处理
+        runLoop.run(until: Date.init(timeIntervalSinceNow: 1))
+        // 运行一次循环，阻止在指定模式下输入直到给定日期
+        runLoop.run(mode: .common, before: Date())
+        
+        // 停止runLoop
+        runLoop.run(until: Date.init(timeIntervalSinceNow: 1))
+        // 手动停止
+        CFRunLoopStop(cfRunLoop)
+        
+    }
+    
+    private func mainRunLoopOberver() {
+        let runLoop = RunLoop.current
+        let cfRunLoop = runLoop.getCFRunLoop()
+        let runLoopObserverHandle:(CFRunLoopObserver?, CFRunLoopActivity)->Void = { (cf, ac) in
+            if ac == .entry {
+                print("进入 runloop")
+            }
+            else if ac == .beforeTimers {
+                print("即将处理timer事件")
+            }
+            else if ac == .beforeWaiting {
+                print("runloop即将休眠")
+            }
+            else if ac == .afterWaiting {
+                print("runloop被唤醒")
+            }
+            else if ac == .exit {
+                print("退出runloop")
+            }
+        }
+        
+        // 卡普奇 Youbi六代
+        
+        let observer = CFRunLoopObserverCreateWithHandler(kCFAllocatorDefault, CFRunLoopActivity.allActivities.rawValue, true, 0, runLoopObserverHandle)
+        CFRunLoopAddObserver(cfRunLoop, observer, .defaultMode)
+        
+//        let timer = Timer.scheduledTimer(timeInterval: 1, target: WeakProxy.init(target: self), selector: #selector(fireTimer), userInfo: nil, repeats: true)
+    }
+    
+    @objc private func fireTimer() {
+        print("timer tigger")
     }
 }
 
