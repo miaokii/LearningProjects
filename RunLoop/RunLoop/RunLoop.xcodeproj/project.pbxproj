@@ -17,6 +17,7 @@
 		E281C61C265CE24E00066AAF /* CatonListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E281C61B265CE24E00066AAF /* CatonListController.swift */; };
 		E281C61E265CE4AB00066AAF /* Images.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E281C61D265CE4AB00066AAF /* Images.bundle */; };
 		E281C620265CEEA400066AAF /* OptimizeListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E281C61F265CEEA400066AAF /* OptimizeListController.swift */; };
+		E281C64D2664EAFC00066AAF /* RunLoopSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = E281C64C2664EAFC00066AAF /* RunLoopSources.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		E281C61B265CE24E00066AAF /* CatonListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatonListController.swift; sourceTree = "<group>"; };
 		E281C61D265CE4AB00066AAF /* Images.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Images.bundle; sourceTree = "<group>"; };
 		E281C61F265CEEA400066AAF /* OptimizeListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptimizeListController.swift; sourceTree = "<group>"; };
+		E281C64C2664EAFC00066AAF /* RunLoopSources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLoopSources.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 			children = (
 				E281C603265CBD7900066AAF /* AppDelegate.swift */,
 				E281C607265CBD7900066AAF /* ViewController.swift */,
+				E281C64C2664EAFC00066AAF /* RunLoopSources.swift */,
 				E281C61B265CE24E00066AAF /* CatonListController.swift */,
 				E281C61F265CEEA400066AAF /* OptimizeListController.swift */,
 				E281C61D265CE4AB00066AAF /* Images.bundle */,
@@ -153,6 +156,7 @@
 				E281C620265CEEA400066AAF /* OptimizeListController.swift in Sources */,
 				E281C608265CBD7900066AAF /* ViewController.swift in Sources */,
 				E281C61A265CD8BE00066AAF /* Color.swift in Sources */,
+				E281C64D2664EAFC00066AAF /* RunLoopSources.swift in Sources */,
 				E281C61C265CE24E00066AAF /* CatonListController.swift in Sources */,
 				E281C604265CBD7900066AAF /* AppDelegate.swift in Sources */,
 				E281C618265CC43800066AAF /* FPSLabel.swift in Sources */,
