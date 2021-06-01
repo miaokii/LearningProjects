@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         launchNewThread()
-        mainRunLoopOberver()
+//        mainRunLoopOberver()
     }
     @IBAction func runCustomThreadSelector(_ sender: Any) {
         perform(#selector(newThreadSelector), on: newThread, with: nil, waitUntilDone: true)

@@ -7,7 +7,7 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController ()<NSMachPortDelegate>
 
 @end
 
@@ -18,5 +18,8 @@
     // Do any additional setup after loading the view.
 }
 
+- (void)handlePortMessage:(NSPortMessage *)message {
+    
+}
 
 @end
