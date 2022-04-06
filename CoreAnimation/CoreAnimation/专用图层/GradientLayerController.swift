@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import MKSwiftRes
+import MiaoKiit
 
 /*
     渐变图层，会使用硬件加速绘制

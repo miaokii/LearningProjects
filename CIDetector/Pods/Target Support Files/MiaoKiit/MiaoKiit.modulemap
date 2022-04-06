@@ -1,0 +1,6 @@
+framework module MiaoKiit {
+  umbrella header "MiaoKiit-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import MKSwiftRes
+import MiaoKiit
 
 class ImageIOController: MKViewController {
     
@@ -21,6 +21,7 @@ class ImageIOController: MKViewController {
         
         tableView = UITableView.init(super: view,
                                      delegate: self,
+                                     dataSource: self,
                                      separatorStyle: .singleLine)
         tableView.snp.makeConstraints { (make) in
             make.edges.equalTo(0)
@@ -30,7 +31,7 @@ class ImageIOController: MKViewController {
     }
 }
 
-extension ImageIOController: MKTableViewCombineDelegate {
+extension ImageIOController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return datas.count
     }

@@ -1,0 +1,27 @@
+{
+  "name": "MiaoKiit",
+  "version": "0.1.0",
+  "summary": "A short description of MiaoKiit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/kangkai/MiaoKiit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "kangkai": "kangkai1108@sina.cn"
+  },
+  "source": {
+    "git": "https://github.com/kangkai/MiaoKiit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "11.0"
+  },
+  "source_files": "MiaoKiit/Classes/**/*",
+  "dependencies": {
+    "SnapKit": [
+
+    ]
+  }
+}

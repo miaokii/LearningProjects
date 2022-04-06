@@ -1,6 +1,0 @@
-framework module MKSwiftRes {
-  umbrella header "MKSwiftRes-umbrella.h"
-
-  export *
-  module * { export * }
-}

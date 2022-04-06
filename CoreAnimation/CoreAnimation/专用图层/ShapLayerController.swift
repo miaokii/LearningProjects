@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import MKSwiftRes
+import MiaoKiit
 
 /*
     CAShapeLayer是一个通过矢量图形而不是bitmap来绘制的图层子类，当指定诸如颜色和线宽等属性

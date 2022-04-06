@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import MKSwiftRes
+import MiaoKiit
 
 class ClockViewController: MKViewController{
     
@@ -46,9 +46,9 @@ class ClockViewController: MKViewController{
         secondPin.center = clockView.center
         
         let dotView = UIView.init(super: view,
-                                  backgroundColor: secondPin.backgroundColor,
+                                  backgroundColor: .red,
                                   cornerRadius: 2)
-        dotView.size = .init(width: 4, height: 4)
+        dotView.size = CGSize.init(width: 4, height: 4)
         dotView.center = clockView.center
         
         hourPin.layer.anchorPoint = .init(x: 0.5, y: 0.9)

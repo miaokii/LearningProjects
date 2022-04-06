@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import MKSwiftRes
+import MiaoKiit
 
 /*
  CAReplicatorLayer高效生成许多相似的图层

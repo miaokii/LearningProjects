@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import MKSwiftRes
+import MiaoKiit
 
 /*
     CATextLayer以图层的形式包含了UILabel几乎所有的绘制特性，并且比UILabel渲染更快

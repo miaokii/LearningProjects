@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import MKSwiftRes
+import MiaoKiit
 
 /*
  为了减少不必要的绘制，系统将屏幕区分为需要重绘制的区域和不需要重绘的区域，需要重绘的部分叫 脏区域

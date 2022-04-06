@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import MKSwiftRes
+import MiaoKiit
 
 /*
  隐式过渡
@@ -57,7 +57,7 @@ fileprivate class TransitionImageController: MKViewController {
             make.height.equalTo(imageView.snp.width)
         }
         
-        let chageImage = UIButton.themeBtn(super: view, title: "Change Image")
+        let chageImage = UIButton.theme(super: view, title: "Change Image")
         chageImage.setClosure { (_) in
             self.uiViewTransition()
         }

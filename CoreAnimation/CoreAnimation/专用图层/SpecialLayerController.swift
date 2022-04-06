@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import MKSwiftRes
+import MiaoKiit
 
 class SpecialLayerController: MKViewController {
     
@@ -25,6 +25,7 @@ class SpecialLayerController: MKViewController {
         
         tableView = UITableView.init(super: view,
                                      delegate: self,
+                                     dataSource: self,
                                      separatorStyle: .singleLine)
         tableView.snp.makeConstraints { (make) in
             make.edges.equalTo(0)
@@ -34,7 +35,7 @@ class SpecialLayerController: MKViewController {
     }
 }
 
-extension SpecialLayerController: MKTableViewCombineDelegate {
+extension SpecialLayerController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return datas.count
     }

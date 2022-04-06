@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import MKSwiftRes
+import MiaoKiit
 
 class HomeViewController: MKViewController {
     
@@ -33,6 +33,7 @@ class HomeViewController: MKViewController {
         
         tableView = UITableView.init(super: view,
                                      delegate: self,
+                                     dataSource: self,
                                      separatorStyle: .singleLine)
         tableView.snp.makeConstraints { (make) in
             make.edges.equalTo(0)
@@ -42,7 +43,7 @@ class HomeViewController: MKViewController {
     }
 }
 
-extension HomeViewController: MKTableViewCombineDelegate {
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return datas.count
     }
