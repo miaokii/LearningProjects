@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import MiaoKiit
+import MKSwiftRes
 
 class SpringListView: DynamicView {
     
@@ -40,8 +40,7 @@ class SpringListView: DynamicView {
         
         let dampingLabel = UILabel.init(super: controlView)
         dampingLabel.tag = 10
-        
-        dampingLabel.text = "damping:\(String.number(for: layout.damping))"
+        dampingLabel.text = "damping:\(String.decimal(value: Float(layout.damping)))"
         dampingLabel.snp.makeConstraints { (make) in
             make.top.equalTo(10)
             make.left.equalTo(40)
@@ -49,7 +48,7 @@ class SpringListView: DynamicView {
         
         let frequencyLabel = UILabel.init(super: controlView)
         frequencyLabel.tag = 20
-        frequencyLabel.text = "frequency:\(String.number(for: layout.frequency))"
+        frequencyLabel.text = "frequency:\(String.decimal(value: Float(layout.frequency)))"
         frequencyLabel.snp.makeConstraints { (make) in
             make.left.equalTo(dampingLabel)
             make.top.equalTo(dampingLabel.snp.bottom).offset(10)
@@ -57,7 +56,7 @@ class SpringListView: DynamicView {
         
         let factorLabel = UILabel.init(super: controlView)
         factorLabel.tag = 30
-        factorLabel.text = "factor:\(String.number(for: layout.resistanceFactor))"
+        factorLabel.text = "factor:\(String.decimal(value: Float(layout.resistanceFactor)))"
         factorLabel.snp.makeConstraints { (make) in
             make.left.equalTo(frequencyLabel)
             make.top.equalTo(frequencyLabel.snp.bottom).offset(10)
@@ -105,13 +104,13 @@ class SpringListView: DynamicView {
         let label = slider.superview?.viewWithTag(slider.tag*10) as! UILabel
         if slider.tag == 1 {
             layout.damping = CGFloat(slider.value)
-            label.text = "damping:\(String.number(for: layout.damping))"
+            label.text = "damping:\(String.decimal(value: Float(layout.damping)))"
         } else if slider.tag == 2 {
             layout.frequency = CGFloat(slider.value)
-            label.text = "frequency:\(String.number(for: layout.frequency))"
+            label.text = "frequency:\(String.decimal(value: Float(layout.frequency)))"
         } else {
             layout.resistanceFactor = CGFloat(slider.value)
-            label.text = "factor:\(String.number(for: layout.resistanceFactor))"
+            label.text = "factor:\(String.decimal(value: Float(layout.resistanceFactor)))"
         }
     }
 }

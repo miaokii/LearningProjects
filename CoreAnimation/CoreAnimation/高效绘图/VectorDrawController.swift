@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import MiaoKiit
+import MKSwiftRes
 
 /*
     矢量图形CoreGraphics
@@ -19,7 +19,7 @@ import MiaoKiit
 class VectorDrawController: MKViewController {
 
     private var path = UIBezierPath.init()
-    private var touchDrawView = ShapeTouchDrawView()
+    private var touchDrawView = TouchDrawView()
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(touchDrawView)

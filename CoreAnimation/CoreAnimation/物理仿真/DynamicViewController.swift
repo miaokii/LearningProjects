@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import MiaoKiit
+import MKSwiftRes
 
 enum DynamicType: Int {
     case gravity = 0

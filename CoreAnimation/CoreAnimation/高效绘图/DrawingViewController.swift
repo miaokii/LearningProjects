@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import MiaoKiit
+import MKSwiftRes
 
 /*
     CALayer：只消一些耗于自己相关的内存，如设置contents属性的图片，不需要增加额外的存储大小，如果多个图层contents共用一张图片，并不会复制内存块，而是复制内存块
@@ -27,7 +27,6 @@ class DrawingViewController: MKViewController {
         
         tableView = UITableView.init(super: view,
                                      delegate: self,
-                                     dataSource: self,
                                      separatorStyle: .singleLine)
         tableView.snp.makeConstraints { (make) in
             make.edges.equalTo(0)
@@ -37,7 +36,7 @@ class DrawingViewController: MKViewController {
     }
 }
 
-extension DrawingViewController: UITableViewDelegate, UITableViewDataSource {
+extension DrawingViewController: MKTableViewCombineDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return datas.count
     }

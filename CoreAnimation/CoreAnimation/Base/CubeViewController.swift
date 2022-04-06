@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import MiaoKiit
+import MKSwiftRes
 import GLKit
 
 // MARK: - 固体对象，创建光照阴影效果的立方体

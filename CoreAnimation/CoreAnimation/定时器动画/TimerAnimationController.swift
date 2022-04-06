@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import MiaoKiit
+import MKSwiftRes
 
 /*
  NSTimer：
@@ -58,17 +58,19 @@ class TimerAnimationController: MKScrollController {
         let ballContainer = UIView.init(super: container)
         ballContainer.frame = .init(x: 0, y: 20, width: view.width, height: 240)
         
-        ballView = UIImageView.init(super: ballView, image: UIImage.init(named: "ball"))
+        ballView = UIImageView.init(super: ballContainer,
+                                    image: UIImage.init(named: "ball"),
+                                    backgroundColor: .clear)
         ballView.size = .init(width: 40, height: 40)
         ballView.center = .init(x: view.width/2, y: 30)
         
-        let timerDropBtn = UIButton.themeBorder(super: container, title: "Timer Drop Down")
+        let timerDropBtn = UIButton.themeBorderBtn(super: container, title: "Timer Drop Down")
         timerDropBtn.frame = .init(x: 60, y: ballContainer.frame.maxY+20, width: view.width-120, height: 40)
         timerDropBtn.setClosure { (_) in
             self.animate(nsTimer: true)
         }
         
-        let linkDropBtn = UIButton.themeBorder(super: container, title: "CADisplayLink Drop Down")
+        let linkDropBtn = UIButton.themeBorderBtn(super: container, title: "CADisplayLink Drop Down")
         linkDropBtn.frame = .init(x: 60, y: timerDropBtn.frame.maxY+20, width: view.width-120, height: 40)
         linkDropBtn.setClosure { (_) in
             self.animate(nsTimer: false)

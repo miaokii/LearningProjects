@@ -1,23 +1,27 @@
 PODS:
-  - MiaoKiit (0.1.0):
+  - MBProgressHUD (1.2.0)
+  - MKSwiftRes (0.1.0):
+    - MBProgressHUD
     - SnapKit
   - SnapKit (5.0.1)
 
 DEPENDENCIES:
-  - MiaoKiit (from `../../MiaoKiit/`)
+  - MKSwiftRes (from `../../../MKSwiftRes/`)
 
 SPEC REPOS:
   trunk:
+    - MBProgressHUD
     - SnapKit
 
 EXTERNAL SOURCES:
-  MiaoKiit:
-    :path: "../../MiaoKiit/"
+  MKSwiftRes:
+    :path: "../../../MKSwiftRes/"
 
 SPEC CHECKSUMS:
-  MiaoKiit: 9a7744b51de8ae589b6db20d08162b29114c7c51
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MKSwiftRes: 10029cbd06465d20325a7029fe697420c94a7303
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: c58f452565e369e877f1f23794f5d428bfdc22a1
+PODFILE CHECKSUM: 70863fae6425dc0c5ad66dd9c635cb12a716e6c6
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.10.0

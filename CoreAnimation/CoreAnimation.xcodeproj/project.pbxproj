@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		39317848E83AE41AAC6B4362 /* Pods_CoreAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD803CEECD185EE30E82915F /* Pods_CoreAnimation.framework */; };
 		B8605A1625CD85870088A8DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8605A1525CD85870088A8DB /* AppDelegate.swift */; };
+		B8605A1825CD85870088A8DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8605A1725CD85870088A8DB /* SceneDelegate.swift */; };
 		B8605A1A25CD85870088A8DB /* CubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8605A1925CD85870088A8DB /* CubeViewController.swift */; };
 		B8605A1D25CD85870088A8DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8605A1B25CD85870088A8DB /* Main.storyboard */; };
 		B8605A1F25CD85880088A8DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8605A1E25CD85880088A8DB /* Assets.xcassets */; };
@@ -56,6 +57,7 @@
 		A7DC5F318E3D939C2320628D /* Pods-CoreAnimation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreAnimation.release.xcconfig"; path = "Target Support Files/Pods-CoreAnimation/Pods-CoreAnimation.release.xcconfig"; sourceTree = "<group>"; };
 		B8605A1225CD85870088A8DB /* CoreAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8605A1525CD85870088A8DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B8605A1725CD85870088A8DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B8605A1925CD85870088A8DB /* CubeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubeViewController.swift; sourceTree = "<group>"; };
 		B8605A1C25CD85870088A8DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B8605A1E25CD85880088A8DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				B8605A1525CD85870088A8DB /* AppDelegate.swift */,
+				B8605A1725CD85870088A8DB /* SceneDelegate.swift */,
 				E20F46C825DE606E00DB37C5 /* HomeViewController.swift */,
 				E259276925E89EB400763D05 /* 图像IO */,
 				E25926F925E792E900763D05 /* 高效绘图 */,
@@ -427,6 +430,7 @@
 				E25BBD3E25E3985200A85AD7 /* AnimationBufferController.swift in Sources */,
 				E2F1EA3C25DE68020010A874 /* SpecialLayerController.swift in Sources */,
 				E259276B25E89ED900763D05 /* ImageIOController.swift in Sources */,
+				B8605A1825CD85870088A8DB /* SceneDelegate.swift in Sources */,
 				E25BBD2A25E35B9400A85AD7 /* TransitionAnimationController.swift in Sources */,
 				E253A3F625E4E6BE000BE52E /* CrashBehaviorView.swift in Sources */,
 				E253A3E825E4DC96000BE52E /* DynamicView.swift in Sources */,

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import MiaoKiit
+import MKSwiftRes
 
 /*
  CAMidiaTiming协议定义了一段时间内用来控制磲时间的属性的集合

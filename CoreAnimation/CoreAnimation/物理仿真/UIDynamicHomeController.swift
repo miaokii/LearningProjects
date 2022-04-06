@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import MiaoKiit
+import MKSwiftRes
 
 /*
  UIDynamic是UIKit的物理驱动引擎，实现了动力、铰链连接、碰撞、悬挂等效果
@@ -37,7 +37,6 @@ class UIDynamicHomeController: MKViewController {
         
         tableView = UITableView.init(super: view,
                                      delegate: self,
-                                     dataSource: self,
                                      separatorStyle: .singleLine)
         tableView.snp.makeConstraints { (make) in
             make.edges.equalTo(0)
@@ -47,7 +46,7 @@ class UIDynamicHomeController: MKViewController {
     }
 }
 
-extension UIDynamicHomeController: UITableViewDelegate, UITableViewDataSource {
+extension UIDynamicHomeController: MKTableViewCombineDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return datas.count
     }

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import MiaoKiit
+import MKSwiftRes
 
 /*
  CAAnimation的timingFunction定义了缓冲方式：

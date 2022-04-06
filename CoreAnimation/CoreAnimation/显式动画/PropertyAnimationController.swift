@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import MiaoKiit
+import MKSwiftRes
 
 /*
  属性动画
@@ -69,7 +69,7 @@ class PropertyAnimationController: MKScrollController {
         alayer.backgroundColor = UIColor.random.cgColor
         alayer.frame = anView.bounds
         
-        let changeLayerColor = UIButton.themeBorder(super: container, title: "change color")
+        let changeLayerColor = UIButton.themeBorderBtn(super: container, title: "change color")
         changeLayerColor.setClosure { (_) in
             let animation = CABasicAnimation.init()
             animation.keyPath = "backgroundColor"
@@ -197,7 +197,7 @@ class PropertyAnimationController: MKScrollController {
         alayer.backgroundColor = formColor
         alayer.frame = anView.bounds
         
-        let changeLayerColor = UIButton.themeBorder(super: container, title: "change color")
+        let changeLayerColor = UIButton.themeBorderBtn(super: container, title: "change color")
         changeLayerColor.setClosure { (_) in
             let animation = CAKeyframeAnimation.init()
             animation.duration = 2
@@ -261,7 +261,7 @@ class PropertyAnimationController: MKScrollController {
         // 自动控制方向
         animation.rotationMode = .rotateAuto
         
-        let replay = UIButton.theme(super: container, title: "Replay")
+        let replay = UIButton.themeBtn(super: container, title: "Replay")
         replay.frame = .init(x: 60, y: 300, width: view.width-120, height: 40)
         replay.setClosure { (_) in
             shipLayer.removeAnimation(forKey: "shipPosition")
@@ -304,7 +304,7 @@ class PropertyAnimationController: MKScrollController {
             colorAnimation]
         
         
-        let replay = UIButton.theme(super: container, title: "Replay")
+        let replay = UIButton.themeBtn(super: container, title: "Replay")
         replay.frame = .init(x: 60, y: 210, width: view.width-120, height: 40)
         replay.setClosure { (_) in
             animationLayer.removeAnimation(forKey: "groupAnimation")

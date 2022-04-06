@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import MiaoKiit
+import MKSwiftRes
 
 /*
  事务
@@ -70,7 +70,7 @@ class ImplicitAnimationController: MKViewController{
         alayer.backgroundColor = UIColor.random.cgColor
         alayer.frame = anView.bounds
         
-        let changeLayerColor = UIButton.themeBorder(super: anView, title: "change color")
+        let changeLayerColor = UIButton.themeBorderBtn(super: anView, title: "change color")
         changeLayerColor.setClosure { (_) in
             // 开始事务
             CATransaction.begin()
@@ -120,7 +120,7 @@ class ImplicitAnimationController: MKViewController{
         transition.subtype = .fromLeft
         alayer.actions = ["backgroundColor": transition]
         
-        let changeLayerColor = UIButton.themeBorder(super: view, title: "change color")
+        let changeLayerColor = UIButton.themeBorderBtn(super: view, title: "change color")
         changeLayerColor.setClosure { (_) in
             alayer.backgroundColor = UIColor.random.cgColor
         }

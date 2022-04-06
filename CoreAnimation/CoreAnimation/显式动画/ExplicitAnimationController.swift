@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import MiaoKiit
+import MKSwiftRes
 
 class ExplicitAnimationController: MKViewController {
     
@@ -21,7 +21,6 @@ class ExplicitAnimationController: MKViewController {
         
         tableView = UITableView.init(super: view,
                                      delegate: self,
-                                     dataSource: self,
                                      separatorStyle: .singleLine)
         tableView.snp.makeConstraints { (make) in
             make.edges.equalTo(0)
@@ -31,7 +30,7 @@ class ExplicitAnimationController: MKViewController {
     }
 }
 
-extension ExplicitAnimationController: UITableViewDelegate, UITableViewDataSource {
+extension ExplicitAnimationController: MKTableViewCombineDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return datas.count
     }
