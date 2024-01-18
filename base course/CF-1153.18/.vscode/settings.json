@@ -1,0 +1,8 @@
+{
+    "makefile.extensionOutputFolder": "./.vscode",
+    "files.associations": {
+        "cfpreferences.h": "c",
+        "cfinternal.h": "c",
+        "cfarray.h": "c"
+    }
+}

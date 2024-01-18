@@ -473,7 +473,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NL2TZ8P5RF;
+				DEVELOPMENT_TEAM = 5NQKPXJXC6;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Runtime/prefixHeader.h";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -485,7 +485,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NL2TZ8P5RF;
+				DEVELOPMENT_TEAM = 5NQKPXJXC6;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Runtime/prefixHeader.h";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;

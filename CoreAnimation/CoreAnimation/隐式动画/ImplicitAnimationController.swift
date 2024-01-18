@@ -58,13 +58,14 @@ class ImplicitAnimationController: MKViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         customCATransitionTest()
+        implicitAnimation()
     }
     
     // 改变layer的背景颜色
     // CoreAnimation会隐式的添加动画
     private func implicitAnimation() {
         let anView = UIView.init(super: view)
-        anView.frame = .init(x: 40, y: 20, width: view.width-80, height: 140)
+        anView.frame = .init(x: 40, y: 250, width: view.width-80, height: 140)
         let alayer = CALayer.init()
         anView.layer.addSublayer(alayer)
         alayer.backgroundColor = UIColor.random.cgColor
@@ -118,6 +119,7 @@ class ImplicitAnimationController: MKViewController{
         let transition = CATransition.init()
         transition.type = .push
         transition.subtype = .fromLeft
+        transition.duration = 0.5
         alayer.actions = ["backgroundColor": transition]
         
         let changeLayerColor = UIButton.themeBorderBtn(super: view, title: "change color")

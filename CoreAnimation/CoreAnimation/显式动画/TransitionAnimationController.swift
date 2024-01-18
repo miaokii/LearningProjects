@@ -33,7 +33,7 @@ class TransitionAnimationController: UITabBarController {
 extension TransitionAnimationController: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         let transition = CATransition.init()
-        transition.type = .fade
+        transition.type = .push
         tabBarController.view.layer.add(transition, forKey: nil)
     }
 }

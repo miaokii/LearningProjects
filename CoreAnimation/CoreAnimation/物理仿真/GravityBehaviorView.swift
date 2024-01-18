@@ -10,7 +10,7 @@ import UIKit
 class GravityBehaviorView: DynamicView {
 
     override func setup() {
-        boxView.transform = CGAffineTransform.init(rotationAngle: .pi/3.5)
+        boxView.transform = CGAffineTransform.init(rotationAngle: .pi/3)
         let box2 = UIImageView.init(image: UIImage.init(named: "dynamic_box"))
         box2.size = .init(width: 45, height: 45)
         box2.center = .init(x: boxView.center.x+23, y: 0)
@@ -20,7 +20,6 @@ class GravityBehaviorView: DynamicView {
         // 开始仿真
         animator.addBehavior(gravity)
         
-        boxView.transform = CGAffineTransform.init(rotationAngle: .pi/3)
         // 碰撞检测
         let collsion = UICollisionBehavior.init(items: [boxView, box2])
         // 回弹

@@ -30,6 +30,7 @@ class ShadowViewController: MKViewController {
         whiteView.layer.cornerRadius = 5
         /// 阴影透明度
         whiteView.layer.shadowOpacity = 0.5
+        whiteView.layer.shadowColor = UIColor.red.cgColor
         /// 阴影的方向和距离
         /// 默认（0，-3）
         whiteView.layer.shadowOffset = .init(width: 0, height: 5)

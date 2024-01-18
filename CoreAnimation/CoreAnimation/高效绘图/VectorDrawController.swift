@@ -19,7 +19,7 @@ import MKSwiftRes
 class VectorDrawController: MKViewController {
 
     private var path = UIBezierPath.init()
-    private var touchDrawView = TouchDrawView()
+    private var touchDrawView = ShapeTouchDrawView()
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(touchDrawView)

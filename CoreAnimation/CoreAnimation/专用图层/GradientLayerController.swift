@@ -52,12 +52,12 @@ class GradientLayerController: MKViewController {
                                 UIColor.cyan.cgColor,
                                 UIColor.red.cgColor]
         // 渐变位置
-        gradientLayer.locations = [0.1, 0.3, 0.5, 0.9]
+//        gradientLayer.locations = [0.1, 0.3, 0.5, 0.9]
         
         // 开始点单为坐标
-        gradientLayer.startPoint = .init(x: 0.5, y: 0)
+        gradientLayer.startPoint = .init(x: 0, y: 0)
         // 结束点单位坐标
-        gradientLayer.endPoint = .init(x: 0.5, y: 1)
+        gradientLayer.endPoint = .init(x: 1, y: 1)
     }
 
 }

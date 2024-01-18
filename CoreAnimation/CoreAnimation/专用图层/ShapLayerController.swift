@@ -67,6 +67,7 @@ class ShapLayerController: MKViewController {
         shapeLayer.fillColor = UIColor.clear.cgColor
         shapeLayer.lineWidth = 5
         shapeLayer.lineJoin = .round
+        shapeLayer.lineCap = .round
         shapeLayer.path = path.cgPath
         
         matchBoyView.layer.addSublayer(shapeLayer)

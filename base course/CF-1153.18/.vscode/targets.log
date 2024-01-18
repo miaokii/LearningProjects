@@ -1,0 +1,2532 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 3.81
+# Copyright (C) 2006  Free Software Foundation, Inc.
+# This is free software; see the source for copying conditions.
+# There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.
+
+# This program built for i386-apple-darwin11.3.0
+ 
+
+# Make data base, printed on Fri Jun 10 16:27:28 2022
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# environment
+VSCODE_LOG_NATIVE = false
+# automatic
+ 
+?D = $(patsubst %/,%,$(dir $?))
+# makefile (from `Makefile', line 26)
+ARCHFLAGS = -arch i386 -arch x86_64
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# automatic
+@F = $(notdir $@)
+# makefile
+CURDIR := /Users/yoctech/Desktop/My/LearningProjects/base course/CF-1153.18
+# makefile
+SHELL = /bin/sh
+# environment
+VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"42e84e0914b17800d483f69e299e1b00.zh-cn","_translationsConfigFile":"/Users/yoctech/Library/Application Support/Code/clp/42e84e0914b17800d483f69e299e1b00.zh-cn/tcf.json","_cacheRoot":"/Users/yoctech/Library/Application Support/Code/clp/42e84e0914b17800d483f69e299e1b00.zh-cn","_resolvedLanguagePackCoreLocation":"/Users/yoctech/Library/Application Support/Code/clp/42e84e0914b17800d483f69e299e1b00.zh-cn/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5","_corruptedFile":"/Users/yoctech/Library/Application Support/Code/clp/42e84e0914b17800d483f69e299e1b00.zh-cn/corrupted.info","_languagePackSupport":true}
+# environment
+_ = /usr/bin/make
+# makefile (from `Makefile', line 31)
+CFLAGS = -c -x c -pipe -std=gnu99 -Wmost -Wno-trigraphs -Wno-deprecated -mmacosx-version-min=$(MIN_MACOSX_VERSION) -fconstant-cfstrings -fexceptions -DCF_BUILDING_CF=1 -DDEPLOYMENT_TARGET_MACOSX=1 -DMAC_OS_X_VERSION_MAX_ALLOWED=$(MAX_MACOSX_VERSION) -DU_SHOW_DRAFT_API=1 -DU_SHOW_CPLUSPLUS_API=0 -I$(OBJBASE) -DVERSION=$(VERSION) -include CoreFoundation_Prefix.h
+# makefile (from `MakefileVersion', line 1)
+MAKEFILE_LIST :=  Makefile MakefileVersion
+# makefile (from `Makefile', line 17)
+unicode_data_file_name = $(if $(or $(findstring i386,$(1)),$(findstring i686,$(1)),$(findstring x86_64,$(1))),CFUnicodeData-L.mapping,CFUnicodeData-B.mapping)
+# makefile (from `MakefileVersion', line 1)
+VERSION = 1153.18
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+__CFBundleIdentifier = com.microsoft.VSCode
+# environment
+INFOPATH = /usr/local/share/info:
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/z_/9zzfdvfd18x4kh0xxm89xmm80000gn/T/vscode-ipc-a3daf6b9-583b-4395-9b2c-bc9ac7c59959.sock
+# environment
+VSCODE_CWD = /
+# environment
+PATH = /usr/local/opt/gnu-sed/libexec/gnubin:/Library/Frameworks/Python.framework/Versions/3.10/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin
+# environment
+LSCOLORS = Gxfxcxdxbxegedabagacad
+# makefile (from `Makefile', line 25)
+STYLE_LFLAGS = 
+# environment
+VSCODE_LOG_STACK = false
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# default
+.FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
+# environment
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.Zv4YHToYBF/Listeners
+# automatic
+%F = $(notdir $%)
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+PWD = /Users/yoctech/Desktop/My/LearningProjects/base course/CF-1153.18
+# environment
+HOMEBREW_CELLAR = /usr/local/Cellar
+# makefile (from `Makefile', line 21)
+DSTBASE = $(if $(DSTROOT),$(DSTROOT)/System/Library/Frameworks,../CF-Root)
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# environment
+MANPATH = /usr/local/share/man::
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /Users/yoctech
+# default
+MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
+# makefile (from `Makefile', line 9)
+HFILES = $(wildcard *.h)
+# environment
+VSCODE_CODE_CACHE_PATH = /Users/yoctech/Library/Application Support/Code/CachedData/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
+# environment
+LOGNAME = yoctech
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# makefile (from `Makefile', line 24)
+STYLE_CFLAGS = -O2
+# makefile (from `Makefile', line 19)
+OBJBASE_ROOT = CF-Objects
+# environment
+ZSH = /Users/yoctech/.oh-my-zsh
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# makefile (from `Makefile', line 5)
+MAX_MACOSX_VERSION = MAC_OS_X_VERSION_10_10
+# environment
+XPC_FLAGS = 0x0
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+SHLVL = 1
+# makefile (from `Makefile', line 29)
+CC = /usr/bin/clang
+# default
+MAKE_VERSION := 3.81
+# environment
+USER = yoctech
+# makefile
+.DEFAULT_GOAL := all
+# environment
+HOMEBREW_BOTTLE_DOMAIN = https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/bottles
+# makefile (from `Makefile', line 10)
+INTERMEDIATE_HFILES = $(addprefix $(OBJBASE)/CoreFoundation/,$(HFILES))
+# makefile (from `Makefile', line 4)
+MIN_MACOSX_VERSION = 10.10
+# environment
+LESS = -R
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# makefile (from `Makefile', line 33)
+LFLAGS = -dynamiclib -mmacosx-version-min=$(MIN_MACOSX_VERSION) -twolevel_namespace -fexceptions -init ___CFInitialize -compatibility_version 150 -current_version $(VERSION) -Wl,-alias_list,SymbolAliases -sectcreate __UNICODE __csbitmaps CFCharacterSetBitmaps.bitmap -sectcreate __UNICODE __properties CFUniCharPropertyDatabase.data -sectcreate __UNICODE __data $(call unicode_data_file_name,$(MACHINE_TYPE)) -segprot __UNICODE r r
+# makefile (from `Makefile', line 12)
+PUBLIC_HEADERS = CFArray.h CFBag.h CFBase.h CFBinaryHeap.h CFBitVector.h CFBundle.h CFByteOrder.h CFCalendar.h CFCharacterSet.h CFData.h CFDate.h CFDateFormatter.h CFDictionary.h CFError.h CFLocale.h CFMessagePort.h CFNumber.h CFNumberFormatter.h CFPlugIn.h CFPlugInCOM.h CFPreferences.h CFPropertyList.h CFRunLoop.h CFSet.h CFSocket.h CFStream.h CFString.h CFStringEncodingExt.h CFTimeZone.h CFTree.h CFURL.h CFURLAccess.h CFUUID.h CFUserNotification.h CFXMLNode.h CFXMLParser.h CFAvailability.h CFUtilities.h CoreFoundation.h
+# default
+MAKE_COMMAND := /Applications/Xcode.app/Contents/Developer/usr/bin/make
+# default
+.VARIABLES := 
+# environment
+TMPDIR = /var/folders/z_/9zzfdvfd18x4kh0xxm89xmm80000gn/T/
+# automatic
+*F = $(notdir $*)
+# makefile (from `Makefile', line 27)
+INSTALLNAME = /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation_$(STYLE)
+# environment
+VSCODE_IPC_HOOK = /Users/yoctech/Library/Application Support/Code/1.67.2-main.sock
+# makefile
+MAKEFLAGS = Rrqp
+# environment
+MFLAGS = -Rrqp
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+HOMEBREW_SHELLENV_PREFIX = /usr/local
+# environment
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.37461760.37461766
+# environment
+HOMEBREW_PREFIX = /usr/local
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# makefile (from `Makefile', line 23)
+STYLE = normal
+# automatic
++F = $(notdir $+)
+ 
+# environment
+HOMEBREW_REPOSITORY = /usr/local/Homebrew
+# environment
+__CF_USER_TEXT_ENCODING = 0x1F5:0:0
+# environment
+COMMAND_MODE = unix2003
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# environment
+PAGER = less
+# environment
+LC_ALL = C
+# automatic
+^F = $(notdir $^)
+# makefile (from `Makefile', line 20)
+OBJBASE = $(OBJBASE_ROOT)/$(STYLE)
+# default
+SUFFIXES := 
+# default
+.INCLUDE_DIRS = /usr/local/include
+# environment
+MAKELEVEL := 0
+# makefile (from `Makefile', line 8)
+OBJECTS = $(patsubst %.c,%.o,$(wildcard *.c)) CFBasicHash.o
+# makefile (from `Makefile', line 14)
+PRIVATE_HEADERS = CFBundlePriv.h CFCharacterSetPriv.h CFError_Private.h CFLogUtilities.h CFPriv.h CFRuntime.h CFStorage.h CFStreamAbstract.h CFStreamPriv.h CFStreamInternal.h CFStringDefaultEncoding.h CFStringEncodingConverter.h CFStringEncodingConverterExt.h CFUniChar.h CFUnicodeDecomposition.h CFUnicodePrecomposition.h ForFoundationOnly.h CFBurstTrie.h CFICULogging.h
+# environment
+LANG = C
+# environment
+VSCODE_PID = 92458
+# makefile (from `Makefile', line 16)
+MACHINE_TYPE := i386
+# variable set hash-table stats:
+# Load=94/1024=9%, Rehash=0, Collisions=1/176=1%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 16777221, inode 40667606): 170 files, no impossibilities.
+# CF-Objects/normal (device 16777221, inode 40679666): No files, no impossibilities so far.
+# CF-Objects/normal/CoreFoundation (device 16777221, inode 40679667): 77 files, no impossibilities so far.
+
+# 247 files, no impossibilities in 3 directories.
+
+# Implicit Rules
+
+CF-Objects/normal/CoreFoundation/%.h: %.h CF-Objects/normal/CoreFoundation
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+CF-Objects/normal/%.o: %.c CF-Objects/normal/CoreFoundation/CFArray.h CF-Objects/normal/CoreFoundation/CFAvailability.h CF-Objects/normal/CoreFoundation/CFBag.h CF-Objects/normal/CoreFoundation/CFBase.h CF-Objects/normal/CoreFoundation/CFBasicHash.h CF-Objects/normal/CoreFoundation/CFBigNumber.h CF-Objects/normal/CoreFoundation/CFBinaryHeap.h CF-Objects/normal/CoreFoundation/CFBitVector.h CF-Objects/normal/CoreFoundation/CFBundle.h CF-Objects/normal/CoreFoundation/CFBundlePriv.h CF-Objects/normal/CoreFoundation/CFBundle_BinaryTypes.h CF-Objects/normal/CoreFoundation/CFBundle_Internal.h CF-Objects/normal/CoreFoundation/CFBurstTrie.h CF-Objects/normal/CoreFoundation/CFByteOrder.h CF-Objects/normal/CoreFoundation/CFCalendar.h CF-Objects/normal/CoreFoundation/CFCharacterSet.h CF-Objects/normal/CoreFoundation/CFCharacterSetPriv.h CF-Objects/normal/CoreFoundation/CFData.h CF-Objects/normal/CoreFoundation/CFDate.h CF-Objects/normal/CoreFoundation/CFDateFormatter.h CF-Objects/normal/CoreFoundation/CFDictionary.h CF-Objects/normal/CoreFoundation/CFError.h CF-Objects/normal/CoreFoundation/CFError_Private.h CF-Objects/normal/CoreFoundation/CFICUConverters.h CF-Objects/normal/CoreFoundation/CFICULogging.h CF-Objects/normal/CoreFoundation/CFInternal.h CF-Objects/normal/CoreFoundation/CFLocale.h CF-Objects/normal/CoreFoundation/CFLocaleInternal.h CF-Objects/normal/CoreFoundation/CFLogUtilities.h CF-Objects/normal/CoreFoundation/CFMachPort.h CF-Objects/normal/CoreFoundation/CFMessagePort.h CF-Objects/normal/CoreFoundation/CFNumber.h CF-Objects/normal/CoreFoundation/CFNumberFormatter.h CF-Objects/normal/CoreFoundation/CFPlugIn.h CF-Objects/normal/CoreFoundation/CFPlugInCOM.h CF-Objects/normal/CoreFoundation/CFPlugIn_Factory.h CF-Objects/normal/CoreFoundation/CFPreferences.h CF-Objects/normal/CoreFoundation/CFPriv.h CF-Objects/normal/CoreFoundation/CFPropertyList.h CF-Objects/normal/CoreFoundation/CFRunLoop.h CF-Objects/normal/CoreFoundation/CFRuntime.h CF-Objects/normal/CoreFoundation/CFSet.h CF-Objects/normal/CoreFoundation/CFSocket.h CF-Objects/normal/CoreFoundation/CFStorage.h CF-Objects/normal/CoreFoundation/CFStream.h CF-Objects/normal/CoreFoundation/CFStreamAbstract.h CF-Objects/normal/CoreFoundation/CFStreamInternal.h CF-Objects/normal/CoreFoundation/CFStreamPriv.h CF-Objects/normal/CoreFoundation/CFString.h CF-Objects/normal/CoreFoundation/CFStringDefaultEncoding.h CF-Objects/normal/CoreFoundation/CFStringEncodingConverter.h CF-Objects/normal/CoreFoundation/CFStringEncodingConverterExt.h CF-Objects/normal/CoreFoundation/CFStringEncodingConverterPriv.h CF-Objects/normal/CoreFoundation/CFStringEncodingDatabase.h CF-Objects/normal/CoreFoundation/CFStringEncodingExt.h CF-Objects/normal/CoreFoundation/CFTimeZone.h CF-Objects/normal/CoreFoundation/CFTree.h CF-Objects/normal/CoreFoundation/CFURL.h CF-Objects/normal/CoreFoundation/CFURL.inc.h CF-Objects/normal/CoreFoundation/CFURLAccess.h CF-Objects/normal/CoreFoundation/CFURLPriv.h CF-Objects/normal/CoreFoundation/CFUUID.h CF-Objects/normal/CoreFoundation/CFUniChar.h CF-Objects/normal/CoreFoundation/CFUniCharPriv.h CF-Objects/normal/CoreFoundation/CFUnicodeDecomposition.h CF-Objects/normal/CoreFoundation/CFUnicodePrecomposition.h CF-Objects/normal/CoreFoundation/CFUserNotification.h CF-Objects/normal/CoreFoundation/CFUtilities.h CF-Objects/normal/CoreFoundation/CFXMLInputStream.h CF-Objects/normal/CoreFoundation/CFXMLNode.h CF-Objects/normal/CoreFoundation/CFXMLParser.h CF-Objects/normal/CoreFoundation/CoreFoundation.h CF-Objects/normal/CoreFoundation/CoreFoundation_Prefix.h CF-Objects/normal/CoreFoundation/ForFoundationOnly.h CF-Objects/normal/CoreFoundation/TargetConditionals.h
+#  commands to execute (from `Makefile', line 51):
+	$(CC) $(STYLE_CFLAGS) $(ARCHFLAGS) $(CFLAGS) $< -o $@
+	
+
+CF-Objects/normal/%.o: %.m CF-Objects/normal/CoreFoundation/CFArray.h CF-Objects/normal/CoreFoundation/CFAvailability.h CF-Objects/normal/CoreFoundation/CFBag.h CF-Objects/normal/CoreFoundation/CFBase.h CF-Objects/normal/CoreFoundation/CFBasicHash.h CF-Objects/normal/CoreFoundation/CFBigNumber.h CF-Objects/normal/CoreFoundation/CFBinaryHeap.h CF-Objects/normal/CoreFoundation/CFBitVector.h CF-Objects/normal/CoreFoundation/CFBundle.h CF-Objects/normal/CoreFoundation/CFBundlePriv.h CF-Objects/normal/CoreFoundation/CFBundle_BinaryTypes.h CF-Objects/normal/CoreFoundation/CFBundle_Internal.h CF-Objects/normal/CoreFoundation/CFBurstTrie.h CF-Objects/normal/CoreFoundation/CFByteOrder.h CF-Objects/normal/CoreFoundation/CFCalendar.h CF-Objects/normal/CoreFoundation/CFCharacterSet.h CF-Objects/normal/CoreFoundation/CFCharacterSetPriv.h CF-Objects/normal/CoreFoundation/CFData.h CF-Objects/normal/CoreFoundation/CFDate.h CF-Objects/normal/CoreFoundation/CFDateFormatter.h CF-Objects/normal/CoreFoundation/CFDictionary.h CF-Objects/normal/CoreFoundation/CFError.h CF-Objects/normal/CoreFoundation/CFError_Private.h CF-Objects/normal/CoreFoundation/CFICUConverters.h CF-Objects/normal/CoreFoundation/CFICULogging.h CF-Objects/normal/CoreFoundation/CFInternal.h CF-Objects/normal/CoreFoundation/CFLocale.h CF-Objects/normal/CoreFoundation/CFLocaleInternal.h CF-Objects/normal/CoreFoundation/CFLogUtilities.h CF-Objects/normal/CoreFoundation/CFMachPort.h CF-Objects/normal/CoreFoundation/CFMessagePort.h CF-Objects/normal/CoreFoundation/CFNumber.h CF-Objects/normal/CoreFoundation/CFNumberFormatter.h CF-Objects/normal/CoreFoundation/CFPlugIn.h CF-Objects/normal/CoreFoundation/CFPlugInCOM.h CF-Objects/normal/CoreFoundation/CFPlugIn_Factory.h CF-Objects/normal/CoreFoundation/CFPreferences.h CF-Objects/normal/CoreFoundation/CFPriv.h CF-Objects/normal/CoreFoundation/CFPropertyList.h CF-Objects/normal/CoreFoundation/CFRunLoop.h CF-Objects/normal/CoreFoundation/CFRuntime.h CF-Objects/normal/CoreFoundation/CFSet.h CF-Objects/normal/CoreFoundation/CFS 
+ocket.h CF-Objects/normal/CoreFoundation/CFStorage.h CF-Objects/normal/CoreFoundation/CFStream.h CF-Objects/normal/CoreFoundation/CFStreamAbstract.h CF-Objects/normal/CoreFoundation/CFStreamInternal.h CF-Objects/normal/CoreFoundation/CFStreamPriv.h CF-Objects/normal/CoreFoundation/CFString.h CF-Objects/normal/CoreFoundation/CFStringDefaultEncoding.h CF-Objects/normal/CoreFoundation/CFStringEncodingConverter.h CF-Objects/normal/CoreFoundation/CFStringEncodingConverterExt.h CF-Objects/normal/CoreFoundation/CFStringEncodingConverterPriv.h CF-Objects/normal/CoreFoundation/CFStringEncodingDatabase.h CF-Objects/normal/CoreFoundation/CFStringEncodingExt.h CF-Objects/normal/CoreFoundation/CFTimeZone.h CF-Objects/normal/CoreFoundation/CFTree.h CF-Objects/normal/CoreFoundation/CFURL.h CF-Objects/normal/CoreFoundation/CFURL.inc.h CF-Objects/normal/CoreFoundation/CFURLAccess.h CF-Objects/normal/CoreFoundation/CFURLPriv.h CF-Objects/normal/CoreFoundation/CFUUID.h CF-Objects/normal/CoreFoundation/CFUniChar.h CF-Objects/normal/CoreFoundation/CFUniCharPriv.h CF-Objects/normal/CoreFoundation/CFUnicodeDecomposition.h CF-Objects/normal/CoreFoundation/CFUnicodePrecomposition.h CF-Objects/normal/CoreFoundation/CFUserNotification.h CF-Objects/normal/CoreFoundation/CFUtilities.h CF-Objects/normal/CoreFoundation/CFXMLInputStream.h CF-Objects/normal/CoreFoundation/CFXMLNode.h CF-Objects/normal/CoreFoundation/CFXMLParser.h CF-Objects/normal/CoreFoundation/CoreFoundation.h CF-Objects/normal/CoreFoundation/CoreFoundation_Prefix.h CF-Objects/normal/CoreFoundation/ForFoundationOnly.h CF-Objects/normal/CoreFoundation/TargetConditionals.h
+#  commands to execute (from `Makefile', line 54):
+	$(CC) $(STYLE_CFLAGS) $(ARCHFLAGS) $(CFLAGS) $< -o $@
+	
+
+# 3 implicit rules, 0 (0.0%) terminal.
+
+# Files
+
+# Not a target:
+CFUtilities.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:41
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CF-Objects/normal/CFBinaryHeap.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+CF-Objects/normal/CoreFoundation_normal: CF-Objects/normal/CFApplicationPreferences.o CF-Objects/normal/CFArray.o CF-Objects/normal/CFBag.o CF-Objects/normal/CFBase.o CF-Objects/normal/CFBasicHash.o CF-Objects/normal/CFBigNumber.o CF-Objects/normal/CFBinaryHeap.o CF-Objects/normal/CFBinaryPList.o CF-Objects/normal/CFBitVector.o CF-Objects/normal/CFBuiltinConverters.o CF-Objects/normal/CFBundle.o CF-Objects/normal/CFBundle_Binary.o CF-Objects/normal/CFBundle_Grok.o CF-Objects/normal/CFBundle_InfoPlist.o CF-Objects/normal/CFBundle_Locale.o CF-Objects/normal/CFBundle_Resources.o CF-Objects/normal/CFBundle_Strings.o CF-Objects/normal/CFBurstTrie.o CF-Objects/normal/CFCalendar.o CF-Objects/normal/CFCharacterSet.o CF-Objects/normal/CFConcreteStreams.o CF-Objects/normal/CFData.o CF-Objects/normal/CFDate.o CF-Objects/normal/CFDateFormatter.o CF-Objects/normal/CFDictionary.o CF-Objects/normal/CFError.o CF-Objects/normal/CFFileUtilities.o CF-Objects/normal/CFICUConverters.o CF-Objects/normal/CFLocale.o CF-Objects/normal/CFLocaleIdentifier.o CF-Objects/normal/CFLocaleKeys.o CF-Objects/normal/CFMachPort.o CF-Objects/normal/CFMessagePort.o CF-Objects/normal/CFNumber.o CF-Objects/normal/CFNumberFormatter.o CF-Objects/normal/CFOldStylePList.o CF-Objects/normal/CFPlatform.o CF-Objects/normal/CFPlatformConverters.o CF-Objects/normal/CFPlugIn.o CF-Objects/normal/CFPlugIn_Factory.o CF-Objects/normal/CFPlugIn_Instance.o CF-Objects/normal/CFPlugIn_PlugIn.o CF-Objects/normal/CFPreferences.o CF-Objects/normal/CFPropertyList.o CF-Objects/normal/CFRunLoop.o CF-Objects/normal/CFRuntime.o CF-Objects/normal/CFSet.o CF-Objects/normal/CFSocket.o CF-Objects/normal/CFSocketStream.o CF-Objects/normal/CFSortFunctions.o CF-Objects/normal/CFStorage.o CF-Objects/normal/CFStream.o CF-Objects/normal/CFString.o CF-Objects/normal/CFStringEncodingConverter.o CF-Objects/normal/CFStringEncodingDatabase.o CF-Objects/normal/CFStringEncodings.o CF-Objects/normal/CFStringScanner.o CF-Objects/normal/CFStringUtilities.o CF-Objects/normal/CFSystemDirectories.o CF-Objects/normal/CFTimeZone.o CF-Objects/normal/CFTree.o CF-Objects/normal/CFURL.o CF-Objects/normal/CFURLAccess.o CF-Objects/normal/CFUUID.o CF-Objects/normal/CFUniChar.o CF-Objects/normal/CFUnicodeDecomposition.o CF-Objects/normal/CFUnicodePrecomposition.o CF-Objects/normal/CFUserNotification.o CF-Objects/normal/CFUtilities.o CF-Objects/normal/CFVersion.o CF-Objects/normal/CFWindowsUtilities.o CF-Objects/normal/CFXMLInputStream.o CF-Objects/normal/CFXMLNode.o CF-Objects/normal/CFXMLParser.o CF-Objects/normal/CFXMLPreferencesDomain.o CF-Objects/normal/CFXMLTree.o CF-Objects/normal/plconvert.o CF-Objects/normal/CFBasicHash.o
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/12=0%
+#  commands to execute (from `Makefile', line 57):
+	$(CC) $(STYLE_LFLAGS) -install_name $(INSTALLNAME) $(ARCHFLAGS) $(LFLAGS) $^ -licucore.A -o $(OBJBASE)/CoreFoundation_$(STYLE)
+	
+
+# Not a target:
+CF-Objects/normal/CFUserNotification.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CF-Objects/normal/CFDateFormatter.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+CF-Objects/normal/CoreFoundation/CFBitVector.h: CFBitVector.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFBitVector'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+ForFoundationOnly.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:41
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CF-Objects/normal/CFConcreteStreams.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+MakefileVersion:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:29
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CF-Objects/normal/CFBigNumber.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+CF-Objects/normal/CoreFoundation/CFBinaryHeap.h: CFBinaryHeap.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFBinaryHeap'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+CF-Objects/normal/CFURLAccess.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+CF-Objects/normal/CoreFoundation/CFICULogging.h: CFICULogging.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFICULogging'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+CF-Objects/normal/CoreFoundation/CFUserNotification.h: CFUserNotification.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFUserNotification'
+ 
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+CF-Objects/normal/CFXMLTree.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+CF-Objects/normal/CoreFoundation/CFDateFormatter.h: CFDateFormatter.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFDateFormatter'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+CF-Objects/normal/CoreFoundation/CFError_Private.h: CFError_Private.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFError_Private'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+CF-Objects/normal/CFUnicodePrecomposition.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+all: install
+#  Phony target (prerequisite of .PHONY).
+#  Command-line target.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/12=0%
+
+# Not a target:
+CFNumber.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:42
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CF-Objects/normal/CFSocketStream.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CF-Objects/normal/CFBase.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CFUniCharPriv.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:44
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+CF-Objects/normal/CoreFoundation/CFBundle_BinaryTypes.h: CFBundle_BinaryTypes.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFBundle_BinaryTypes'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+CFError.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:44
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CFUniChar.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:44
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+.PHONY: all install clean
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CFCalendar.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:44
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CFXMLInputStream.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:42
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CF-Objects/normal/CFPropertyList.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+CF-Objects/normal/CoreFoundation/CFBigNumber.h: CFBigNumber.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFBigNumber'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+ 
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+CFXMLNode.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:42
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CFPlugInCOM.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CFDate.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:42
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+CF-Objects/normal/CoreFoundation/CFURLAccess.h: CFURLAccess.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFURLAccess'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+CFURL.inc.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:44
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CFPlugIn_Factory.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+CF-Objects/normal/CoreFoundation/CFUnicodePrecomposition.h: CFUnicodePrecomposition.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFUnicodePrecomposition'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+.PRECIOUS: CF-Objects/normal/CoreFoundation/%.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+CF-Objects/normal/CoreFoundation/CFBase.h: CFBase.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFBase'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+CFByteOrder.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:40
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CFBundlePriv.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CFSocket.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CF-Objects/normal/CFStorage.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CF-Objects/normal/CFVersion.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+CF-Objects/normal/CoreFoundation/CFPropertyList.h: CFPropertyList.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFPropertyList'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+ 
+	
+
+# Not a target:
+CF-Objects/normal/CFBundle_Resources.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CF-Objects/normal/CFOldStylePList.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CFBundle.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CFLocale.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:42
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CF-Objects/normal/CFBundle_Locale.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CFNumberFormatter.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:45
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CF-Objects/normal/CFBasicHash.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CoreFoundation_Prefix.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:45
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CFURLPriv.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:44
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CF-Objects/normal/CFBurstTrie.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CF-Objects/normal/CFPlugIn_Instance.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CFCharacterSetPriv.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:44
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+CF-Objects/normal/CoreFoundation/ForFoundationOnly.h: ForFoundationOnly.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `ForFoundationOnly'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+CF-Objects/normal/CoreFoundation/CFStorage.h: CFStorage.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFStorage'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+ 
+	
+
+# Not a target:
+CFUUID.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:41
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CFCharacterSet.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:44
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:29
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+CF-Objects/normal/CoreFoundation/TargetConditionals.h: TargetConditionals.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `TargetConditionals'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+CF-Objects/normal/CoreFoundation/CFStringEncodingConverterExt.h: CFStringEncodingConverterExt.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFStringEncodingConverterExt'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+CF-Objects/normal/CFSystemDirectories.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CF-Objects/normal/CFTimeZone.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CFStreamInternal.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:45
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CF-Objects/normal/CFRunLoop.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CF-Objects/normal/CFFileUtilities.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+CF-Objects/normal/CoreFoundation/CFBasicHash.h: CFBasicHash.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFBasicHash'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+CFURL.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:44
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+CF-Objects/normal/CoreFoundation/CFBundle_Internal.h: CFBundle_Internal.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFBundle_Internal'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+CF-Objects/normal/CoreFoundation/CFLocaleInternal.h: CFLocaleInternal.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFLocaleInternal'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+CF-Objects/normal/CFRuntime.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CFStringEncodingExt.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:44
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CF-Objects/normal/CFData.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+CF-Objects/normal/CoreFoundation/CFBurstTrie.h: CFBurstTrie.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFBurstTrie'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+ 
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+CF-Objects/normal/CFMachPort.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CF-Objects/normal/CFMessagePort.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CF-Objects/normal/CFICUConverters.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CF-Objects/normal/CFPlatformConverters.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CF-Objects/normal/CoreFoundation/%.h:
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CFArray.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:41
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CF-Objects/normal/CFXMLParser.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CFPlugIn.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+CF-Objects/normal/CoreFoundation/CFTimeZone.h: CFTimeZone.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFTimeZone'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+CF-Objects/normal/CoreFoundation/CFPriv.h: CFPriv.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFPriv'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+CF-Objects/normal/CoreFoundation/CFRunLoop.h: CFRunLoop.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFRunLoop'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+CF-Objects/normal/CFStringEncodingDatabase.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CF-Objects/normal/CFSocket.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+CF-Objects/normal/CoreFoundation:
+#  Implicit rule search has not been done.
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+#  commands to execute (from `Makefile', line 45):
+	/bin/mkdir -p $(OBJBASE)/CoreFoundation
+	
+
+CF-Objects/normal/CFApplicationPreferences.o: CFApplicationPreferences.c CF-Objects/normal/CoreFoundation/CFArray.h CF-Objects/normal/CoreFoundation/CFAvailability.h CF-Objects/normal/CoreFoundation/CFBag.h CF-Objects/normal/CoreFoundation/CFBase.h CF-Objects/normal/CoreFoundation/CFBasicHash.h CF-Objects/normal/CoreFoundation/CFBigNumber.h CF-Objects/normal/CoreFoundation/CFBinaryHeap.h CF-Objects/normal/CoreFoundation/CFBitVector.h CF-Objects/normal/CoreFoundation/CFBundle.h CF-Objects/normal/CoreFoundation/CFBundlePriv.h CF-Objects/normal/CoreFoundation/CFBundle_BinaryTypes.h CF-Objects/normal/CoreFoundation/CFBundle_Internal.h CF-Objects/normal/CoreFoundation/CFBurstTrie.h CF-Objects/normal/CoreFoundation/CFByteOrder.h CF-Objects/normal/CoreFoundation/CFCalendar.h CF-Objects/normal/CoreFoundation/CFCharacterSet.h CF-Objects/normal/CoreFoundation/CFCharacterSetPriv.h CF-Objects/normal/CoreFoundation/CFData.h CF-Objects/normal/CoreFoundation/CFDate.h CF-Objects/normal/CoreFoundation/CFDateFormatter.h CF-Objects/normal/CoreFoundation/CFDictionary.h CF-Objects/normal/CoreFoundation/CFError.h CF-Objects/normal/CoreFoundation/CFError_Private.h CF-Objects/normal/CoreFoundation/CFICUConverters.h CF-Objects/normal/CoreFoundation/CFICULogging.h CF-Objects/normal/CoreFoundation/CFInternal.h CF-Objects/normal/CoreFoundation/CFLocale.h CF-Objects/normal/CoreFoundation/CFLocaleInternal.h CF-Objects/normal/CoreFoundation/CFLogUtilities.h CF-Objects/normal/CoreFoundation/CFMachPort.h CF-Objects/normal/CoreFoundation/CFMessagePort.h CF-Objects/normal/CoreFoundation/CFNumber.h CF-Objects/normal/CoreFoundation/CFNumberFormatter.h CF-Objects/normal/CoreFoundation/CFPlugIn.h CF-Objects/normal/CoreFoundation/CFPlugInCOM.h CF-Objects/normal/CoreFoundation/CFPlugIn_Factory.h CF-Objects/normal/CoreFoundation/CFPreferences.h CF-Objects/normal/CoreFoundation/CFPriv.h CF-Objects/normal/CoreFoundation/CFPropertyList.h CF-Objects/normal/CoreFoundation/CFRunLoop.h CF-Objects/normal/CoreFoundation/CFRuntime.h CF-Objects/normal/CoreFoundation/CFSet.h CF-Objects/normal/CoreFoundation/CFSocket.h CF-Objects/normal/CoreFoundation/CFStorage.h CF-Objects/normal/CoreFoundation/CFStream.h CF-Objects/normal/CoreFoundation/CFStreamAbstract.h CF-Objects/normal/CoreFoundation/CFStreamInternal.h CF-Objects/normal/CoreFoundation/CFStreamPriv.h CF-Objects/normal/CoreFoundation/CFString.h CF-Objects/normal/CoreFoundation/CFStringDefaultEncoding.h CF-Objects/normal/CoreFoundation/CFStringEncodingConverter.h CF-Objects/normal/CoreFoundation/CFStringEncodingConverterExt.h CF-Objects/normal/CoreFoundation/CFStringEncodingConverterPriv.h CF-Objects/normal/CoreFoundation/CFStringEncodingDatabase.h CF-Objects/normal/CoreFoundation/CFStringEncodingExt.h CF-Objects/normal/CoreFoundation/CFTimeZone.h CF-Objects/normal/CoreFoundation/CFTree.h CF-Objects/normal/CoreFoundation/CFURL.h CF-Objects/normal/CoreFoundation/CFURL.inc.h CF-Objects/normal/CoreFoundation/CFURLAccess.h CF-Objects/normal/CoreFoundation/CFURLPriv.h CF-Objects/normal/CoreFoundation/CFUUID.h CF-Objects/normal/CoreFoundation/CFUniChar.h CF-Objects/normal/CoreFoundation/CFUniCharPriv.h CF-Objects/normal/CoreFoundation/CFUnicodeDecomposition.h CF-Objects/normal/CoreFoundation/CFUnicodePrecomposition.h CF-Objects/normal/CoreFoundation/CFUserNotification.h CF-Objects/normal/CoreFoundation/CFUtilities.h CF-Objects/normal/CoreFoundation/CFXMLInputStream.h CF-Objects/normal/CoreFoundation/CFXMLNode.h CF-Objects/normal/CoreFoundation/CFXMLParser.h CF-Objects/normal/CoreFoundation/CoreFoundation.h CF-Objects/normal/CoreFoundation/CoreFoundation_Prefix.h CF-Objects/normal/CoreFoundation/ForFoundationOnly.h CF-Objects/normal/CoreFoundation/TargetConditionals.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFApplicationPreferences'
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := CF-Objects/normal/CFApplicationPreferences.o
+# automatic
+# % := 
+# automatic
+# * := CFApplicationPreferences
+# automatic
+ 
+# + := CFApplicationPreferences.c CF-Objects/normal/CoreFoundation/CFArray.h CF-Objects/normal/CoreFoundation/CFAvailability.h CF-Objects/normal/CoreFoundation/CFBag.h CF-Objects/normal/CoreFoundation/CFBase.h CF-Objects/normal/CoreFoundation/CFBasicHash.h CF-Objects/normal/CoreFoundation/CFBigNumber.h CF-Objects/normal/CoreFoundation/CFBinaryHeap.h CF-Objects/normal/CoreFoundation/CFBitVector.h CF-Objects/normal/CoreFoundation/CFBundle.h CF-Objects/normal/CoreFoundation/CFBundlePriv.h CF-Objects/normal/CoreFoundation/CFBundle_BinaryTypes.h CF-Objects/normal/CoreFoundation/CFBundle_Internal.h CF-Objects/normal/CoreFoundation/CFBurstTrie.h CF-Objects/normal/CoreFoundation/CFByteOrder.h CF-Objects/normal/CoreFoundation/CFCalendar.h CF-Objects/normal/CoreFoundation/CFCharacterSet.h CF-Objects/normal/CoreFoundation/CFCharacterSetPriv.h CF-Objects/normal/CoreFoundation/CFData.h CF-Objects/normal/CoreFoundation/CFDate.h CF-Objects/normal/CoreFoundation/CFDateFormatter.h CF-Objects/normal/CoreFoundation/CFDictionary.h CF-Objects/normal/CoreFoundation/CFError.h CF-Objects/normal/CoreFoundation/CFError_Private.h CF-Objects/normal/CoreFoundation/CFICUConverters.h CF-Objects/normal/CoreFoundation/CFICULogging.h CF-Objects/normal/CoreFoundation/CFInternal.h CF-Objects/normal/CoreFoundation/CFLocale.h CF-Objects/normal/CoreFoundation/CFLocaleInternal.h CF-Objects/normal/CoreFoundation/CFLogUtilities.h CF-Objects/normal/CoreFoundation/CFMachPort.h CF-Objects/normal/CoreFoundation/CFMessagePort.h CF-Objects/normal/CoreFoundation/CFNumber.h CF-Objects/normal/CoreFoundation/CFNumberFormatter.h CF-Objects/normal/CoreFoundation/CFPlugIn.h CF-Objects/normal/CoreFoundation/CFPlugInCOM.h CF-Objects/normal/CoreFoundation/CFPlugIn_Factory.h CF-Objects/normal/CoreFoundation/CFPreferences.h CF-Objects/normal/CoreFoundation/CFPriv.h CF-Objects/normal/CoreFoundation/CFPropertyList.h CF-Objects/normal/CoreFoundation/CFRunLoop.h CF-Objects/normal/CoreFoundation/CFRuntime.h CF-Objects/normal/CoreFoundation/CFSet.h CF-Objects/normal/CoreFoundation/CFSocket.h CF-Objects/normal/CoreFoundation/CFStorage.h CF-Objects/normal/CoreFoundation/CFStream.h CF-Objects/normal/CoreFoundation/CFStreamAbstract.h CF-Objects/normal/CoreFoundation/CFStreamInternal.h CF-Objects/normal/CoreFoundation/CFStreamPriv.h CF-Objects/normal/CoreFoundation/CFString.h CF-Objects/normal/CoreFoundation/CFStringDefaultEncoding.h CF-Objects/normal/CoreFoundation/CFStringEncodingConverter.h CF-Objects/normal/CoreFoundation/CFStringEncodingConverterExt.h CF-Objects/normal/CoreFoundation/CFStringEncodingConverterPriv.h CF-Objects/normal/CoreFoundation/CFStringEncodingDatabase.h CF-Objects/normal/CoreFoundation/CFStringEncodingExt.h CF-Objects/normal/CoreFoundation/CFTimeZone.h CF-Objects/normal/CoreFoundation/CFTree.h CF-Objects/normal/CoreFoundation/CFURL.h CF-Objects/normal/CoreFoundation/CFURL.inc.h CF-Objects/normal/CoreFoundation/CFURLAccess.h CF-Objects/normal/CoreFoundation/CFURLPriv.h CF-Objects/normal/CoreFoundation/CFUUID.h CF-Objects/normal/CoreFoundation/CFUniChar.h CF-Objects/normal/CoreFoundation/CFUniCharPriv.h CF-Objects/normal/CoreFoundation/CFUnicodeDecomposition.h CF-Objects/normal/CoreFoundation/CFUnicodePrecomposition.h CF-Objects/normal/CoreFoundation/CFUserNotification.h CF-Objects/normal/CoreFoundation/CFUtilities.h CF-Objects/normal/CoreFoundation/CFXMLInputStream.h CF-Objects/normal/CoreFoundation/CFXMLNode.h CF-Objects/normal/CoreFoundation/CFXMLParser.h CF-Objects/normal/CoreFoundation/CoreFoundation.h CF-Objects/normal/CoreFoundation/CoreFoundation_Prefix.h CF-Objects/normal/CoreFoundation/ForFoundationOnly.h CF-Objects/normal/CoreFoundation/TargetConditionals.h
+# automatic
+# | := 
+# automatic
+# < := CFApplicationPreferences.c
+# automatic
+# ^ := CFApplicationPreferences.c CF-Objects/normal/CoreFoundation/CFArray.h CF-Objects/normal/CoreFoundation/CFAvailability.h CF-Objects/normal/CoreFoundation/CFBag.h CF-Objects/normal/CoreFoundation/CFBase.h CF-Objects/normal/CoreFoundation/CFBasicHash.h CF-Objects/normal/CoreFoundation/CFBigNumber.h CF-Objects/normal/CoreFoundation/CFBinaryHeap.h CF-Objects/normal/CoreFoundation/CFBitVector.h CF-Objects/normal/CoreFoundation/CFBundle.h CF-Objects/normal/CoreFoundation/CFBundlePriv.h CF-Objects/normal/CoreFoundation/CFBundle_BinaryTypes.h CF-Objects/normal/CoreFoundation/CFBundle_Internal.h CF-Objects/normal/CoreFoundation/CFBurstTrie.h CF-Objects/normal/CoreFoundation/CFByteOrder.h CF-Objects/normal/CoreFoundation/CFCalendar.h CF-Objects/normal/CoreFoundation/CFCharacterSet.h CF-Objects/normal/CoreFoundation/CFCharacterSetPriv.h CF-Objects/normal/CoreFoundation/CFData.h CF-Objects/normal/CoreFoundation/CFDate.h CF-Objects/normal/CoreFoundation/CFDateFormatter.h CF-Objects/normal/CoreFoundation/CFDictionary 
+.h CF-Objects/normal/CoreFoundation/CFError.h CF-Objects/normal/CoreFoundation/CFError_Private.h CF-Objects/normal/CoreFoundation/CFICUConverters.h CF-Objects/normal/CoreFoundation/CFICULogging.h CF-Objects/normal/CoreFoundation/CFInternal.h CF-Objects/normal/CoreFoundation/CFLocale.h CF-Objects/normal/CoreFoundation/CFLocaleInternal.h CF-Objects/normal/CoreFoundation/CFLogUtilities.h CF-Objects/normal/CoreFoundation/CFMachPort.h CF-Objects/normal/CoreFoundation/CFMessagePort.h CF-Objects/normal/CoreFoundation/CFNumber.h CF-Objects/normal/CoreFoundation/CFNumberFormatter.h CF-Objects/normal/CoreFoundation/CFPlugIn.h CF-Objects/normal/CoreFoundation/CFPlugInCOM.h CF-Objects/normal/CoreFoundation/CFPlugIn_Factory.h CF-Objects/normal/CoreFoundation/CFPreferences.h CF-Objects/normal/CoreFoundation/CFPriv.h CF-Objects/normal/CoreFoundation/CFPropertyList.h CF-Objects/normal/CoreFoundation/CFRunLoop.h CF-Objects/normal/CoreFoundation/CFRuntime.h CF-Objects/normal/CoreFoundation/CFSet.h CF-Objects/normal/CoreFoundation/CFSocket.h CF-Objects/normal/CoreFoundation/CFStorage.h CF-Objects/normal/CoreFoundation/CFStream.h CF-Objects/normal/CoreFoundation/CFStreamAbstract.h CF-Objects/normal/CoreFoundation/CFStreamInternal.h CF-Objects/normal/CoreFoundation/CFStreamPriv.h CF-Objects/normal/CoreFoundation/CFString.h CF-Objects/normal/CoreFoundation/CFStringDefaultEncoding.h CF-Objects/normal/CoreFoundation/CFStringEncodingConverter.h CF-Objects/normal/CoreFoundation/CFStringEncodingConverterExt.h CF-Objects/normal/CoreFoundation/CFStringEncodingConverterPriv.h CF-Objects/normal/CoreFoundation/CFStringEncodingDatabase.h CF-Objects/normal/CoreFoundation/CFStringEncodingExt.h CF-Objects/normal/CoreFoundation/CFTimeZone.h CF-Objects/normal/CoreFoundation/CFTree.h CF-Objects/normal/CoreFoundation/CFURL.h CF-Objects/normal/CoreFoundation/CFURL.inc.h CF-Objects/normal/CoreFoundation/CFURLAccess.h CF-Objects/normal/CoreFoundation/CFURLPriv.h CF-Objects/normal/CoreFoundation/CFUUID.h CF-Objects/normal/CoreFoundation/CFUniChar.h CF-Objects/normal/CoreFoundation/CFUniCharPriv.h CF-Objects/normal/CoreFoundation/CFUnicodeDecomposition.h CF-Objects/normal/CoreFoundation/CFUnicodePrecomposition.h CF-Objects/normal/CoreFoundation/CFUserNotification.h CF-Objects/normal/CoreFoundation/CFUtilities.h CF-Objects/normal/CoreFoundation/CFXMLInputStream.h CF-Objects/normal/CoreFoundation/CFXMLNode.h CF-Objects/normal/CoreFoundation/CFXMLParser.h CF-Objects/normal/CoreFoundation/CoreFoundation.h CF-Objects/normal/CoreFoundation/CoreFoundation_Prefix.h CF-Objects/normal/CoreFoundation/ForFoundationOnly.h CF-Objects/normal/CoreFoundation/TargetConditionals.h
+# automatic
+# ? := CFApplicationPreferences.c CF-Objects/normal/CoreFoundation/CFArray.h CF-Objects/normal/CoreFoundation/CFAvailability.h CF-Objects/normal/CoreFoundation/CFBag.h CF-Objects/normal/CoreFoundation/CFBase.h CF-Objects/normal/CoreFoundation/CFBasicHash.h CF-Objects/normal/CoreFoundation/CFBigNumber.h CF-Objects/normal/CoreFoundation/CFBinaryHeap.h CF-Objects/normal/CoreFoundation/CFBitVector.h CF-Objects/normal/CoreFoundation/CFBundle.h CF-Objects/normal/CoreFoundation/CFBundlePriv.h CF-Objects/normal/CoreFoundation/CFBundle_BinaryTypes.h CF-Objects/normal/CoreFoundation/CFBundle_Internal.h CF-Objects/normal/CoreFoundation/CFBurstTrie.h CF-Objects/normal/CoreFoundation/CFByteOrder.h CF-Objects/normal/CoreFoundation/CFCalendar.h CF-Objects/normal/CoreFoundation/CFCharacterSet.h CF-Objects/normal/CoreFoundation/CFCharacterSetPriv.h CF-Objects/normal/CoreFoundation/CFData.h CF-Objects/normal/CoreFoundation/CFDate.h CF-Objects/normal/CoreFoundation/CFDateFormatter.h CF-Objects/normal/CoreFoundation/CFDictionary.h CF-Objects/normal/CoreFoundation/CFError.h CF-Objects/normal/CoreFoundation/CFError_Private.h CF-Objects/normal/CoreFoundation/CFICUConverters.h CF-Objects/normal/CoreFoundation/CFICULogging.h CF-Objects/normal/CoreFoundation/CFInternal.h CF-Objects/normal/CoreFoundation/CFLocale.h CF-Objects/normal/CoreFoundation/CFLocaleInternal.h CF-Objects/normal/CoreFoundation/CFLogUtilities.h CF-Objects/normal/CoreFoundation/CFMachPort.h CF-Objects/normal/CoreFoundation/CFMessagePort.h CF-Objects/normal/CoreFoundation/CFNumber.h CF-Objects/normal/CoreFoundation/CFNumberFormatter.h CF-Objects/normal/CoreFoundation/CFPlugIn.h CF-Objects/normal/CoreFoundation/CFPlugInCOM.h CF-Objects/normal/CoreFoundation/CFPlugIn_Factory.h CF-Objects/normal/CoreFoundation/CFPreferences.h CF-Objects/normal/CoreFoundation/CFPriv.h CF-Objects/normal/CoreFoundation/CFPropertyList.h CF-Objects/normal/CoreFoundation/CFRunLoop.h CF-Objects/normal/CoreFoundation/CFRuntime.h CF-Objects/normal/CoreFoundation/CFSet.h CF-Objects/normal/CoreFoundation/CFSocket.h CF-Objects/normal/CoreFoundation/CFStorage.h CF-Objects/normal/CoreFoundation/CFStream.h CF-Objects/normal/CoreFoundation/CFStreamAbstract.h CF-Objects/normal/CoreFoundation/CFStreamInternal.h CF-Objects/normal/CoreFoundation/CFStreamPriv.h CF-Objects/normal/CoreFoundation/CFString.h CF-Objects/normal/CoreFoundation/CFStringDefaultEncoding.h CF-Objects/normal/CoreFoundation/CFStringEncodingConverter.h CF-Objects/normal/CoreFoundation/CFStringEncodingConverterExt.h CF-Objects/normal/CoreFoundation/CFStringEncodingConverterPriv.h CF-Objects/normal/CoreFoundation/CFStringEncodingDatabase.h CF-Objects/normal/CoreFoundation/CFStringEncodingExt.h CF-Objects/normal/CoreFoundation/CFTimeZone.h CF-Objects/normal/CoreFoundation/CFTree.h CF-Objects/normal/CoreFoundation/CFURL.h CF-Objects/normal/CoreFoundation/CFURL.inc.h CF-Objects/normal/CoreFoundation/CFURLAccess.h CF-Objects/normal/CoreFoundation/CFURLPriv.h CF-Objects/normal/CoreFoundation/CFUUID.h CF-Objects/normal/CoreFoundation/CFUniChar.h CF-Objects/normal/CoreFoundation/CFUniCharPriv.h CF-Objects/normal/CoreFoundation/CFUnicodeDecomposition.h CF-Objects/normal/CoreFoundation/CFUnicodePrecomposition.h CF-Objects/normal/CoreFoundation/CFUserNotification.h CF-Objects/normal/CoreFoundation/CFUtilities.h CF-Objects/normal/CoreFoundation/CFXMLInputStream.h CF-Objects/normal/CoreFoundation/CFXMLNode.h CF-Objects/normal/CoreFoundation/CFXMLParser.h CF-Objects/normal/CoreFoundation/CoreFoundation.h CF-Objects/normal/CoreFoundation/CoreFoundation_Prefix.h CF-Objects/normal/CoreFoundation/ForFoundationOnly.h CF-Objects/normal/CoreFoundation/TargetConditionals.h
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=2/22=9%
+#  commands to execute (from `Makefile', line 51):
+	$(CC) $(STYLE_CFLAGS) $(ARCHFLAGS) $(CFLAGS) $< -o $@
+	
+
+CF-Objects/normal/CoreFoundation/CFRuntime.h: CFRuntime.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFRuntime'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+CF-Objects/normal/CFBuiltinConverters.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+CF-Objects/normal/CoreFoundation/CFData.h: CFData.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFData'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+CF-Objects/normal/CoreFoundation/CFSet.h: CFSet.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFSet'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+CF-Objects/normal/CoreFoundation/CFMachPort.h: CFMachPort.h CF-Objects/normal/CoreFoundation
+ 
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFMachPort'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+CF-Objects/normal/CoreFoundation/CFMessagePort.h: CFMessagePort.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFMessagePort'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+CF-Objects/normal/CoreFoundation/CFICUConverters.h: CFICUConverters.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFICUConverters'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+CF-Objects/normal/CFString.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+CF-Objects/normal/CoreFoundation/CFStringDefaultEncoding.h: CFStringDefaultEncoding.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFStringDefaultEncoding'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+CFBitVector.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:41
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CF-Objects/normal/CFDictionary.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+CF-Objects/normal/CoreFoundation/CFXMLParser.h: CFXMLParser.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFXMLParser'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+CF-Objects/normal/CFStream.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CF-Objects/normal/plconvert.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+CF-Objects/normal/CoreFoundation/CFStringEncodingDatabase.h: CFStringEncodingDatabase.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFStringEncodingDatabase'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+CF-Objects/normal/CoreFoundation/CoreFoundation.h: CoreFoundation.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CoreFoundation'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+CFBinaryHeap.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:41
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CFICULogging.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:42
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CFUserNotification.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:40
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CFDateFormatter.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:45
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CFError_Private.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:44
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+CF-Objects/normal/CoreFoundation/CFStreamPriv.h: CFStreamPriv.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFStreamPriv'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+CF-Objects/normal/CoreFoundation/CFString.h: CFString.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFString'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+CFBundle_BinaryTypes.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+CF-Objects/normal/CoreFoundation/CFDictionary.h: CFDictionary.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFDictionary'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+CF-Objects/normal/CoreFoundation/CFStream.h: CFStream.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFStream'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+CF-Objects/normal/CoreFoundation/CFStreamAbstract.h: CFStreamAbstract.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFStreamAbstract'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+CF-Objects/normal/CFTree.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CF-Objects/normal/CFPreferences.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+ 
+CFBigNumber.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:42
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+TargetConditionals.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:29
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CF-Objects/normal/CFLocaleIdentifier.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CFURLAccess.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:44
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CF-Objects/normal/CFPlugIn_PlugIn.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CF-Objects/normal/CFStringEncodingConverter.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CFUnicodePrecomposition.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:44
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CFStreamAbstract.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CFBase.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:40
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CF-Objects/normal/CFXMLPreferencesDomain.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+CF-Objects/normal/CoreFoundation/CFLogUtilities.h: CFLogUtilities.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFLogUtilities'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+CF-Objects/normal/CoreFoundation/CFTree.h: CFTree.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFTree'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+CF-Objects/normal/CoreFoundation/CFPreferences.h: CFPreferences.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFPreferences'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+CFPropertyList.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:42
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CFStringEncodingConverterPriv.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:44
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CF-Objects/normal/CFLocaleKeys.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+CF-Objects/normal/CoreFoundation/CFStringEncodingConverterPriv.h: CFStringEncodingConverterPriv.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFStringEncodingConverterPriv'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+CF-Objects/normal/CFUtilities.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+CF-Objects/normal/CoreFoundation/CFAvailability.h: CFAvailability.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFAvailability'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+CF-Objects/normal/CoreFoundation/CFStringEncodingConverter.h: CFStringEncodingConverter.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFStringEncodingConverter'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+CFBag.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:41
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CFStorage.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:41
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CFStringEncodingConverterExt.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:44
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+CF-Objects/normal/CoreFoundation/CFUtilities.h: CFUtilities.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFUtilities'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+CFApplicationPreferences.c:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CF-Objects/normal/CFStringUtilities.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+ 
+#  File has not been updated.
+
+# Not a target:
+CFBasicHash.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:45
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CFBundle_Internal.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CFLocaleInternal.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:45
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 42):
+	-/bin/rm -rf $(OBJBASE_ROOT)
+	
+
+# Not a target:
+CF-Objects/normal/CFNumber.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CFBurstTrie.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:45
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CF-Objects/normal/CFError.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CF-Objects/normal/CFUniChar.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CFUnicodeDecomposition.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:44
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CF-Objects/normal/CFCalendar.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+CF-Objects/normal/CoreFoundation/CFInternal.h: CFInternal.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFInternal'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+CF-Objects/normal/CFXMLInputStream.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CF-Objects/normal/CFXMLNode.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CoreFoundation.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:41
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CFTimeZone.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:42
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CF-Objects/normal/CFDate.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CFPriv.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:41
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CFRunLoop.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CF-Objects/normal/CFPlugIn_Factory.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CFInternal.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:41
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+CF-Objects/normal/CoreFoundation/CFNumber.h: CFNumber.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFNumber'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+CFRuntime.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:41
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+CF-Objects/normal/CoreFoundation/CFUniCharPriv.h: CFUniCharPriv.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFUniCharPriv'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+CF-Objects/normal/CFBundle_Binary.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CFData.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:41
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+CF-Objects/normal/CoreFoundation/CFError.h: CFError.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFError'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+CFMessagePort.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CFICUConverters.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:45
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CF-Objects/normal/CFWindowsUtilities.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+CF-Objects/normal/CoreFoundation/CFUniChar.h: CFUniChar.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFUniChar'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+CFStringDefaultEncoding.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:44
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+CF-Objects/normal/CoreFoundation/CFCalendar.h: CFCalendar.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFCalendar'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+ 
+CF-Objects/normal/CFStringEncodings.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CFXMLParser.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:42
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+CF-Objects/normal/CoreFoundation/CFXMLInputStream.h: CFXMLInputStream.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFXMLInputStream'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+CF-Objects/normal/CoreFoundation/CFSocket.h: CFSocket.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFSocket'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+CF-Objects/normal/CoreFoundation/CFXMLNode.h: CFXMLNode.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFXMLNode'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+CF-Objects/normal/CFBundle.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+CF-Objects/normal/CoreFoundation/CFDate.h: CFDate.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFDate'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+CF-Objects/normal/CFLocale.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CF-Objects/normal/CFNumberFormatter.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CFStringEncodingDatabase.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:45
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+CF-Objects/normal/CoreFoundation/CFURL.inc.h: CFURL.inc.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFURL.inc'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+CF-Objects/normal/CoreFoundation/CFPlugIn_Factory.h: CFPlugIn_Factory.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFPlugIn_Factory'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+CFSet.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:41
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CF-Objects/normal/CFSortFunctions.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+CF-Objects/normal/CoreFoundation/CFByteOrder.h: CFByteOrder.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFByteOrder'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+CFStreamPriv.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+CF-Objects/normal/CoreFoundation/CFBundlePriv.h: CFBundlePriv.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFBundlePriv'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+ 
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+CF-Objects/normal/CFUnicodeDecomposition.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CFString.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:44
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CF-Objects/normal/CFBundle_Strings.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CF-Objects/normal/CFPlatform.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CFDictionary.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:41
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CF-Objects/normal/CFUUID.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CFStream.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CF-Objects/normal/CFCharacterSet.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+CF-Objects/normal/CoreFoundation/CFPlugInCOM.h: CFPlugInCOM.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFPlugInCOM'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+CFMachPort.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+CF-Objects/normal/CoreFoundation/CFBundle.h: CFBundle.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFBundle'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+CF-Objects/normal/CoreFoundation/CFLocale.h: CFLocale.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFLocale'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+CF-Objects/normal/CoreFoundation/CFNumberFormatter.h: CFNumberFormatter.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFNumberFormatter'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+CF-Objects/normal/CFURL.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CF-Objects/normal/CFStringScanner.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CF-Objects/normal/CFBag.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CF-Objects/normal/CFBundle_InfoPlist.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+CF-Objects/normal/CoreFoundation/CFURLPriv.h: CFURLPriv.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFURLPriv'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+CF-Objects/normal/CoreFoundation/CFUnicodeDecomposition.h: CFUnicodeDecomposition.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFUnicodeDecomposition'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+CF-Objects/normal/CoreFoundation/CFCharacterSetPriv.h: CFCharacterSetPriv.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFCharacterSetPriv'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+CF-Objects/normal/CoreFoundation/CFUUID.h: CFUUID.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFUUID'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+CF-Objects/normal/CoreFoundation/CFCharacterSet.h: CFCharacterSet.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFCharacterSet'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+CF-Objects/normal/CoreFoundation/CFStringEncodingExt.h: CFStringEncodingExt.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFStringEncodingExt'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+ 
+
+# Not a target:
+CF-Objects/normal/CFArray.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CFLogUtilities.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:45
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CF-Objects/normal/CFPlugIn.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+CFTree.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:42
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CFPreferences.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+CF-Objects/normal/CoreFoundation/CFStreamInternal.h: CFStreamInternal.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFStreamInternal'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+CF-Objects/normal/CFBundle_Grok.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+CF-Objects/normal/CoreFoundation/CFURL.h: CFURL.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFURL'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+CFAvailability.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:45
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+CF-Objects/normal/CoreFoundation/CFBag.h: CFBag.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFBag'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+CFStringEncodingConverter.h:
+#  Implicit rule search has been done.
+#  Last modified 2015-06-24 06:35:44
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+CF-Objects/normal/CFBinaryPList.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+CF-Objects/normal/CoreFoundation/CoreFoundation_Prefix.h: CoreFoundation_Prefix.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CoreFoundation_Prefix'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# Not a target:
+CF-Objects/normal/CFBitVector.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+CF-Objects/normal/CoreFoundation/CFArray.h: CFArray.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFArray'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+install: CF-Objects/normal/CoreFoundation_normal
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/12=0%
+#  commands to execute (from `Makefile', line 60):
+	/bin/rm -rf $(DSTBASE)/CoreFoundation.framework
+	/bin/mkdir -p $(DSTBASE)/CoreFoundation.framework/Versions/A/Resources
+	/bin/mkdir -p $(DSTBASE)/CoreFoundation.framework/Versions/A/Headers
+	/bin/mkdir -p $(DSTBASE)/CoreFoundation.framework/Versions/A/PrivateHeaders
+	/bin/ln -sf A $(DSTBASE)/CoreFoundation.framework/Versions/Current
+	/bin/ln -sf Versions/Current/Resources $(DSTBASE)/CoreFoundation.framework/Resources
+	/bin/ln -sf Versions/Current/Headers $(DSTBASE)/CoreFoundation.framework/Headers
+	/bin/ln -sf Versions/Current/PrivateHeaders $(DSTBASE)/CoreFoundation.framework/PrivateHeaders
+	/bin/ln -sf Versions/Current/CoreFoundation $(DSTBASE)/CoreFoundation.framework/CoreFoundation
+	/bin/cp Info.plist $(DSTBASE)/CoreFoundation.framework/Versions/A/Resources
+	/bin/mkdir -p $(DSTBASE)/CoreFoundation.framework/Versions/A/Resources/en.lproj
+	/bin/cp $(PUBLIC_HEADERS) $(DSTBASE)/CoreFoundation.framework/Versions/A/Headers
+	/bin/cp $(PRIVATE_HEADERS) $(DSTBASE)/CoreFoundation.framework/Versions/A/PrivateHeaders
+	#/usr/bin/strip -S -o $(DSTBASE)/CoreFoundation.framework/Versions/A/CoreFoundation $(OBJBASE)/CoreFoundation_$(STYLE)
+	/bin/cp $(OBJBASE)/CoreFoundation_$(STYLE) $(DSTBASE)/CoreFoundation.framework/Versions/A/CoreFoundation
+	/usr/bin/dsymutil $(DSTBASE)/CoreFoundation.framework/Versions/A/CoreFoundation -o $(DSTBASE)/CoreFoundation.framework.dSYM
+	/usr/sbin/chown -RH -f root:wheel $(DSTBASE)/CoreFoundation.framework
+	/bin/chmod -RH a-w,a+rX $(DSTBASE)/CoreFoundation.framework
+	/bin/chmod -RH u+w $(DSTBASE)
+	install_name_tool -id /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation $(DSTBASE)/CoreFoundation.framework/Versions/A/CoreFoundation
+	@echo "Installing done.  The framework is in $(DSTBASE)"
+	
+
+# Not a target:
+CF-Objects/normal/CFSet.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+CF-Objects/normal/CoreFoundation/CFPlugIn.h: CFPlugIn.h CF-Objects/normal/CoreFoundation
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `CFPlugIn'
+#  Last modified 2022-06-10 16:26:14
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 48):
+	/bin/cp $< $@
+	
+
+# files hash-table stats:
+# Load=240/1024=23%, Rehash=0, Collisions=58/866=7%
+# VPATH Search Paths
+
+ 
+# No `vpath' search paths.
+
+# No general (`VPATH' variable) search path.
+
+# # of strings in strcache: 2
+# # of strcache buffers: 1
+# strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
+# strcache free: total = 4071 / max = 4071 / min = 4071 / avg = 4071
+
+# Finished Make data base on Fri Jun 10 16:27:28 2022
+
+ 

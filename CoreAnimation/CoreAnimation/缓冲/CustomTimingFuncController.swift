@@ -165,16 +165,17 @@ class CustomTimingFuncController: MKScrollController{
         if animated {
             let animation = CABasicAnimation.init()
             animation.keyPath = "transform"
-            animation.toValue = NSValue.init(caTransform3D: transform)
             // 1时：指针平滑移动，因为1s刷新一次
             // animation.duration = 1
             // 自定义缓冲函数
             let timingFunc = CAMediaTimingFunction.init(controlPoints: 1, 0, 0.75, 1)
             animation.timingFunction = timingFunc
-            animation.delegate = self
+//            animation.delegate = self
             animation.fillMode = .removed
-            animation.setValue(pin, forKey: RotateClockPinKey)
+//            animation.setValue(pin, forKey: RotateClockPinKey)
             pin.layer.add(animation, forKey: nil)
+            pin.layer.transform = transform
+
         } else {
             pin.layer.transform = transform
         }

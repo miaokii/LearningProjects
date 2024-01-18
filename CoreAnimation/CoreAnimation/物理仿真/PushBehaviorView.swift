@@ -23,9 +23,11 @@ class PushBehaviorView: DynamicView {
     private var currentPoint: CGPoint = .zero
     
     override func setup() {
-        let blueView = UIView.init(super: self,backgroundColor: .blue)
+        let blueView = UIImageView.init(image: .init(named: "dot"))
+        self.addSubview(blueView)
         blueView.frame = .init(x: 150, y: 300, width: 40, height: 40)
         
+        boxView.image = .init(named: "dot")
         smallView = UIImageView.init(super: self,
                                      cornerRadius: 5)
         smallView.backgroundColor = .black

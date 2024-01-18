@@ -68,16 +68,15 @@ class PropertyAnimationController: MKScrollController {
         anView.layer.addSublayer(alayer)
         alayer.backgroundColor = UIColor.random.cgColor
         alayer.frame = anView.bounds
-        
+    
         let changeLayerColor = UIButton.themeBorderBtn(super: container, title: "change color")
         changeLayerColor.setClosure { (_) in
             let animation = CABasicAnimation.init()
             animation.keyPath = "backgroundColor"
-            animation.toValue = UIColor.random.cgColor
-            animation.delegate = self
-            // 设置自定义属性，区分图层
-            animation.setValue(alayer, forKey: AnimationBackgroundColorKey)
+//            animation.toValue = toColor
+            animation.fromValue = alayer.backgroundColor
             alayer.add(animation, forKey: nil)
+            alayer.backgroundColor = UIColor.random.cgColor
         }
         changeLayerColor.frame = .init(x: 60, y: anView.frame.maxY+20, width: view.width-120, height: 45)
         container.size = .init(width: view.width, height: changeLayerColor.frame.maxY)
@@ -166,14 +165,16 @@ class PropertyAnimationController: MKScrollController {
         if animated {
             let animation = CABasicAnimation.init()
             animation.keyPath = "transform"
-            animation.toValue = NSValue.init(caTransform3D: transform)
+//            animation.toValue = NSValue.init(caTransform3D: transform)
             // 1时：指针平滑移动，因为1s刷新一次
             // animation.duration = 1
             // 自定义缓冲函数
             let timingFunc = CAMediaTimingFunction.init(controlPoints: 1, 0, 0.75, 1)
             animation.timingFunction = timingFunc
-            animation.delegate = self
-            animation.setValue(pin, forKey: RotateClockPinKey)
+//            animation.delegate = self
+//            animation.setValue(pin, forKey: RotateClockPinKey)
+            
+            pin.layer.transform = transform
             pin.layer.add(animation, forKey: nil)
         } else {
             pin.layer.transform = transform
@@ -199,6 +200,7 @@ class PropertyAnimationController: MKScrollController {
         
         let changeLayerColor = UIButton.themeBorderBtn(super: container, title: "change color")
         changeLayerColor.setClosure { (_) in
+            let toColor = UIColor.random.cgColor
             let animation = CAKeyframeAnimation.init()
             animation.duration = 2
             animation.keyPath = "backgroundColor"
@@ -206,7 +208,7 @@ class PropertyAnimationController: MKScrollController {
                 self.formColor,
                 UIColor.red.cgColor,
                 UIColor.purple.cgColor,
-                UIColor.random.cgColor
+                toColor
             ]
             animation.values = colors
             
@@ -217,10 +219,10 @@ class PropertyAnimationController: MKScrollController {
             animation.timingFunctions = [fn, fn, fn]
             
             self.formColor = colors.last!
-            
-            animation.delegate = self
-            animation.setValue(alayer, forKey: KeyFrameColorKey)
+//            animation.delegate = self
+//            animation.setValue(alayer, forKey: KeyFrameColorKey)
             alayer.add(animation, forKey: nil)
+            alayer.backgroundColor = toColor
         }
         changeLayerColor.frame = .init(x: 60, y: anView.frame.maxY+20, width: view.width-120, height: 45)
         container.size = .init(width: view.width, height: changeLayerColor.frame.maxY)
@@ -342,11 +344,11 @@ extension PropertyAnimationController: CAAnimationDelegate {
         if let basicAnimation = anim as? CABasicAnimation {
             if let backgroundLayer = basicAnimation.value(forKey: AnimationBackgroundColorKey) as? CALayer,
                let toValue = basicAnimation.toValue {
-                CATransaction.begin()
-                CATransaction.setDisableActions(true)
-                let toColor = toValue as! CGColor
-                backgroundLayer.backgroundColor = toColor
-                CATransaction.commit()
+//                CATransaction.begin()
+//                CATransaction.setDisableActions(true)
+//                let toColor = toValue as! CGColor
+//                backgroundLayer.backgroundColor = toColor
+//                CATransaction.commit()
             } else if let pinView = basicAnimation.value(forKey: RotateClockPinKey) as? UIView,
                       let toValue = basicAnimation.toValue as? NSValue {
                 let transform = toValue.caTransform3DValue

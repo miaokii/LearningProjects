@@ -17,7 +17,8 @@ class EmitterLayerController: MKViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        emitterTest()
-        fireworks()
+//        fireworks()
+        chatgptEmitter()
     }
     
     // 烟花效果
@@ -116,7 +117,7 @@ class EmitterLayerController: MKViewController {
         let cell = CAEmitterCell.init()
         cell.contents = UIImage.init(named: "xuehua")?.cgImage
         // 每一秒创建的粒子数
-        cell.birthRate = 150
+        cell.birthRate = 100
         // 粒子持续时间
         cell.lifetime = 5
         // 可以混合图片内容颜色的混合色
@@ -141,5 +142,32 @@ class EmitterLayerController: MKViewController {
         
         emitter.emitterCells = [cell]
     }
+    
+    private func chatgptEmitter() {
+        let emitterLayer = CAEmitterLayer()
+        emitterLayer.frame = view.bounds
+        view.layer.addSublayer(emitterLayer)
+        emitterLayer.renderMode = .additive
+        // 粒子发射出的位置
+        emitterLayer.emitterPosition = .init(x: view.width/2, y: view.height/2-MKDefine.navAllHeight)
+
+        // Configure particle cell
+        let particle = CAEmitterCell()
+        particle.contents = UIImage(named: "xuehua")?.cgImage
+        particle.birthRate = 1
+        particle.lifetime = 3.0
+        particle.velocity = 100
+        particle.velocityRange = 50
+        particle.emissionLongitude = .pi * 2
+        particle.emissionRange = .pi / 4
+        particle.scale = 0.1
+        particle.scaleRange = 0.05
+        particle.scaleSpeed = -0.05
+        particle.alphaRange = 0.5
+        particle.alphaSpeed = -0.2
+
+        emitterLayer.emitterCells = [particle]
+    }
+    
     
 }

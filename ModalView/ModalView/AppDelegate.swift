@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow.init(frame: UIScreen.main.bounds)
         window?.backgroundColor = .white
         window?.isUserInteractionEnabled = true
-        window?.rootViewController = NavigationViewController.init(rootViewController: HomeViewController.init())
+        window?.rootViewController = TransitionNavigationController.init(rootViewController: HomeViewController.init())
         UIColor.theme = .init(0x202025)
         return true
     }

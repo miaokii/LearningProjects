@@ -3,10 +3,10 @@ PODS:
   - MKSwiftRes (0.1.0):
     - MBProgressHUD
     - SnapKit
-  - SnapKit (5.0.1)
+  - SnapKit (5.6.0)
 
 DEPENDENCIES:
-  - MKSwiftRes (from `../../MKSwiftRes/`)
+  - MKSwiftRes (from `../MKSwiftRes/`)
 
 SPEC REPOS:
   trunk:
@@ -15,13 +15,13 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   MKSwiftRes:
-    :path: "../../MKSwiftRes/"
+    :path: "../MKSwiftRes/"
 
 SPEC CHECKSUMS:
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MKSwiftRes: 10029cbd06465d20325a7029fe697420c94a7303
-  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: 970bda49d8487cd27443aaeb5d0300b99323e51e
+PODFILE CHECKSUM: 132737ab0fbe418e4fd13219bcda7f31bbbc7543
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.11.3
